@@ -34,8 +34,8 @@ b)In the 2nd approach too we have taken two stacks(Input && Output)
        |        |           |       |                       ARE TAKING O(1) COMPLEXITY BUT IN SOME INSTANCES THEY ARE
        |________|           |_______|                       TAKING O(N) COMPLEXITY
        Input                 Output
-
-        push(x)
+                                                SC -> O(2N)
+        push(x)                                     
         Add x -> Input
 
         pop()
