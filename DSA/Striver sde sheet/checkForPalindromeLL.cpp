@@ -1,36 +1,28 @@
-// my leetcode submission
-/**
- * Definition for singly-linked list.
- * struct ListNode {
- *     int val;
- *     ListNode *next;
- *     ListNode() : val(0), next(nullptr) {}
- *     ListNode(int x) : val(x), next(nullptr) {}
- *     ListNode(int x, ListNode *next) : val(x), next(next) {}
- * };
+
+/*
  https://leetcode.com/problems/palindrome-linked-list/discuss/1137696/Short-and-Easy-w-Explanation-or-T-%3A-O(N)-S-%3A-O(1)-Solution-using-Fast-and-Slow
  */
-// my leetcode submission
+// my leetcode submission --> slow == curr
 class Solution {
     public:
         bool isPalindrome(ListNode* head) {
 
-            ListNode * slow = head, * fast = head, * prev = NULL, * tmp;
+            ListNode * curr = head, * fast = head, * prev = NULL, * next;
 
             while (fast && fast -> next) {
                 fast = fast -> next -> next;
 
-                tmp = slow -> next;
-                slow -> next = prev;
-                prev = slow;
-                slow = tmp;
+                next = curr -> next;
+                curr -> next = prev;
+                prev = curr;
+                curr = next;
             }
 
-            slow = (fast ? slow -> next : slow);
+            curr = (fast ? curr -> next : curr);
 
-            while (slow) {
-                if (slow -> val != prev -> val) return false;
-                else slow = slow -> next, prev = prev -> next;
+            while (curr) {
+                if (curr -> val != prev -> val) return false;
+                else curr = curr -> next, prev = prev -> next;
             }
             return true;
         }
