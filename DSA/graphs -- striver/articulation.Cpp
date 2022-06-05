@@ -8,12 +8,16 @@ void dfs(int node, int parent, vector<int> &vis, vector<int> &tin, vector<int> &
         if(it == parent) continue;
         
         if(!vis[it]) {
+			
             dfs(it, node, vis, tin, low, timer, adj, isArticulation); 
             low[node] = min(low[node], low[it]); 
-	    child++; 
+	    
             if(low[it] >= tin[node] && parent != -1) {
                 isArticulation[node] = 1; 
             }
+
+			child++; 
+
         } else {
             low[node] = min(low[node], tin[it]); 
         }
