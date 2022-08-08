@@ -30,6 +30,7 @@ TRY TO RUN TC->O(1)
 // https://leetcode.com/problems/xor-operation-in-an-array/discuss/697849/O(1)-time
 
 // https://leetcode.com/problems/xor-operation-in-an-array/discuss/862065/c%2B%2B-0ms-easy-solution   --FRIENDLY
+
 class Solution
 {
 public:
