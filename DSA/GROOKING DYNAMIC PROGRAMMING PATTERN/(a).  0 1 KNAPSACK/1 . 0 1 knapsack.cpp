@@ -1,5 +1,7 @@
 /*
-Given the weights and profits of ‘N’ items, we are asked to put these items in a knapsack with a capacity ‘C.’
+Given the weights and profits of ‘N’ items, we are asked to put these items in a knapsack
+with a capacity ‘C.’
+
  The goal is to get the maximum profit out of the knapsack items.
  Each item can only be selected once, as we don’t have multiple quantities of any item.
 
@@ -8,8 +10,10 @@ Let’s take Merry’s example, who wants to carry some fruits in the knapsack t
  Here are the weights and profits of the fruits:
 
 Items: { Apple, Orange, Banana, Melon }
+
 Weights: { 2, 3, 1, 4 }
 Profits: { 4, 5, 3, 7 }
+
 Knapsack capacity: 5
 
 Let’s try to put various combinations of fruits in the knapsack,
