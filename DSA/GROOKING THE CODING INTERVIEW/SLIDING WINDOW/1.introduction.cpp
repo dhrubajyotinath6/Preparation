@@ -4,22 +4,28 @@ Given an array, find the average of all  subarrays of ‘K’ contiguous element
 
 */
 
-static vector<double> findAverages(int K, const vector<int>& arr) {
+// TC -> O(N)
+// SC -> O(1)
 
-    vector<double> result(arr.size() - K + 1);
-    
-    double windowSum = 0;
-    int windowStart = 0;
+static vector<double> findAverages(int K, const vector<int> &arr)
+{
 
-    for (int windowEnd = 0; windowEnd < arr.size(); windowEnd++) {
-      windowSum += arr[windowEnd];  // add the next element
-      // slide the window, no need to slide if we've not hit the window size of 'k'
-      if (windowEnd >= K - 1) {
-        result[windowStart] = windowSum / K;  // calculate the average
-        windowSum -= arr[windowStart];        // subtract the element going out
-        windowStart++;                        // slide the window ahead
-      }
+  vector<double> result(arr.size() - K + 1);
+
+  double windowSum = 0;
+  int windowStart = 0;
+
+  for (int windowEnd = 0; windowEnd < arr.size(); windowEnd++)
+  {
+    windowSum += arr[windowEnd]; // add the next element
+    // slide the window, no need to slide if we've not hit the window size of 'k'
+    if (windowEnd >= K - 1)
+    {
+      result[windowStart] = windowSum / K; // calculate the average
+      windowSum -= arr[windowStart];       // subtract the element going out
+      windowStart++;                       // slide the window ahead
     }
-
-    return result;
   }
+
+  return result;
+}
