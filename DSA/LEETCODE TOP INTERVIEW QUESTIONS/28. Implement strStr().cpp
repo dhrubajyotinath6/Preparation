@@ -1,4 +1,11 @@
 /*
+KMP ALGO
+
+https://leetcode.com/problems/implement-strstr/discuss/12956/C%2B%2B-Brute-Force-and-KMP
+
+*/
+
+/*
 Implement strStr().
 
 Given two strings needle and haystack, return the index of the first occurrence of needle in haystack,
