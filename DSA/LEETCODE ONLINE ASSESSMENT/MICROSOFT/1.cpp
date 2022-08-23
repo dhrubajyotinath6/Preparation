@@ -36,7 +36,7 @@ K = 3
 100000 -> 0
 K=4, K = 1
 */
-
+// 1234567890  k = 9
 class Solution
 {
 public:
