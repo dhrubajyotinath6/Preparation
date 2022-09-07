@@ -46,6 +46,8 @@ int Solution::canCompleteCircuit(const vector<int> &A, const vector<int> &B) {
  
 //  https://leetcode.com/problems/gas-station/discuss/42568/Share-some-of-my-ideas.   
 
+//https://leetcode.com/submissions/detail/712799677/
+
 int total = 0;
 int tank = 0;
 int start = 0;
