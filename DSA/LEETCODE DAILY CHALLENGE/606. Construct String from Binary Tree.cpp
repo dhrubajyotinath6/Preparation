@@ -13,6 +13,13 @@ https://leetcode.com/problems/construct-string-from-binary-tree/
  * };
  https://leetcode.com/problems/construct-string-from-binary-tree/discuss/104098/JavaC%2B%2B-1-liner
  https://leetcode.com/problems/construct-string-from-binary-tree/discuss/104089/Easy-C%2B%2B-Solution
+ 
+
+Time Complexity: O(N) where N is the number of the nodes in the tree
+Space Complexity: O(H) where H is the height of the tree. 
+
+In worse case, H can be N when it is a left skewed binary tree / right skewed binary tree
+ 
  */
 /*
 class Solution {
