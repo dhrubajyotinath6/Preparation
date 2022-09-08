@@ -1,5 +1,8 @@
 //https://leetcode.com/problems/binary-tree-inorder-traversal/
 
+//https://leetcode.com/problems/binary-tree-inorder-traversal/discuss/2547352/Two-Methods-oror-Easy-with-Visualization-oror-Beginner-Friendly
+//VERY GUD VISUALISATION
+
 //3 SOLUTIONS ( DFS + ITERATIVE + MORRIS TRANSVERSAL [TC -> O(n), SC -> O(1)] )
 
 /*

@@ -44,7 +44,12 @@ public:
 
         for(auto i : mpp){
 
+            //if a number occur even times , do nothing
+
+            //we found a odd times number but we already HAVE a odd occuring number(since flag == true)
             if(i % 2 != 0 && flag == true) return false;
+
+            //we found a odd times number but we already DONOT HAVE a odd occuring number(since flag == false)
             else if (i % 2 != 0) flag = true;
         }
 
@@ -76,10 +81,11 @@ public:
 
             mpp[val]++;
 
-            if (mpp[val] % 2 == 0)
-            {
+            //even times
+            if (mpp[val] % 2 == 0){
                 count--;
             }
+            //odd times
             else
                 count++;
         }
