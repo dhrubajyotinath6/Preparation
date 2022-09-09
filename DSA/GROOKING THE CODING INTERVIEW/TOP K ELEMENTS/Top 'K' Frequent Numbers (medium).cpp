@@ -1,3 +1,21 @@
+/*
+https://leetcode.com/problems/top-k-frequent-elements/solution/   --VERY VERY IMP 
+
+Approach 2: Quickselect (Hoare's selection algorithm)
+
+Further Discussion: Could We Do Worst-Case Linear Time?
+In theory, we could, the algorithm is called Median of Medians.
+
+This method is never used in practice because of two drawbacks:
+
+
+There is in fact O(n) time and space solution, using bucket sort idea: no frequencies can be more than n. 
+I think this solution is simpler and better than overcomplicated QuickSelect solution.
+For more details see 
+https://leetcode.com/problems/top-k-frequent-elements/discuss/740374/Python-5-lines-O(n)-buckets-solution-explained.
+
+*/
+
 Given an unsorted array of numbers, find the top ‘K’ frequently occurring numbers in it.
 
 Example 1:
