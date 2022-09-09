@@ -65,3 +65,14 @@ public:
         return steps - 1;
     }
 };
+
+/*
+for (int powerOfTwo = 1; powerOfTwo <= num; powerOfTwo = powerOfTwo * 2)  -> why this condition
+
+eg: 15 ->1111 -> we have to check 4 bits so upto 2^3 is sufficient
+
+2^0, 2^1, 2^2, 2^3
+
+16 -> 10000  -> we have to check 5 bits so upto 2^4 is sufficient.
+2^0, 2^1, 2^2, 2^3, 2^4
+*/
