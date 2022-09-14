@@ -7,7 +7,9 @@ Note: This question is the same as 1081: https://leetcode.com/problems/smallest-
 Example 1:
 
 Input: s = "bcabc"
-Output: "abc"
+Output: "abc"   -> smallest in lexicographical order
+
+
 Example 2:
 
 Input: s = "cbacdcbc"
@@ -68,3 +70,29 @@ public:
         
     }
 };
+
+
+
+//WITHOUT USING REVERSE FUNCTION
+/*
+        string ans = "";
+        
+        while (st.size() > 0){            
+             ans = st.top() + ans; 
+             st.pop();
+        }
+        
+        // reverse(ans.begin(), ans.end());
+        
+        return ans;
+
+
+*/
+
+WHAT IF THE QUESTION SAYS LARGEST IN  ***LEXICOGRAPHICAL***  ORDER
+
+-> just change a condition in the while loop  "c < st.top()"  to  "c > st.top()"
+
+ while(st.empty() == false && c > st.top() && lastOccurence[st.top()] > i){
+
+ }
