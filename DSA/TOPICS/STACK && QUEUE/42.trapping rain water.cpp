@@ -5,8 +5,11 @@ public:
     int trap(vector<int>& height) {
         
         int n = height.size(); 
+
         int left=0; int right=n-1;
+
         int res=0;
+        
         int maxleft=0, maxright=0;
         
         while(left<=right){
