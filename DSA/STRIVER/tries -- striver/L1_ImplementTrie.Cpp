@@ -13,15 +13,19 @@ struct Node {
     bool containsKey(char ch) {
         return (links[ch - 'a'] != NULL); 
     }
+
     Node* get(char ch) {
         return links[ch-'a']; 
     }
+
     void put(char ch, Node* node) {
         links[ch-'a'] = node; 
     }
+
     void setEnd() {
         flag = true; 
     }
+    
     bool isEnd() {
         return flag; 
     }
