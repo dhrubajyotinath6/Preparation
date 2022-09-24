@@ -29,7 +29,10 @@ void solve(){
     
     int x = abs(A-B);
     
-    
+    /*
+    A = 24, B = 12 , X = 12
+    it will give yes but actually no
+    */
     // if(x%2 == 0 && x%X==0){  ->why this not works??
     //     cout << "Yes" << endl;
     //     return;
