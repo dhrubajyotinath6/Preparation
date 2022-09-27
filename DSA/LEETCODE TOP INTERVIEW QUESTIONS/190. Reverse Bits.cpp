@@ -1,5 +1,7 @@
 //https://leetcode.com/problems/reverse-bits/
 
+//https://leetcode.com/problems/reverse-bits/solution/  --VERY IMP
+
 Reverse bits of a given 32 bits unsigned integer.
 
 Note:
