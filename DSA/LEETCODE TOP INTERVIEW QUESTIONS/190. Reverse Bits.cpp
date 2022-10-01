@@ -27,3 +27,25 @@ Input: n = 11111111111111111111111111111101
 Output:   3221225471 (10111111111111111111111111111111)
 Explanation: The input binary string 11111111111111111111111111111101 represents the unsigned integer 4294967293, so return 3221225471 which its 
 binary representation is 10111111111111111111111111111111.
+
+
+class Solution {
+public:
+    uint32_t reverseBits(uint32_t n) {
+        
+        uint32_t rev = 0, power = 31;
+        
+        while(n != 0){
+            rev += (n & 1) << power;
+            n = n >> 1;
+            power -= 1;
+        }
+        
+        return rev;
+    }
+};
+
+/*
+TC - O(1)
+SC - O(1)
+*/
