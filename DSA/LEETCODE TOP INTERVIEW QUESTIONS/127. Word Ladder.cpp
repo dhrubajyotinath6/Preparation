@@ -22,6 +22,8 @@ Output: 0
 Explanation: The endWord "cog" is not in wordList, therefore there is no valid transformation sequence.
 
  
+ //APPROACH 1
+ 
  class Solution {
     
     vector<string> n(string word){
@@ -61,3 +63,6 @@ public:
         return 0;
     }
 };
+
+
+//APPROACH 2 ->WHICH IS MUCH FASTER  -> Bidirectional Breadth First Search
