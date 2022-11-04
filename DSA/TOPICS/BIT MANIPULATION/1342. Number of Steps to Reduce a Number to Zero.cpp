@@ -76,3 +76,16 @@ eg: 15 ->1111 -> we have to check 4 bits so upto 2^3 is sufficient
 16 -> 10000  -> we have to check 5 bits so upto 2^4 is sufficient.
 2^0, 2^1, 2^2, 2^3, 2^4
 */
+
+
+//ANOTHER APPROCH
+
+        int steps = 0;
+        while (num>0)
+        {
+            if (num & 1)
+                steps++;
+            num = num >> 1;
+            steps++;
+        }
+        return steps ? --steps : steps;
