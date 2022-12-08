@@ -1,26 +1,26 @@
 /*
-https://leetcode.com/problems/combination-sum/
+https://leetcode.com/problems/combination-sum-ii/
 
 Example 1:
 
-Input: candidates = [2,3,6,7], target = 7
-Output: [[2,2,3],[7]]
-Explanation:
-2 and 3 are candidates, and 2 + 2 + 3 = 7. Note that 2 can be used multiple times.
-7 is a candidate, and 7 = 7.
-These are the only two combinations.
+Input: candidates = [10,1,2,7,6,1,5], target = 8
+Output: 
+[
+[1,1,6],
+[1,2,5],
+[1,7],
+[2,6]
+]
 
 
 Example 2:
 
-Input: candidates = [2,3,5], target = 8
-Output: [[2,2,2,2],[2,3,3],[3,5]]
-
-
-Example 3:
-
-Input: candidates = [2], target = 1
-Output: []
+Input: candidates = [2,5,2,1,2], target = 5
+Output: 
+[
+[1,2,2],
+[5]
+]
 
 */
 
