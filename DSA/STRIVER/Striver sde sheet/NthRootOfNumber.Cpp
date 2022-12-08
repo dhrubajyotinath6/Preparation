@@ -1,3 +1,14 @@
+/*
+Given two numbers N and A, find N-th root of A. In mathematics, Nth root of a number A is a real number that gives A, 
+when we raise it to integer power N. These roots are used in Number Theory and other advanced branches of mathematics.
+
+Input : A = 81
+        N = 4
+Output : 3 
+3^4 = 81
+
+*/	
+
 #include <bits/stdc++.h>
 using namespace std;
 double multiply(double number, int n) {
