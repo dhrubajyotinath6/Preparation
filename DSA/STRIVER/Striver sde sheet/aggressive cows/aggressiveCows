@@ -1,3 +1,6 @@
+    
+    https://www.spoj.com/problems/AGGRCOW/
+  
     #include <bits/stdc++.h>
     using namespace std;
     bool isPossible(int a[], int n, int cows, int minDist) {
