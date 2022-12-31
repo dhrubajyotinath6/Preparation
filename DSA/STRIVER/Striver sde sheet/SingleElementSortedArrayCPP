@@ -1,3 +1,5 @@
+//https://leetcode.com/problems/single-element-in-a-sorted-array/
+
 int singleNonDuplicate(vector<int>& nums) {
         int low = 0, high = nums.size() - 2; 
         while(low <= high) {
