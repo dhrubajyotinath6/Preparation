@@ -1,4 +1,11 @@
 // Credits: https://github.com/joric/interviewbit/blob/master/programming/arrays/repeat-and-missing-number-array.md
+
+//https://www.geeksforgeeks.org/find-a-repeating-and-a-missing-number/
+
+This can also be solved using cyclic sort (refer to grooking)
+tc - O(n)
+sc - O(1)
+
 vector < int >Solution::repeatedNumber (const vector < int >&arr) {
     /* Will hold xor of all elements and numbers from 1 to n */
     int xor1;
