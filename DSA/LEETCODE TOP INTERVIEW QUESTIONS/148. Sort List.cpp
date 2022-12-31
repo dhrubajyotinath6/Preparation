@@ -17,6 +17,18 @@ https://leetcode.com/problems/sort-list/discuss/1795126/C%2B%2B-oror-Merge-Sort-
 https://leetcode.com/problems/sort-list/discuss/1795343/C%2B%2Bor-Detailed-Explanation-w-Comments-or-Easy-to-understand-code
 
 */
+
+/*
+https://leetcode.com/problems/sort-list/solution/
+
+Your getMid function of Top Down approach is doing 2 jobs
+
+getting Mid Element
+Splitting list (setting null to the next pointer of lastNode of the first/left list)
+For better understanding of other users I think you may want rename the method appropriately
+
+
+*/
 class Solution {
 public:
     ListNode* sortList(ListNode* head) {

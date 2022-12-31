@@ -56,3 +56,10 @@ public:
     }
 
 };
+
+
+
+I think it is worthy to mention that for most of this kind of questions that we could not add memorization upon a DFS. 
+    This question is a special case. 
+        Normally when you could move to 4 directions, there would be cycle so you could not memorize the result. 
+        However since this question is strictly increasing, thus it is a DAG.

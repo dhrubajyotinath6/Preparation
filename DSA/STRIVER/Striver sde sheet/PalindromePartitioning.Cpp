@@ -1,3 +1,9 @@
+/*
+
+“aba|b|bbabb|a|b|aba” is a palindrome partitioning of “ababbbabbababa”
+
+*/
+
 class Solution {
 public:
     vector<vector<string>> partition(string s) {
