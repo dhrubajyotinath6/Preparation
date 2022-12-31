@@ -10,8 +10,7 @@ int nextGap(int gap)
 void merge(int* arr1, int* arr2, int n, int m)
 {
     int i, j, gap = n + m;
-    for (gap = nextGap(gap);
-         gap > 0; gap = nextGap(gap))
+    for (gap = nextGap(gap); gap > 0; gap = nextGap(gap))
     {
         // comparing elements in the first array.
         for (i = 0; i + gap < n; i++)
@@ -19,9 +18,7 @@ void merge(int* arr1, int* arr2, int n, int m)
                 swap(arr1[i], arr1[i + gap]);
  
         // comparing elements in both arrays.
-        for (j = gap > n ? gap - n : 0;
-             i < n && j < m;
-             i++, j++)
+        for (j = gap > n ? gap - n : 0; i < n && j < m; i++, j++)
             if (arr1[i] > arr2[j])
                 swap(arr1[i], arr2[j]);
  
