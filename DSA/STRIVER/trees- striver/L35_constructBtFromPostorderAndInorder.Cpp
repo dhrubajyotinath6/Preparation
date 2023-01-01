@@ -47,6 +47,7 @@ public:
 
         int ri = hm[postorder[pe]];
 
+                                                                           //     ps + length - 1
         TreeNode *leftchild = buildTreePostIn(inorder, is, ri - 1, postorder, ps, ps + ri - is - 1, hm);
         TreeNode *rightchild = buildTreePostIn(inorder, ri + 1, ie, postorder, ps + ri - is, pe - 1, hm);
 
