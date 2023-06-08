@@ -1,5 +1,23 @@
 //https://leetcode.com/problems/01-matrix/solution/
 
+
+Given an m x n binary matrix mat, return the distance of the nearest 0 for each cell.
+
+The distance between two adjacent cells is 1.
+
+ 
+
+Example 1:
+
+
+Input: mat = [[0,0,0],[0,1,0],[0,0,0]]
+Output: [[0,0,0],[0,1,0],[0,0,0]]
+Example 2:
+
+
+Input: mat = [[0,0,0],[0,1,0],[1,1,1]]
+Output: [[0,0,0],[0,1,0],[1,2,1]]
+
 /*
 For those who are asking why DP is done in two passes, in DP we can only use the values which are previously calculated. When we are parsing from top left and coming down to bottom right, we can only use the values of above and left because only those two values are precomputed, if we take right and down, those values are not yet computed, if we work with those values we will get suboptimal answer. For example take this test case,
 

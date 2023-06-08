@@ -1,5 +1,11 @@
 //https://leetcode.com/problems/surrounded-regions/
 
+Given an m x n matrix board containing 'X' and 'O', capture all regions that are 4-directionally 
+surrounded by 'X'.
+
+A region is captured by flipping all 'O's into 'X's in that surrounded region.
+
+
 class Solution {
 public:
     void DFS(vector<vector<char>>& board, int i, int j, int m, int n) {
@@ -46,7 +52,7 @@ public:
         
      int n = board[0].size();
      
-     //Moving over firts and last column   
+     //Moving over first and last column   
      for(int i=0; i<m; i++) {
          if(board[i][0] == 'O')
              DFS(board, i, 0, m, n);
