@@ -1,20 +1,69 @@
+Given an array of integers nums and an integer k, return the total number of 
+subarrays whose sum equals to k.
+
+A subarray is a contiguous non-empty sequence of elements within an array.
+
+ 
+
+Example 1:
+
+Input: nums = [1,1,1], k = 2
+Output: 2
+Example 2:
+
+Input: nums = [1,2,3], k = 3
+Output: 2
+
+
 /*
-Given an array arr[] of size N-1 with integers in the range of [1, N], 
-the task is to find the missing number from the first N integers.
+class Solution {
+public:
+    int subarraySum(vector<int>& nums, int k) {
+        
+        int ans = 0;
+        
+        for(int start = 0; start < nums.size(); start++){
+            int sum = 0;
+            for(int end = start; end < nums.size(); end++){
+                sum += nums[end];
+                
+                if(sum == k) ans++;
+            }
+        }
+        
+        return ans;
+    }
+};
 
-Note: There are no duplicates in the list.
-
-Examples: 
-
-Input: arr[] = {1, 2, 4, 6, 3, 7, 8}, N = 8
-Output: 5
-Explanation: The missing number between 1 to 8 is 5
-
-Input: arr[] = {1, 2, 3, 5}, N = 5
-Output: 4
-Explanation: The missing number between 1 to 5 is 4
 */
 
-// https://www.geeksforgeeks.org/find-the-missing-number/
+class Solution {
+public:
+    int subarraySum(vector<int>& nums, int k) {
+        
+        int ans = 0, sum = 0;
+        unordered_map<int,int> map;
+        map[0] = 1;
+        
+        for(int i = 0; i < nums.size(); i++){
+            sum += nums[i];
+ 
+/*
+suppose k = 5
 
-counting sort , XoR
+if sum = 3
+
+if sum = 9, we need to check whether 4 is there or not
+
+if sum = 5, we need to check whether 0 is there or not
+*/
+            if(map.find(sum - k) != map.end()){
+                ans += map[sum - k];
+            }
+            
+            map[sum]++;
+        }
+
+        return ans;
+    }
+};
