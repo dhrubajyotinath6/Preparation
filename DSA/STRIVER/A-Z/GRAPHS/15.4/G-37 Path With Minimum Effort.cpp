@@ -12,10 +12,7 @@ public:
         // Create a priority queue containing pairs of cells 
         // and their respective distance from the source cell in the 
         // form {diff, {row of cell, col of cell}}.
-        priority_queue<pair<int, pair<int, int>>,
-                       vector<pair<int, pair<int, int>>>,
-                       greater<pair<int, pair<int, int>>>>
-            pq;
+        priority_queue<pair<int, pair<int, int>>, vector<pair<int, pair<int, int>>>,greater<pair<int, pair<int, int>>>>  pq;
 
         int n = heights.size();
         int m = heights[0].size();

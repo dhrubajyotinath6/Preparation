@@ -51,6 +51,16 @@ public:
     }
 };
 */
+Example 1:
+
+Input: s = "())"
+Output: 1
+Example 2:
+
+Input: s = "((("
+Output: 3
+
+
 class Solution {
 public:
     int minAddToMakeValid(string s) {

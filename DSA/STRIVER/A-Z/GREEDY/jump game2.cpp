@@ -14,8 +14,7 @@ public:
     }
 
     for (int start = 0; start < jumps.size() - 1; start++) {
-      for (int end = start + 1; end <= start + jumps[start] && 
-                                      end < jumps.size(); end++) {
+      for (int end = start + 1; end <= start + jumps[start] && end < jumps.size(); end++) {
         dp[end] = min(dp[end], dp[start] + 1);
       }
     }

@@ -22,7 +22,7 @@ public:
 
         ListNode *current = head;
 
-        ListNode *next_next;
+        // ListNode *next_next;
 
         if (!current)
             return current;
