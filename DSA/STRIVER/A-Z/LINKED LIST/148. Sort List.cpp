@@ -33,7 +33,7 @@ Output: []
 
 //https://leetcode.com/problems/sort-list/solution/
 
-//CHECK APPROCH 1 -> SC : O(1)
+//CHECK APPROCH 2 -> SC : O(1)
 
 class Solution {
 public:

@@ -23,6 +23,31 @@ Output:
 Explanation:
 The substrings are:
 "a", "b", "a", "aa", "a", "c", "a". 
+
+a -
+ab
+aba
+abaa
+abaac
+abaaca
+
+b -
+ba
+baa
+baac
+baaca
+
+a -
+aa -
+aac
+aaca
+
+a -
+ac
+aca
+
+c -
+ca
 */
 
 FROM GFG
