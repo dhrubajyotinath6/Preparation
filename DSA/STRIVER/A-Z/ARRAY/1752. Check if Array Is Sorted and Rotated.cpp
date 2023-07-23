@@ -47,6 +47,8 @@ public:
             
         }
         
+        // nums[nums.size()-1] > nums[0]  means nums is sorted , then  atMost should be false
+        // if  nums[nums.size()-1] > nums[0]  is not , it means sorted array is rotate
         if(nums[nums.size()-1] > nums[0] && atMost) return false;
         
         return true;

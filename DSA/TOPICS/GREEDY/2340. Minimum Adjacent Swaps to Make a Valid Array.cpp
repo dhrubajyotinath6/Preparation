@@ -1,3 +1,5 @@
+//https://leetcode.com/problems/minimum-adjacent-swaps-to-make-a-valid-array/
+
 You are given a 0-indexed integer array nums.
 
 Swaps of adjacent elements are able to be performed on nums.
@@ -26,3 +28,5 @@ Example 2:
 Input: nums = [9]
 Output: 0
 Explanation: The array is already valid, so we return 0.
+
+

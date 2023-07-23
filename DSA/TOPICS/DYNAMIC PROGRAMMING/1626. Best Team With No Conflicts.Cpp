@@ -20,7 +20,8 @@ Example 2:
 
 Input: scores = [4,5,6,5], ages = [2,1,2,1]
 Output: 16
-Explanation: It is best to choose the last 3 players. Notice that you are allowed to choose multiple people of the same age.
+Explanation: It is best to choose the last 3 players. Notice that you are allowed 
+to choose multiple people of the same age.
 
 
 Example 3:

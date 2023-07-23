@@ -12,10 +12,15 @@ Example 1:
 
 Input: s = "()"
 Output: true
+
+
 Example 2:
 
 Input: s = "(*)"
 Output: true
+
+
+
 Example 3:
 
 Input: s = "(*))"
@@ -64,7 +69,7 @@ s[i] is '(', ')' or '*'.
 */
 
 
-/*
+
   public boolean checkValidString(String s) {  
     int leftBalance = 0;
     for (int i=0; i<s.length(); i++) {
@@ -88,9 +93,9 @@ s[i] is '(', ')' or '*'.
     return true;
   }
 
-*/
 
 
+/////////////////////////////////////////////////
 class Solution {
 public:
     bool checkValidString(string s) {

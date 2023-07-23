@@ -68,7 +68,7 @@ s[i] is '(', ')' or '*'.
 */
 
 
-/*
+
   public boolean checkValidString(String s) {  
     int leftBalance = 0;
     for (int i=0; i<s.length(); i++) {
@@ -92,9 +92,9 @@ s[i] is '(', ')' or '*'.
     return true;
   }
 
-*/
 
 
+//in one loop
 class Solution {
 public:
     bool checkValidString(string s) {

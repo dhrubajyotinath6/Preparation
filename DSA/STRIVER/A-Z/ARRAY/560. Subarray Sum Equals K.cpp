@@ -51,7 +51,7 @@ public:
 /*
 suppose k = 5
 
-if sum = 3
+if sum = 3, we need to check whether (3 - 5 = -2) -2 is there  or not
 
 if sum = 9, we need to check whether 4 is there or not
 

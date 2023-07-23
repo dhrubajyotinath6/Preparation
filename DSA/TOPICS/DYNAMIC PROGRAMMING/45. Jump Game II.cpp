@@ -28,7 +28,7 @@ Constraints:
 
 1 <= nums.length <= 104
 0 <= nums[i] <= 1000
-It's guaranteed that you can reach nums[n - 1].
+It is guaranteed that you can reach nums[n - 1].
 
 
 class Solution {
@@ -44,8 +44,7 @@ public:
     }
 
     for (int start = 0; start < jumps.size() - 1; start++) {
-      for (int end = start + 1; end <= start + jumps[start] && 
-                                      end < jumps.size(); end++) {
+      for (int end = start + 1; end <= start + jumps[start] && end < jumps.size(); end++) {
         dp[end] = min(dp[end], dp[start] + 1);
       }
     }

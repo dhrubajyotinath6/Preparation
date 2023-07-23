@@ -8,13 +8,21 @@ You may not move diagonally or move outside the boundary (i.e., wrap-around is n
 Example 1:
 
 
-Input: matrix = [[9,9,4],[6,6,8],[2,1,1]]
+Input: matrix = [
+                 [9,9,4],
+                 [6,6,8],
+                 [2,1,1]
+                ]
 Output: 4
 Explanation: The longest increasing path is [1, 2, 6, 9].
 Example 2:
 
 
-Input: matrix = [[3,4,5],[3,2,6],[2,2,1]]
+Input: matrix = [
+                  [3,4,5],
+                  [3,2,6],
+                  [2,2,1]
+                ]
 Output: 4
 Explanation: The longest increasing path is [3, 4, 5, 6]. Moving diagonally is not allowed.
 Example 3:

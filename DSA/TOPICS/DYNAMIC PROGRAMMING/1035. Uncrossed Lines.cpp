@@ -1,4 +1,5 @@
-You are given two integer arrays nums1 and nums2. We write the integers of nums1 and nums2 (in the order they are given) on two separate horizontal lines.
+You are given two integer arrays nums1 and nums2. We write the integers of nums1 and nums2 
+(in the order they are given) on two separate horizontal lines.
 
 We may draw connecting lines: a straight line connecting two numbers nums1[i] and nums2[j] such that:
 
@@ -32,7 +33,7 @@ Constraints:
 1 <= nums1.length, nums2.length <= 500
 1 <= nums1[i], nums2[j] <= 2000
 
-
+//basically longest common subsequence
 class Solution {
 public:
     int maxUncrossedLines(vector<int>& s1, vector<int>& s2) {

@@ -17,5 +17,5 @@ Explanation: The missing number between 1 to 5 is 4
 
 // https://www.geeksforgeeks.org/find-the-missing-number/
 
-counting sort , XoR
+cyclic sort , XoR
 

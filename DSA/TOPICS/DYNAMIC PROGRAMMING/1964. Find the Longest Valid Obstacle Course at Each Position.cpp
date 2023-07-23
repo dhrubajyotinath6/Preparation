@@ -1,6 +1,8 @@
-You want to build some obstacle courses. You are given a 0-indexed integer array obstacles of length n, where obstacles[i] describes the height of the ith obstacle.
+You want to build some obstacle courses. You are given a 0-indexed integer array obstacles of length n, 
+where obstacles[i] describes the height of the ith obstacle.
 
-For every index i between 0 and n - 1 (inclusive), find the length of the longest obstacle course in obstacles such that:
+For every index i between 0 and n - 1 (inclusive), find the length of the longest obstacle course 
+in obstacles such that:
 
 You choose any number of obstacles between 0 and i inclusive.
 You must include the ith obstacle in the course.
@@ -51,6 +53,8 @@ n == obstacles.length
 //You must include the ith obstacle in the course.
 /*
       1   2   6   7   5
+
+for i = 4
 LIS : 1   2   6   7
 
 BUT must include the ith obstacle in the course
