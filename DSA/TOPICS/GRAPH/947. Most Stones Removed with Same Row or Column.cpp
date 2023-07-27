@@ -147,6 +147,11 @@ public:
             rep[i] = i;
             size[i] = 1;
         }
+
+        /*
+        Input: stones = [[0,0],[0,1],[1,0],[1,2],[2,1],[2,2]]
+        Output: 5        
+        */
         
         int componentCount = stones.size();
         for (int i = 0; i < stones.size(); i++) {

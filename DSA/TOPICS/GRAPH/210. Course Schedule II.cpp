@@ -35,7 +35,7 @@ Output: [0]
 
 class Solution {
     
-        void topo(unordered_map<int,vector<int>> &graph, unordered_map<int,int> &inDegree, vector<int> &sortedOrder){
+    void topo(unordered_map<int,vector<int>> &graph, unordered_map<int,int> &inDegree, vector<int> &sortedOrder){
         
         queue<int> sources;
     
