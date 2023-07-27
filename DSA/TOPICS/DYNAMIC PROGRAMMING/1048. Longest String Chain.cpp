@@ -95,6 +95,12 @@ public:
 
 */
 
+/*
+Input: words = ["a","b","ba","bca","bda","bdca"]
+Output: 4
+Explanation: One of the longest word chains is ["a","ba","bda","bdca"].
+*/
+
 class Solution {
     
 public:
@@ -115,6 +121,7 @@ public:
             
             for(int i = 0; i < word.size(); i++){
                 string pred = word.substr(0,i) + word.substr(i+1, word.size()+1);
+                //string pred = word.substr(0,i) + word.substr(i+1, word.size() - i -1);  --> also accepted
                 
                 if(dp.find(pred) != dp.end()){
                     int prevLength = dp[pred];
