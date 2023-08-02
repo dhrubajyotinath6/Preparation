@@ -91,6 +91,14 @@ Constraints:
 1 <= s.length <= 105
 s consists of lowercase English letters.
 */
+
+/*
+Input: s = "abbaca"
+Output: "ca"
+
+Input: s = "azxxzy"
+Output: "ay"
+*/
 class Solution {
 public:
      string removeDuplicates(string s) {

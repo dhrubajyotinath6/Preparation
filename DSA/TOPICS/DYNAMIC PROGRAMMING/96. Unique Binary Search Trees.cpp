@@ -66,3 +66,4 @@ dp[3] += dp[2]*dp[0]
 //  https://leetcode.com/problems/unique-binary-search-trees/discuss/703049/Python-Math-oneliner-O(n)-using-Catalan-number-explained
 
 
+f[n] = (2n)!/(n! * n! * (n+1)).

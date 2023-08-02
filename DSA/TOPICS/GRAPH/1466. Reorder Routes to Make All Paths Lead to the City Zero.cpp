@@ -52,17 +52,17 @@ ai != bi
 
 we hv to travel from parent to child
 
-if there is already parent -> child , add 1;
-if there is already child -> parent , add 0;
+if there is already parent -- child , add 1;
+if there is already child -- parent , add 0;
 
 case 1: (add 1)
 
-  there is parent -> child  => 1
-  artifical : child -> parent 
+  there is parent -- child  => 1
+  artifical : child -- parent 
   
 case 2: (add 0)
-  there is child -> parent 
-  artifical: parent -> child  => 0
+  there is child -- parent 
+  artifical: parent -- child  => 0
 
 */
 

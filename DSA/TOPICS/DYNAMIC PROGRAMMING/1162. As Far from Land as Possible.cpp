@@ -11,7 +11,11 @@ between two cells (x0, y0) and (x1, y1) is |x0 - x1| + |y0 - y1|.
 Example 1:
 
 
-Input: grid = [[1,0,1],[0,0,0],[1,0,1]]
+Input: grid = [
+               [1,0,1],
+               [0,0,0],
+               [1,0,1]
+              ]
 Output: 2
 Explanation: The cell (1, 1) is as far as possible from all the land with distance 2.
 
@@ -20,7 +24,11 @@ Explanation: The cell (1, 1) is as far as possible from all the land with distan
 Example 2:
 
 
-Input: grid = [[1,0,0],[0,0,0],[0,0,0]]
+Input: grid = [ 
+                [1,0,0],
+                [0,0,0],
+                [0,0,0]
+              ]
 Output: 4
 Explanation: The cell (2, 2) is as far as possible from all the land with distance 4.
  

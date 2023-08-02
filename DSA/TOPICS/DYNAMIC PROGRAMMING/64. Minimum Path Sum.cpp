@@ -29,7 +29,7 @@ n == grid[i].length
 
 
 
-/*
+
 //2D  DP
 class Solution {
 public:
@@ -60,7 +60,7 @@ public:
         return dp[0][0];
     }
 };
-*/
+
 
 
 //1D  DP
@@ -94,7 +94,7 @@ public:
 
 //Dynamic Programming (Without Extra Space)
 
-/*
+
 public class Solution {
     public int minPathSum(int[][] grid) {
         for (int i = grid.length - 1; i >= 0; i--) {
@@ -112,7 +112,7 @@ public class Solution {
 }
 
 
-*/
+
 
 
 

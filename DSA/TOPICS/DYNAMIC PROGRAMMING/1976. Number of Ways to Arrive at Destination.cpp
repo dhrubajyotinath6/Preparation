@@ -63,7 +63,7 @@ public:
         
     priority_queue<pair<long long, long long>,vector<pair<long long, long long>>, greater<pair<long long, long long>>> pq;
     
-    pq.push({0,0});
+    pq.push({0,0});  //  (dis, node)
     
     vector<long long> ways(n,0);
     ways[0] = 1;

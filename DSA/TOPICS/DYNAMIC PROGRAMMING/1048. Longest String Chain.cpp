@@ -108,7 +108,7 @@ public:
     int longestStrChain(vector<string>& words){
         
         unordered_map<string,int> dp;
-        unordered_set<string> wordsPresent;
+        // unordered_set<string> wordsPresent;
         
         sort(words.begin(),words.end(),[](const string &word1, const string &word2){
             return word1.size() < word2.size();

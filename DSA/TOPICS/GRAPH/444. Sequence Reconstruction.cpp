@@ -63,7 +63,7 @@ public:
         
         vector<int> sortedOrder;
         
-        if(inDegree.size() != nums.size()) return false;
+        if(inDegree.size() != nums.size()) return false;   //  ---> NEW
         
         queue<int> sources;
     
@@ -76,10 +76,10 @@ public:
 
         while (!sources.empty()) {
             
-            if(sources.size() > 1) return false;
+            if(sources.size() > 1) return false;      //  ---> NEW
             
             //the next source (or number) is different from original sequence
-            if (nums[sortedOrder.size()] != sources.front()) return false;
+            if (nums[sortedOrder.size()] != sources.front()) return false;    //  ---> NEW
         
 
               int vertex = sources.front();

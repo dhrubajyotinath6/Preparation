@@ -16,7 +16,7 @@ Input: matrix = [
                  [6,5,4],
                  [7,8,9]
                 ]
-Output: 13
+Output: 13   (1 -> 5 -> 7) (1 -> 4 -> 8)
 Explanation: There are two falling paths with a minimum sum as shown.
 Example 2:
 
@@ -115,7 +115,7 @@ public:
 
 */
 
-/*
+
 class Solution {
     
 public:
@@ -147,7 +147,7 @@ public:
     }
 };
 
-*/
+/////////////////
 
 class Solution {
 public:

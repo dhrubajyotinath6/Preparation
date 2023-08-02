@@ -118,7 +118,7 @@ public:
         return ans;
     }
   
-  
+ };
   //https://leetcode.com/problems/remove-outermost-parentheses/discuss/270022/JavaC%2B%2BPython-Count-Opened-Parenthesis
 class Solution {
 public:
@@ -135,5 +135,5 @@ public:
         return res;
     }
 };
-};
+
 
