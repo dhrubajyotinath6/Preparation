@@ -8,7 +8,8 @@ Note: You can only move either down or right at any point in time.
 Example 1:
 
 
-Input: grid = [[1,3,1],
+Input: grid = [
+               [1,3,1],
                [1,5,1],
                [4,2,1]
               ]
@@ -99,10 +100,16 @@ public class Solution {
     public int minPathSum(int[][] grid) {
         for (int i = grid.length - 1; i >= 0; i--) {
             for (int j = grid[0].length - 1; j >= 0; j--) {
+
+                //last row but not last col
                 if(i == grid.length - 1 && j != grid[0].length - 1)
                     grid[i][j] = grid[i][j] +  grid[i][j + 1];
+
+                //last col but not last row
                 else if(j == grid[0].length - 1 && i != grid.length - 1)
                     grid[i][j] = grid[i][j] + grid[i + 1][j];
+
+                //normal
                 else if(j != grid[0].length - 1 && i != grid.length - 1)
                     grid[i][j] = grid[i][j] + Math.min(grid[i + 1][j],grid[i][j + 1]);
             }

@@ -69,7 +69,7 @@ class Solution {
 
 public:
     vector<int> longestObstacleCourseAtEachPosition(vector<int>& nums) {
-        //vector<int> sub;
+        vector<int> sub;
         
         for(int i = 0; i < nums.size(); i++){
             int num = nums[i];

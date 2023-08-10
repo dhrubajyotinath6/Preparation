@@ -1,10 +1,12 @@
 
-You are entering a competition, and are given two positive integers initialEnergy and initialExperience denoting your initial energy and initial experience respectively.
+You are entering a competition, and are given two positive integers initialEnergy and initialExperience 
+denoting your initial energy and initial experience respectively.
 
 You are also given two 0-indexed integer arrays energy and experience, both of length n.
 
 You will face n opponents in order. The energy and experience of the ith opponent is denoted 
-by energy[i] and experience[i] respectively. When you face an opponent, you need to have both strictly greater experience and energy to defeat them and move to the next opponent if available.
+by energy[i] and experience[i] respectively. When you face an opponent, you need to have both strictly 
+greater experience and energy to defeat them and move to the next opponent if available.
 
 Defeating the ith opponent increases your experience by experience[i], 
 but decreases your energy by energy[i].

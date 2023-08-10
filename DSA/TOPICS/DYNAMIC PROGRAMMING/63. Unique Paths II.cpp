@@ -51,6 +51,7 @@ public:
             return 0;
         }
         
+        //means obstacleGrid[0][0]  = 0, ie we hv 1 way to obstacleGrid[0][0] 
         obstacleGrid[0][0] = 1;
         
         for(int i = 1; i < row; i++){

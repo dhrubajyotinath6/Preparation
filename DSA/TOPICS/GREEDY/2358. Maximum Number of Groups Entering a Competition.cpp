@@ -38,13 +38,21 @@ For example, consider the input nums = [5,4,7,4,8,9,1,2,7,4,10]. One possible tr
 2, 4
 4, 4, 5
 7, 7, 8, 9, 10
-The cool trick here is that we're guaranteed that a triangle can be made out of any array of positive integers (where the last level of the triangle can have any number of elements).
-Imagine an arbitrary integer array of positive values sorted in non-decreasing order: nums = [a0, a1, a2, ..., an], ai <= a(i+1).
+The cool trick here is that we're guaranteed that a triangle can be made out of any array of 
+positive integers (where the last level of the triangle can have any number of elements).
 
-Regardless of what those numbers are, we can say with absolute certainty that a1 + a2 > a0. Additionally, a3 + a4 + a5 > a1 + a2 and so on...
-Therefore, as long as these numbers are positive, we can definitely create some triangle out of them. Heck, we don't even need to sort the array since we don't care where these numbers are nor what these numbers are. All we care about is that they exist.
+Imagine an arbitrary integer array of positive values sorted in non-decreasing order: 
+nums = [a0, a1, a2, ..., an], ai <= a(i+1).
 
-Now all we need to figure is how tall we can make the triangle. Once we find that, we'll have our answer. This is the logic that Lee details above in the O(1) mathematical solution.
+Regardless of what those numbers are, we can say with absolute certainty that a1 + a2 > a0. 
+Additionally, a3 + a4 + a5 > a1 + a2 and so on...
+
+Therefore, as long as these numbers are positive, we can definitely create some triangle out of them. 
+Heck, we don't even need to sort the array since we don't care where these numbers are nor what 
+these numbers are. All we care about is that they exist.
+
+Now all we need to figure is how tall we can make the triangle. Once we find that, we'll have our answer. 
+This is the logic that Lee details above in the O(1) mathematical solution.
 Hope this helps!
 
 

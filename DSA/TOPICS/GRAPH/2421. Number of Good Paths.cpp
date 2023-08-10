@@ -102,7 +102,7 @@ class Solution {
 public:
     int numberOfGoodPaths(vector<int>& vals, vector<vector<int>>& edges) {
         
-       int n = vals.size();
+        int n = vals.size();
         vector<vector<int>> adj(n);
         
         for(auto& edge : edges){

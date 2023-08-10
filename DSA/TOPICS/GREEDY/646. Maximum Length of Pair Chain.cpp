@@ -14,14 +14,14 @@ Example 1:
 
 Input: pairs = [[1,2],[2,3],[3,4]]
 Output: 2
-Explanation: The longest chain is [1,2] -> [3,4].
+Explanation: The longest chain is [1,2] - [3,4].
 
 
 Example 2:
 
 Input: pairs = [[1,2],[7,8],[4,5]]
 Output: 3
-Explanation: The longest chain is [1,2] -> [4,5] -> [7,8].
+Explanation: The longest chain is [1,2] - [4,5] - [7,8].
  
 
 Constraints:

@@ -49,7 +49,7 @@ public:
     // dp[strIndex][patIndex] will be storing the count of SPM up to
     // str[0..strIndex-1][0..patIndex-1]
     int n = str.length() + 1, m = pat.length() + 1;
-    vector<vector<uint>> dp(n, vector<uint>(m));
+    vector<vector<uint>> dp(n, vector<uint>(m));     // imp line
 
     // for the empty pattern, we have one matching
     for (int i = 0; i <= str.length(); i++) {
@@ -74,3 +74,8 @@ public:
         return ans;
     }
 };
+
+
+
+
+

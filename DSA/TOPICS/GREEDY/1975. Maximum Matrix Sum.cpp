@@ -14,7 +14,10 @@ Your goal is to maximize the summation of the matrix's elements.
 Example 1:
 
 
-Input: matrix = [[1,-1],[-1,1]]
+Input: matrix = [
+                 [1,-1],
+                 [-1,1]
+                 ]
 Output: 4
 Explanation: We can follow the following steps to reach sum equals 4:
 - Multiply the 2 elements in the first row by -1.
@@ -22,7 +25,11 @@ Explanation: We can follow the following steps to reach sum equals 4:
 Example 2:
 
 
-Input: matrix = [[1,2,3],[-1,-2,-3],[1,2,3]]
+Input: matrix = [
+                 [1,2,3],
+                 [-1,-2,-3],
+                 [1,2,3]
+                 ]
 Output: 16
 Explanation: We can follow the following step to reach sum equals 16:
 - Multiply the 2 last elements in the second row by -1.

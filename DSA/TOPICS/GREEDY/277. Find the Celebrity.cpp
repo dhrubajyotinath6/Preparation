@@ -12,7 +12,7 @@ You need to find out the celebrity (or verify there is not one) by asking as few
 You are given a helper function bool knows(a, b) that tells you whether a knows b. 
 Implement a function int findCelebrity(n). There will be exactly one celebrity if they are at the party.
 
-Return the celebrity's label if there is a celebrity at the party. If there is no celebrity, return -1.
+Return the celebritys label if there is a celebrity at the party. If there is no celebrity, return -1.
 
  
 

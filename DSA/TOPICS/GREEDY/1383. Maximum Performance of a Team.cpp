@@ -4,7 +4,7 @@ efficiency of the ith engineer respectively.
 
 Choose at most k different engineers out of the n engineers to form a team with the maximum performance.
 
-The performance of a team is the sum of their engineers' speeds multiplied by the minimum efficiency 
+The performance of a team is the sum of their engineers speeds multiplied by the minimum efficiency 
 among their engineers.
 
 Return the maximum performance of this team. Since the answer can be a huge number, return it modulo 109 + 7.
