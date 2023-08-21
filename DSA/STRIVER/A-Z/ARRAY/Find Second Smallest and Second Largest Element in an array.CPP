@@ -20,10 +20,6 @@ present in the array. There is no second largest or second smallest element pres
 
 
 
-
-
-
-
 #include<bits/stdc++.h>
 using namespace std;
 int secondSmallest(int arr[],int n)

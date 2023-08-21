@@ -1,0 +1,171 @@
+#javatpointcom_dynamic_incontent {
+		height: 280px;
+}
+#javatpointcom_leaderboard_3 {
+		height: 448px;
+}
+#javatpointcom_leaderboard_atf_homepage {
+		height: 100px;
+}
+#javatpointcom_leaderboard_btf_1 {
+		height: 280px;
+}
+#javatpointcom_leaderboard_btf_2 {
+		height: 280px;
+}
+#javatpointcom_leaderboard_btf_3 {
+		height: 280px;
+}
+#javatpointcom_leaderboard_homepage_1 {
+		height: 345px;
+}
+#javatpointcom_leaderboard_homepage_2 {
+		height: 100px;
+}
+#javatpointcom_rightrail_homepage {
+		height: 448px;
+}
+@media only screen and (min-device-width: 768px) {
+	#javatpointcom_dynamic_incontent {
+		height: 250px;
+	}
+	#javatpointcom_leaderboard_3 {
+		height: 250px;
+	}
+	#javatpointcom_leaderboard_atf_article {
+		height: 150px;
+	}
+	#javatpointcom_leaderboard_atf_homepage {
+		height: 150px;
+	}
+	#javatpointcom_leaderboard_btf_1 {
+		height: 250px;
+	}
+	#javatpointcom_leaderboard_btf_2 {
+		height: 250px;
+	}
+	#javatpointcom_leaderboard_btf_3 {
+		height: 250px;
+	}
+	#javatpointcom_leaderboard_homepage_1 {
+		height: 250px;
+	}
+	#javatpointcom_leaderboard_homepage_2 {
+		height: 150px;
+	}
+	#javatpointcom_rightrail_homepage {
+		height: 280px;
+	}
+}
+@media only screen and (min-device-width: 1024px) {
+	#javatpointcom_lefttrail_1 {
+		height: 600px;
+	}
+}
+@media only screen and (min-device-width: 1270px) {
+	#javatpointcom_dynamic_incontent {
+		height: 250px;
+	}
+	#javatpointcom_leaderboard_3 {
+		height: 250px;
+	}
+	#javatpointcom_leaderboard_atf_article {
+		height: 150px;
+	}
+	#javatpointcom_leaderboard_atf_homepage {
+		height: 150px;
+	}
+	#javatpointcom_leaderboard_btf_1 {
+		height: 250px;
+	}
+	#javatpointcom_leaderboard_btf_2 {
+		height: 250px;
+	}
+	#javatpointcom_leaderboard_btf_3 {
+		height: 250px;
+	}
+	#javatpointcom_leaderboard_homepage_1 {
+		height: 250px;
+	}
+	#javatpointcom_leaderboard_homepage_2 {
+		height: 150px;
+	}
+}
+@media only screen and (min-device-width: 1000px) {
+	#javatpointcom_dynamic_incontent {
+		height: 250px;
+	}
+	#javatpointcom_leaderboard_3 {
+		height: 250px;
+	}
+	#javatpointcom_leaderboard_atf_article {
+		height: 150px;
+	}
+	#javatpointcom_leaderboard_atf_homepage {
+		height: 150px;
+	}
+	#javatpointcom_leaderboard_btf_1 {
+		height: 250px;
+	}
+	#javatpointcom_leaderboard_btf_2 {
+		height: 250px;
+	}
+	#javatpointcom_leaderboard_btf_3 {
+		height: 250px;
+	}
+	#javatpointcom_leaderboard_homepage_1 {
+		height: 250px;
+	}
+	#javatpointcom_leaderboard_homepage_2 {
+		height: 150px;
+	}
+}
+@media only screen and (min-device-width: 1675px) {
+	#javatpointcom_dynamic_incontent {
+		height: 250px;
+	}
+	#javatpointcom_leaderboard_3 {
+		height: 250px;
+	}
+	#javatpointcom_leaderboard_atf_article {
+		height: 90px;
+	}
+	#javatpointcom_leaderboard_atf_homepage {
+		height: 90px;
+	}
+	#javatpointcom_leaderboard_btf_1 {
+		height: 250px;
+	}
+	#javatpointcom_leaderboard_btf_2 {
+		height: 250px;
+	}
+	#javatpointcom_leaderboard_btf_3 {
+		height: 250px;
+	}
+	#javatpointcom_leaderboard_homepage_1 {
+		height: 250px;
+	}
+	#javatpointcom_leaderboard_homepage_2 {
+		height: 90px;
+	}
+}
+@media only screen and (min-device-width: 1100px) {
+	#javatpointcom_rightrail_1 {
+		height: 280px;
+	}
+	#javatpointcom_rightrail_2 {
+		height: 280px;
+	}
+	#javatpointcom_rightrail_3 {
+		height: 280px;
+	}
+	#javatpointcom_rightrail_4 {
+		height: 280px;
+	}
+	#javatpointcom_rightrail_5 {
+		height: 280px;
+	}
+	#javatpointcom_rightrail_6 {
+		height: 280px;
+	}
+}

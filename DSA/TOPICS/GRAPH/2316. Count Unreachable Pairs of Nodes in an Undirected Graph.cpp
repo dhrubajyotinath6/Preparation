@@ -36,6 +36,7 @@ There are no repeated edges.
 
 
 //Approach 3: Union-find
+
 class UnionFind{
     
 private:

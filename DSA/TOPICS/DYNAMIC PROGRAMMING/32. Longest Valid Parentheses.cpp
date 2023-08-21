@@ -73,7 +73,7 @@ public:
             else right++;
             
             if(left == right) maxLength = max(maxLength, 2 * right);
-            else if(right >= left) left = right = 0;
+            else if(right > left) left = right = 0;
         }
         
         left = right = 0;
@@ -82,10 +82,11 @@ public:
             else right++;
             
             if(left == right) maxLength = max(maxLength, 2*left);
-            else if(left >= right) left = right = 0;
+            else if(left > right) left = right = 0;
         }
         
     
         return maxLength;
     }
 };
+

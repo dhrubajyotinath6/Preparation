@@ -23,6 +23,8 @@ class Number{
             cout<<"The number for this object is "<< a <<endl;
         }
 };
+
+
 int main(){
     Number x, y, z(45), z2;
     x.display();

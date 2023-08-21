@@ -17,6 +17,7 @@ class Solution {
          else if (m1.pos < m2.pos) return true;
          return false;
       }
+
    void maxMeetings(int s[], int e[], int n) {
       struct meeting meet[n];
       for (int i = 0; i < n; i++) {
@@ -25,7 +26,7 @@ class Solution {
 
       sort(meet, meet + n, comparator);
 
-      vector < int > answer;
+      vector<int> answer;
 
       int limit = meet[0].end;
       answer.push_back(meet[0].pos);
@@ -36,6 +37,8 @@ class Solution {
             answer.push_back(meet[i].pos);
          }
       }
+
+
       cout<<"The order in which the meetings will be performed is "<<endl;
       for (int i = 0; i < answer.size(); i++) {
          cout << answer[i] << " ";

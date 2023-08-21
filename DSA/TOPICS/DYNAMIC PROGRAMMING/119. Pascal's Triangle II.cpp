@@ -57,7 +57,7 @@ SC -> o(2k)
 
 
 //APPROACH 2
-/*
+
 class Solution {
 public:
     vector<int> getRow(int rowIndex) {
@@ -79,7 +79,7 @@ public:
 
 TC -> O(k^2)
 SC -> o(k)
-*/
+
 
 
 //APPROACH 3

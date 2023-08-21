@@ -5,9 +5,12 @@ You are given an array nums of n positive integers.
 You can perform two types of operations on any element of the array any number of times:
 
 If the element is even, divide it by 2.
+
 For example, if the array is [1,2,3,4], then you can do this operation on the last element, 
 and the array will be [1,2,3,2].
+
 If the element is odd, multiply it by 2.
+
 For example, if the array is [1,2,3,4], then you can do this operation on the first element, 
 and the array will be [2,2,3,4].
 The deviation of the array is the maximum difference between any two elements in the array.
@@ -34,8 +37,10 @@ Output: 3
 class Solution {
 public:
     int minimumDeviation(vector<int>& nums) {
+
         priority_queue<int> evens;
         int minimum = INT_MAX;
+        
         for (int num : nums) {
             if (num % 2 == 0) {
                 evens.push(num);
@@ -45,7 +50,9 @@ public:
                 minimum = min(minimum, num * 2);
             }
         }
+
         int minDeviation = INT_MAX;
+
         while (!evens.empty()) {
             int currentValue = evens.top();
             evens.pop();

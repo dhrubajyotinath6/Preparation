@@ -1,0 +1,1394 @@
+<!DOCTYPE html>
+<!-- saved from url=(0054)https://www.javatpoint.com/multiple-inheritance-in-cpp -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+
+<script async="" src="./Multiple Inheritance in C++ - javatpoint_files/async-ads.js.download"></script><script async="" src="./Multiple Inheritance in C++ - javatpoint_files/async-ads.js.download"></script><script type="text/javascript" async="" src="./Multiple Inheritance in C++ - javatpoint_files/ga.js.download"></script><script type="text/javascript" async="" src="./Multiple Inheritance in C++ - javatpoint_files/f.txt"></script><script type="text/javascript" async="" src="./Multiple Inheritance in C++ - javatpoint_files/f.txt"></script><script async="" src="./Multiple Inheritance in C++ - javatpoint_files/js"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-24880427-1');
+</script>
+<title>Multiple Inheritance in C++ - javatpoint</title><link rel="SHORTCUT ICON" href="https://static.javatpoint.com/images/favicon2.png">
+<link rel="stylesheet" type="text/css" href="./Multiple Inheritance in C++ - javatpoint_files/link.css" async=""><link rel="dns-prefetch" href="https://clients1.google.com/"><link rel="dns-prefetch" href="https://static.javatpoint.com/"><link rel="dns-prefetch" href="https://googleads.g.doubleclick.net/"><link rel="dns-prefetch" href="https://www.google.com/"><link rel="dns-prefetch" href="https://feedify.net/"><meta name="theme-color" content="#4CAF50"><meta property="og:title" content="Multiple Inheritance in C++ - javatpoint"><meta property="og:description" content="Multiple Inheritance in C++ with C++ tutorial for beginners and professionals, if-else, switch, break, continue, object and class, exception, static, structs, inheritance, aggregation etc.">
+<meta name="keywords" content="C++, tutorial, beginners, professionals, introduction, if-else, switch, break, continue, comments, arrays, templates, object and class, exception"><meta name="description" content="Multiple Inheritance in C++ with C++ tutorial for beginners and professionals, if-else, switch, break, continue, object and class, exception, static, structs, inheritance, aggregation etc."><meta name="viewport" content="width=device-width, initial-scale=1.0"><meta name="apple-mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-status-bar-style" content="black"><link rel="canonical" href="https://www.javatpoint.com/multiple-inheritance-in-cpp">
+<meta property="og:locale" content="en_US"><meta property="og:type" content="article"><meta name="twitter:title" property="og:title" content="Multiple Inheritance in C++ - javatpoint"><meta name="twitter:description" property="og:description" content="Multiple Inheritance in C++ with C++ tutorial for beginners and professionals, if-else, switch, break, continue, object and class, exception, static, structs, inheritance, aggregation etc."><meta property="og:url" content="https://www.javatpoint.com/multiple-inheritance-in-cpp"><meta property="og:site_name" content="www.javatpoint.com"><meta name="twitter:card" content="summary"><meta name="twitter:site" content="@pagejavatpoint"><meta name="twitter:domain" content="www.javatpoint.com"><meta name="twitter:creator" content="@pagejavatpoint">
+<link href="https://www.javatpoint.com/manifest.json" rel="manifest">
+<link rel="preconnect" href="https://a.pub.network/" crossorigin="">
+<link rel="preconnect" href="https://b.pub.network/" crossorigin="">
+<link rel="preconnect" href="https://c.pub.network/" crossorigin="">
+<link rel="preconnect" href="https://d.pub.network/" crossorigin="">
+<link rel="preconnect" href="https://c.amazon-adsystem.com/" crossorigin="">
+<link rel="preconnect" href="https://s.amazon-adsystem.com/" crossorigin="">
+<link rel="preconnect" href="https://secure.quantserve.com/" crossorigin="">
+<link rel="preconnect" href="https://rules.quantcount.com/" crossorigin="">
+<link rel="preconnect" href="https://pixel.quantserve.com/" crossorigin="">
+<link rel="preconnect" href="https://cmp.quantcast.com/" crossorigin="">
+<link rel="preconnect" href="https://btloader.com/" crossorigin="">
+<link rel="preconnect" href="https://api.btloader.com/" crossorigin="">
+<link rel="preconnect" href="https://confiant-integrations.global.ssl.fastly.net/" crossorigin="">
+
+
+
+<link rel="stylesheet" href="./Multiple Inheritance in C++ - javatpoint_files/cls.css">
+<script data-cfasync="false" type="text/javascript">
+  var freestar = freestar || {};
+  freestar.queue = freestar.queue || [];
+  freestar.config = freestar.config || {};
+  freestar.config.enabled_slots = [];
+  freestar.initCallback = function () { (freestar.config.enabled_slots.length === 0) ? freestar.initCallbackCalled = false : freestar.newAdSlots(freestar.config.enabled_slots) }
+</script>
+<script src="./Multiple Inheritance in C++ - javatpoint_files/pubfig.min.js.download" data-cfasync="false" async=""></script>
+<style type="text/css">.dp-cpp .datatypes { color: #2E8B57; font-weight: bold; }</style><style type="text/css">.dp-cpp .datatypes { color: #2E8B57; font-weight: bold; }</style><style type="text/css">.dp-cpp .datatypes { color: #2E8B57; font-weight: bold; }</style><style type="text/css">.dp-cpp .datatypes { color: #2E8B57; font-weight: bold; }</style><style type="text/css">.dp-cpp .datatypes { color: #2E8B57; font-weight: bold; }</style><style type="text/css">.dp-cpp .datatypes { color: #2E8B57; font-weight: bold; }</style><style type="text/css">.dp-cpp .datatypes { color: #2E8B57; font-weight: bold; }</style><style type="text/css">.dp-cpp .datatypes { color: #2E8B57; font-weight: bold; }</style><style>[id*='google_ads_iframe'],[id*='taboola-'],.taboolaHeight,.taboola-placeholder,#credential_picker_container,#credentials-picker-container,#credential_picker_iframe,[id*='google-one-tap-iframe'],#google-one-tap-popup-container,.google-one-tap-modal-div,#amp_floatingAdDiv,#ez-content-blocker-container,#notify-adblock{display:none!important;min-height:0!important;height:0!important;}</style><script src="./Multiple Inheritance in C++ - javatpoint_files/cse_element__en.js.download" type="text/javascript"></script><link type="text/css" href="./Multiple Inheritance in C++ - javatpoint_files/default+en.css" rel="stylesheet"><link type="text/css" href="./Multiple Inheritance in C++ - javatpoint_files/espresso.css" rel="stylesheet"><script src="./Multiple Inheritance in C++ - javatpoint_files/cse_element__en.js.download" type="text/javascript"></script><link type="text/css" href="./Multiple Inheritance in C++ - javatpoint_files/default+en.css" rel="stylesheet"><link type="text/css" href="./Multiple Inheritance in C++ - javatpoint_files/espresso.css" rel="stylesheet"><style type="text/css">.gsc-control-cse{font-family:georgia, arial, serif}.gsc-control-cse .gsc-table-result{font-family:georgia, arial, serif}.gsc-refinementsGradient{background:linear-gradient(to left,rgba(255,255,255,1),rgba(255,255,255,0))}.gsc-control-cse{border-color:#FFFFFF;background-color:#FFFFFF}input.gsc-input,.gsc-input-box,.gsc-input-box-hover,.gsc-input-box-focus{border-color:#D3BCA1}.gsc-search-button-v2,.gsc-search-button-v2:hover,.gsc-search-button-v2:focus{border-color:#300D00;background-color:#461200;background-image:none;filter:none}.gsc-search-button-v2 svg{fill:#FFFFFF}.gsc-tabHeader.gsc-tabhActive,.gsc-refinementHeader.gsc-refinementhActive{color:#461200;border-color:#461200;background-color:#FFFFFF}.gsc-tabHeader.gsc-tabhInactive,.gsc-refinementHeader.gsc-refinementhInactive{color:#950000;border-color:#950000;background-color:#FFFFFF}.gsc-webResult.gsc-result,.gsc-results .gsc-imageResult{border-color:#FFFFFF;background-color:#FFFFFF}.gsc-webResult.gsc-result:hover{border-color:#FFFFFF;background-color:#FFFFFF}.gs-webResult.gs-result a.gs-title:link,.gs-webResult.gs-result a.gs-title:link b,.gs-imageResult a.gs-title:link,.gs-imageResult a.gs-title:link b{color:#950000}.gs-webResult.gs-result a.gs-title:visited,.gs-webResult.gs-result a.gs-title:visited b,.gs-imageResult a.gs-title:visited,.gs-imageResult a.gs-title:visited b{color:#950000}.gs-webResult.gs-result a.gs-title:hover,.gs-webResult.gs-result a.gs-title:hover b,.gs-imageResult a.gs-title:hover,.gs-imageResult a.gs-title:hover b{color:#950000}.gs-webResult.gs-result a.gs-title:active,.gs-webResult.gs-result a.gs-title:active b,.gs-imageResult a.gs-title:active,.gs-imageResult a.gs-title:active b{color:#950000}.gsc-cursor-page{color:#950000}a.gsc-trailing-more-results:link{color:#950000}.gs-webResult:not(.gs-no-results-result):not(.gs-error-result) .gs-snippet,.gs-fileFormatType{color:#333333}.gs-webResult div.gs-visibleUrl{color:#A25B08}.gs-webResult div.gs-visibleUrl-short{color:#A25B08}.gsc-cursor-box{border-color:#FFFFFF}.gsc-results .gsc-cursor-box .gsc-cursor-page{border-color:#950000;background-color:#FFFFFF;color:#950000}.gsc-results .gsc-cursor-box .gsc-cursor-current-page{border-color:#461200;background-color:#FFFFFF;color:#461200}.gsc-webResult.gsc-result.gsc-promotion{border-color:#FEFEDC;background-color:#FFFFCC}.gsc-completion-title{color:#950000}.gsc-completion-snippet{color:#333333}.gs-promotion a.gs-title:link,.gs-promotion a.gs-title:link *,.gs-promotion .gs-snippet a:link{color:#0000CC}.gs-promotion a.gs-title:visited,.gs-promotion a.gs-title:visited *,.gs-promotion .gs-snippet a:visited{color:#0000CC}.gs-promotion a.gs-title:hover,.gs-promotion a.gs-title:hover *,.gs-promotion .gs-snippet a:hover{color:#0000CC}.gs-promotion a.gs-title:active,.gs-promotion a.gs-title:active *,.gs-promotion .gs-snippet a:active{color:#0000CC}.gs-promotion .gs-snippet,.gs-promotion .gs-title .gs-promotion-title-right,.gs-promotion .gs-title .gs-promotion-title-right *{color:#333333}.gs-promotion .gs-visibleUrl,.gs-promotion .gs-visibleUrl-short{color:#A25B08}.gcsc-find-more-on-google{color:#950000}.gcsc-find-more-on-google-magnifier{fill:#950000}</style><style type="text/css">.gscb_a{display:inline-block;font:27px/13px arial,sans-serif}.gsst_a .gscb_a{color:#a1b9ed;cursor:pointer}.gsst_a:hover .gscb_a,.gsst_a:focus .gscb_a{color:#36c}.gsst_a{display:inline-block}.gsst_a{cursor:pointer;padding:0 4px}.gsst_a:hover{text-decoration:none!important}.gsst_b{font-size:16px;padding:0 2px;position:relative;user-select:none;-webkit-user-select:none;white-space:nowrap}.gsst_e{vertical-align:middle;opacity:0.55;}.gsst_a:hover .gsst_e,.gsst_a:focus .gsst_e{opacity:0.72;}.gsst_a:active .gsst_e{opacity:1;}.gsst_f{background:white;text-align:left}.gsst_g{background-color:white;border:1px solid #ccc;border-top-color:#d9d9d9;box-shadow:0 2px 4px rgba(0,0,0,0.2);-webkit-box-shadow:0 2px 4px rgba(0,0,0,0.2);margin:-1px -3px;padding:0 6px}.gsst_h{background-color:white;height:1px;margin-bottom:-1px;position:relative;top:-1px}.gsib_a{width:100%;padding:4px 6px 0}.gsib_a,.gsib_b{vertical-align:top}.gssb_c{border:0;position:absolute;z-index:989}.gssb_e{border:1px solid #ccc;border-top-color:#d9d9d9;box-shadow:0 2px 4px rgba(0,0,0,0.2);-webkit-box-shadow:0 2px 4px rgba(0,0,0,0.2);cursor:default}.gssb_f{visibility:hidden;white-space:nowrap}.gssb_k{border:0;display:block;position:absolute;top:0;z-index:988}.gsdd_a{border:none!important}.gsq_a{padding:0}.gssb_a{padding:0 7px}.gssb_a,.gssb_a td{white-space:nowrap;overflow:hidden;line-height:22px}#gssb_b{font-size:11px;color:#36c;text-decoration:none}#gssb_b:hover{font-size:11px;color:#36c;text-decoration:underline}.gssb_g{text-align:center;padding:8px 0 7px;position:relative}.gssb_h{font-size:15px;height:28px;margin:0.2em;-webkit-appearance:button}.gssb_i{background:#eee}.gss_ifl{visibility:hidden;padding-left:5px}.gssb_i .gss_ifl{visibility:visible}a.gssb_j{font-size:13px;color:#36c;text-decoration:none;line-height:100%}a.gssb_j:hover{text-decoration:underline}.gssb_l{height:1px;background-color:#e5e5e5}.gssb_m{color:#000;background:#fff}.gssb_a{padding:0 9px}.gsib_a{padding:5px 9px 4px 9px}.gscb_a{line-height:27px}.gssb_e{border:0}.gssb_l{margin:5px 0}input.gsc-input::-webkit-input-placeholder{font-size:14px}input.gsc-input:-moz-placeholder{font-size:14px}input.gsc-input::-moz-placeholder{font-size:14px}input.gsc-input:-ms-input-placeholder{font-size:14px}input.gsc-input:focus::-webkit-input-placeholder{color:transparent}input.gsc-input:focus:-moz-placeholder{color:transparent}input.gsc-input:focus::-moz-placeholder{color:transparent}input.gsc-input:focus:-ms-input-placeholder{color:transparent}.gssb_c .gsc-completion-container{position:static}.gssb_c{z-index:5000}.gsc-completion-container table{background:transparent;font-size:inherit;font-family:inherit}.gssb_c > tbody > tr,.gssb_c > tbody > tr > td,.gssb_d,.gssb_d > tbody > tr,.gssb_d > tbody > tr > td,.gssb_e,.gssb_e > tbody > tr,.gssb_e > tbody > tr > td{padding:0;margin:0;border:0}.gssb_a table,.gssb_a table tr,.gssb_a table tr td{padding:0;margin:0;border:0}</style><style type="text/css">.gscb_a{display:inline-block;font:27px/13px arial,sans-serif}.gsst_a .gscb_a{color:#a1b9ed;cursor:pointer}.gsst_a:hover .gscb_a,.gsst_a:focus .gscb_a{color:#36c}.gsst_a{display:inline-block}.gsst_a{cursor:pointer;padding:0 4px}.gsst_a:hover{text-decoration:none!important}.gsst_b{font-size:16px;padding:0 2px;position:relative;user-select:none;-webkit-user-select:none;white-space:nowrap}.gsst_e{vertical-align:middle;opacity:0.55;}.gsst_a:hover .gsst_e,.gsst_a:focus .gsst_e{opacity:0.72;}.gsst_a:active .gsst_e{opacity:1;}.gsst_f{background:white;text-align:left}.gsst_g{background-color:white;border:1px solid #ccc;border-top-color:#d9d9d9;box-shadow:0 2px 4px rgba(0,0,0,0.2);-webkit-box-shadow:0 2px 4px rgba(0,0,0,0.2);margin:-1px -3px;padding:0 6px}.gsst_h{background-color:white;height:1px;margin-bottom:-1px;position:relative;top:-1px}.gsib_a{width:100%;padding:4px 6px 0}.gsib_a,.gsib_b{vertical-align:top}.gssb_c{border:0;position:absolute;z-index:989}.gssb_e{border:1px solid #ccc;border-top-color:#d9d9d9;box-shadow:0 2px 4px rgba(0,0,0,0.2);-webkit-box-shadow:0 2px 4px rgba(0,0,0,0.2);cursor:default}.gssb_f{visibility:hidden;white-space:nowrap}.gssb_k{border:0;display:block;position:absolute;top:0;z-index:988}.gsdd_a{border:none!important}.gsq_a{padding:0}.gssb_a{padding:0 7px}.gssb_a,.gssb_a td{white-space:nowrap;overflow:hidden;line-height:22px}#gssb_b{font-size:11px;color:#36c;text-decoration:none}#gssb_b:hover{font-size:11px;color:#36c;text-decoration:underline}.gssb_g{text-align:center;padding:8px 0 7px;position:relative}.gssb_h{font-size:15px;height:28px;margin:0.2em;-webkit-appearance:button}.gssb_i{background:#eee}.gss_ifl{visibility:hidden;padding-left:5px}.gssb_i .gss_ifl{visibility:visible}a.gssb_j{font-size:13px;color:#36c;text-decoration:none;line-height:100%}a.gssb_j:hover{text-decoration:underline}.gssb_l{height:1px;background-color:#e5e5e5}.gssb_m{color:#000;background:#fff}.gssb_a{padding:0 9px}.gsib_a{padding:5px 9px 4px 9px}.gscb_a{line-height:27px}.gssb_e{border:0}.gssb_l{margin:5px 0}input.gsc-input::-webkit-input-placeholder{font-size:14px}input.gsc-input:-moz-placeholder{font-size:14px}input.gsc-input::-moz-placeholder{font-size:14px}input.gsc-input:-ms-input-placeholder{font-size:14px}input.gsc-input:focus::-webkit-input-placeholder{color:transparent}input.gsc-input:focus:-moz-placeholder{color:transparent}input.gsc-input:focus::-moz-placeholder{color:transparent}input.gsc-input:focus:-ms-input-placeholder{color:transparent}.gssb_c .gsc-completion-container{position:static}.gssb_c{z-index:5000}.gsc-completion-container table{background:transparent;font-size:inherit;font-family:inherit}.gssb_c > tbody > tr,.gssb_c > tbody > tr > td,.gssb_d,.gssb_d > tbody > tr,.gssb_d > tbody > tr > td,.gssb_e,.gssb_e > tbody > tr,.gssb_e > tbody > tr > td{padding:0;margin:0;border:0}.gssb_a table,.gssb_a table tr,.gssb_a table tr td{padding:0;margin:0;border:0}</style><style type="text/css">.gsc-control-cse{font-family:georgia, arial, serif}.gsc-control-cse .gsc-table-result{font-family:georgia, arial, serif}.gsc-refinementsGradient{background:linear-gradient(to left,rgba(255,255,255,1),rgba(255,255,255,0))}.gsc-control-cse{border-color:#FFFFFF;background-color:#FFFFFF}input.gsc-input,.gsc-input-box,.gsc-input-box-hover,.gsc-input-box-focus{border-color:#D3BCA1}.gsc-search-button-v2,.gsc-search-button-v2:hover,.gsc-search-button-v2:focus{border-color:#300D00;background-color:#461200;background-image:none;filter:none}.gsc-search-button-v2 svg{fill:#FFFFFF}.gsc-tabHeader.gsc-tabhActive,.gsc-refinementHeader.gsc-refinementhActive{color:#461200;border-color:#461200;background-color:#FFFFFF}.gsc-tabHeader.gsc-tabhInactive,.gsc-refinementHeader.gsc-refinementhInactive{color:#950000;border-color:#950000;background-color:#FFFFFF}.gsc-webResult.gsc-result,.gsc-results .gsc-imageResult{border-color:#FFFFFF;background-color:#FFFFFF}.gsc-webResult.gsc-result:hover{border-color:#FFFFFF;background-color:#FFFFFF}.gs-webResult.gs-result a.gs-title:link,.gs-webResult.gs-result a.gs-title:link b,.gs-imageResult a.gs-title:link,.gs-imageResult a.gs-title:link b{color:#950000}.gs-webResult.gs-result a.gs-title:visited,.gs-webResult.gs-result a.gs-title:visited b,.gs-imageResult a.gs-title:visited,.gs-imageResult a.gs-title:visited b{color:#950000}.gs-webResult.gs-result a.gs-title:hover,.gs-webResult.gs-result a.gs-title:hover b,.gs-imageResult a.gs-title:hover,.gs-imageResult a.gs-title:hover b{color:#950000}.gs-webResult.gs-result a.gs-title:active,.gs-webResult.gs-result a.gs-title:active b,.gs-imageResult a.gs-title:active,.gs-imageResult a.gs-title:active b{color:#950000}.gsc-cursor-page{color:#950000}a.gsc-trailing-more-results:link{color:#950000}.gs-webResult:not(.gs-no-results-result):not(.gs-error-result) .gs-snippet,.gs-fileFormatType{color:#333333}.gs-webResult div.gs-visibleUrl{color:#A25B08}.gs-webResult div.gs-visibleUrl-short{color:#A25B08}.gsc-cursor-box{border-color:#FFFFFF}.gsc-results .gsc-cursor-box .gsc-cursor-page{border-color:#950000;background-color:#FFFFFF;color:#950000}.gsc-results .gsc-cursor-box .gsc-cursor-current-page{border-color:#461200;background-color:#FFFFFF;color:#461200}.gsc-webResult.gsc-result.gsc-promotion{border-color:#FEFEDC;background-color:#FFFFCC}.gsc-completion-title{color:#950000}.gsc-completion-snippet{color:#333333}.gs-promotion a.gs-title:link,.gs-promotion a.gs-title:link *,.gs-promotion .gs-snippet a:link{color:#0000CC}.gs-promotion a.gs-title:visited,.gs-promotion a.gs-title:visited *,.gs-promotion .gs-snippet a:visited{color:#0000CC}.gs-promotion a.gs-title:hover,.gs-promotion a.gs-title:hover *,.gs-promotion .gs-snippet a:hover{color:#0000CC}.gs-promotion a.gs-title:active,.gs-promotion a.gs-title:active *,.gs-promotion .gs-snippet a:active{color:#0000CC}.gs-promotion .gs-snippet,.gs-promotion .gs-title .gs-promotion-title-right,.gs-promotion .gs-title .gs-promotion-title-right *{color:#333333}.gs-promotion .gs-visibleUrl,.gs-promotion .gs-visibleUrl-short{color:#A25B08}.gcsc-find-more-on-google{color:#950000}.gcsc-find-more-on-google-magnifier{fill:#950000}</style></head>
+<body onload="highlightlink()">
+
+
+<div id="page" style="margin:-8px;background-color:#f5f5f4;"><div id="container"> <div class="header"><table style="width:100%;margin-bottom:5px"> <tbody><tr> <td> <div style="clear:both;float:left;width:230px;margin-top:15px;margin-left:20px"> <a href="https://www.javatpoint.com/"><img src="./Multiple Inheritance in C++ - javatpoint_files/jtp_logo.png" alt="Javatpoint Logo"></a> </div> <div style="float:left;width:60%;"><script> (function() { var cx = '005383125436438536544:y1edweedxwi'; var gcse = document.createElement('script'); gcse.type = 'text/javascript'; gcse.async = true; gcse.src = 'https://cse.google.com/cse.js?cx=' + cx; var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(gcse, s); })();</script><div id="___gcse_0"><div class="gsc-control-cse gsc-control-cse-en"><div class="gsc-control-wrapper-cse" dir="ltr"><form class="gsc-search-box gsc-search-box-tools" accept-charset="utf-8"><table cellspacing="0" cellpadding="0" role="presentation" class="gsc-search-box"><tbody><tr><td class="gsc-input"><div class="gsc-input-box" id="gsc-iw-id1"><table cellspacing="0" cellpadding="0" role="presentation" id="gs_id50" class="gstl_50 gsc-input" style="width: 100%; padding: 0px;"><tbody><tr><td id="gs_tti50" class="gsib_a"><input autocomplete="off" type="text" size="10" class="gsc-input" name="search" title="search" aria-label="search" id="gsc-i-id1" style="width: 100%; padding: 0px; border: none; margin: 0px; height: auto; outline: none;" dir="ltr" spellcheck="false"></td><td class="gsib_b"><div class="gsst_b" id="gs_st50" dir="ltr"><a class="gsst_a" href="javascript:void(0)" style="display: none;" title="Clear search box" role="button"><span class="gscb_a" id="gs_cb50" aria-hidden="true">×</span></a></div></td></tr></tbody></table></div></td><td class="gsc-search-button"><button class="gsc-search-button gsc-search-button-v2"><svg width="13" height="13" viewBox="0 0 13 13"><title>search</title><path d="m4.8495 7.8226c0.82666 0 1.5262-0.29146 2.0985-0.87438 0.57232-0.58292 0.86378-1.2877 0.87438-2.1144 0.010599-0.82666-0.28086-1.5262-0.87438-2.0985-0.59352-0.57232-1.293-0.86378-2.0985-0.87438-0.8055-0.010599-1.5103 0.28086-2.1144 0.87438-0.60414 0.59352-0.8956 1.293-0.87438 2.0985 0.021197 0.8055 0.31266 1.5103 0.87438 2.1144 0.56172 0.60414 1.2665 0.8956 2.1144 0.87438zm4.4695 0.2115 3.681 3.6819-1.259 1.284-3.6817-3.7 0.0019784-0.69479-0.090043-0.098846c-0.87973 0.76087-1.92 1.1413-3.1207 1.1413-1.3553 0-2.5025-0.46363-3.4417-1.3909s-1.4088-2.0686-1.4088-3.4239c0-1.3553 0.4696-2.4966 1.4088-3.4239 0.9392-0.92727 2.0864-1.3969 3.4417-1.4088 1.3553-0.011889 2.4906 0.45771 3.406 1.4088 0.9154 0.95107 1.379 2.0924 1.3909 3.4239 0 1.2126-0.38043 2.2588-1.1413 3.1385l0.098834 0.090049z"></path></svg></button></td><td class="gsc-clear-button"><div class="gsc-clear-button" title="clear results">&nbsp;</div></td></tr></tbody></table></form><div class="gsc-results-wrapper-nooverlay"><div class="gsc-positioningWrapper"><div class="gsc-tabsAreaInvisible"><div aria-label="refinement" role="tab" class="gsc-tabHeader gsc-inline-block gsc-tabhActive">Custom Search</div><span class="gs-spacer"> </span></div></div><div class="gsc-positioningWrapper"><div class="gsc-refinementsAreaInvisible"></div></div><div class="gsc-above-wrapper-area-invisible"><div class="gsc-above-wrapper-area-backfill-container"></div><table cellspacing="0" cellpadding="0" role="presentation" class="gsc-above-wrapper-area-container"><tbody><tr><td class="gsc-result-info-container"><div class="gsc-result-info-invisible"></div></td><td class="gsc-orderby-container"><div class="gsc-orderby-invisible"><div class="gsc-orderby-label gsc-inline-block">Sort by:</div><div class="gsc-option-menu-container gsc-inline-block"><div class="gsc-selected-option-container gsc-inline-block"><div class="gsc-selected-option">Relevance</div><div class="gsc-option-selector"></div></div><div class="gsc-option-menu-invisible"><div class="gsc-option-menu-item gsc-option-menu-item-highlighted"><div class="gsc-option">Relevance</div></div><div class="gsc-option-menu-item"><div class="gsc-option">Date</div></div></div></div></div></td></tr></tbody></table></div><div class="gsc-adBlockInvisible"></div><div class="gsc-wrapper"><div class="gsc-adBlockInvisible"></div><div class="gsc-resultsbox-invisible"><div class="gsc-resultsRoot gsc-tabData gsc-tabdActive"><div><div class="gsc-expansionArea"></div></div></div></div></div></div></div></div></div> </div> </td> </tr></tbody></table> </div>
+<div class="headermobile">
+<div style="margin-top:10px;padding:0px;text-align:left;">
+<span style="float:left"><input type="image" src="./Multiple Inheritance in C++ - javatpoint_files/menuhome64.png" alt="Go To Top" onclick="showmenu()"></span>
+<span style="float:left"><a href="https://www.javatpoint.com/"><img src="./Multiple Inheritance in C++ - javatpoint_files/jtp_logo(1).png" alt="Javatpoint Logo"></a></span>
+</div>
+<div style="margin:0px;padding:0px;clear:both">
+<script>
+  (function() {
+    var cx = '005383125436438536544:y1edweedxwi';
+    var gcse = document.createElement('script');
+    gcse.type = 'text/javascript';
+    gcse.async = true;
+    gcse.src = 'https://cse.google.com/cse.js?cx=' + cx;
+    var s = document.getElementsByTagName('script')[0];
+    s.parentNode.insertBefore(gcse, s);
+  })();
+</script>
+<div id="___gcse_1"><div class="gsc-control-cse gsc-control-cse-en"><div class="gsc-control-wrapper-cse" dir="ltr"><form class="gsc-search-box gsc-search-box-tools" accept-charset="utf-8"><table cellspacing="0" cellpadding="0" role="presentation" class="gsc-search-box"><tbody><tr><td class="gsc-input"><div class="gsc-input-box" id="gsc-iw-id2"><table cellspacing="0" cellpadding="0" role="presentation" id="gs_id51" class="gstl_51 gsc-input" style="width: 100%; padding: 0px;"><tbody><tr><td id="gs_tti51" class="gsib_a"><input autocomplete="off" type="text" size="10" class="gsc-input" name="search" title="search" aria-label="search" id="gsc-i-id2" dir="ltr" spellcheck="false" style="width: 100%; padding: 0px; border: none; margin: 0px; height: auto; outline: none;"></td><td class="gsib_b"><div class="gsst_b" id="gs_st51" dir="ltr"><a class="gsst_a" href="javascript:void(0)" title="Clear search box" role="button" style="display: none;"><span class="gscb_a" id="gs_cb51" aria-hidden="true">×</span></a></div></td></tr></tbody></table></div></td><td class="gsc-search-button"><button class="gsc-search-button gsc-search-button-v2"><svg width="13" height="13" viewBox="0 0 13 13"><title>search</title><path d="m4.8495 7.8226c0.82666 0 1.5262-0.29146 2.0985-0.87438 0.57232-0.58292 0.86378-1.2877 0.87438-2.1144 0.010599-0.82666-0.28086-1.5262-0.87438-2.0985-0.59352-0.57232-1.293-0.86378-2.0985-0.87438-0.8055-0.010599-1.5103 0.28086-2.1144 0.87438-0.60414 0.59352-0.8956 1.293-0.87438 2.0985 0.021197 0.8055 0.31266 1.5103 0.87438 2.1144 0.56172 0.60414 1.2665 0.8956 2.1144 0.87438zm4.4695 0.2115 3.681 3.6819-1.259 1.284-3.6817-3.7 0.0019784-0.69479-0.090043-0.098846c-0.87973 0.76087-1.92 1.1413-3.1207 1.1413-1.3553 0-2.5025-0.46363-3.4417-1.3909s-1.4088-2.0686-1.4088-3.4239c0-1.3553 0.4696-2.4966 1.4088-3.4239 0.9392-0.92727 2.0864-1.3969 3.4417-1.4088 1.3553-0.011889 2.4906 0.45771 3.406 1.4088 0.9154 0.95107 1.379 2.0924 1.3909 3.4239 0 1.2126-0.38043 2.2588-1.1413 3.1385l0.098834 0.090049z"></path></svg></button></td><td class="gsc-clear-button"><div class="gsc-clear-button" title="clear results">&nbsp;</div></td></tr></tbody></table></form><div class="gsc-results-wrapper-nooverlay"><div class="gsc-positioningWrapper"><div class="gsc-tabsAreaInvisible"><div aria-label="refinement" role="tab" class="gsc-tabHeader gsc-inline-block gsc-tabhActive">Custom Search</div><span class="gs-spacer"> </span></div></div><div class="gsc-positioningWrapper"><div class="gsc-refinementsAreaInvisible"></div></div><div class="gsc-above-wrapper-area-invisible"><div class="gsc-above-wrapper-area-backfill-container"></div><table cellspacing="0" cellpadding="0" role="presentation" class="gsc-above-wrapper-area-container"><tbody><tr><td class="gsc-result-info-container"><div class="gsc-result-info-invisible"></div></td><td class="gsc-orderby-container"><div class="gsc-orderby-invisible"><div class="gsc-orderby-label gsc-inline-block">Sort by:</div><div class="gsc-option-menu-container gsc-inline-block"><div class="gsc-selected-option-container gsc-inline-block"><div class="gsc-selected-option">Relevance</div><div class="gsc-option-selector"></div></div><div class="gsc-option-menu-invisible"><div class="gsc-option-menu-item gsc-option-menu-item-highlighted"><div class="gsc-option">Relevance</div></div><div class="gsc-option-menu-item"><div class="gsc-option">Date</div></div></div></div></div></td></tr></tbody></table></div><div class="gsc-adBlockInvisible"></div><div class="gsc-wrapper"><div class="gsc-adBlockInvisible"></div><div class="gsc-resultsbox-invisible"><div class="gsc-resultsRoot gsc-tabData gsc-tabdActive"><div><div class="gsc-expansionArea"></div></div></div></div></div></div></div></div></div>
+
+</div>
+</div>
+<div id="link" style="clear:both;z-index:999"> <div class="ddsmoothmenu">
+<ul>
+<li><a href="https://www.javatpoint.com/">Home</a></li>
+<li><a href="https://www.javatpoint.com/cpp-tutorial" class="selected">C++</a></li>
+<li><a href="https://www.javatpoint.com/c-programming-language-tutorial">C</a></li>
+<li><a href="https://www.javatpoint.com/c-sharp-tutorial">C#</a></li>
+<li><a href="https://www.javatpoint.com/java-tutorial">Java</a></li>
+<li><a href="https://www.javatpoint.com/php-tutorial">PHP</a></li>
+<li><a href="https://www.javatpoint.com/html-tutorial">HTML</a></li>
+<li><a href="https://www.javatpoint.com/css-tutorial">CSS</a></li>
+<li><a href="https://www.javatpoint.com/javascript-tutorial">JavaScript</a></li>
+<li><a href="https://www.javatpoint.com/jquery-tutorial">jQuery</a></li>
+<li><a href="https://www.javatpoint.com/xml-tutorial">XML</a></li>
+<li><a href="https://www.javatpoint.com/json-tutorial">JSON</a></li>
+<li><a href="https://www.javatpoint.com/ajax-tutorial">Ajax</a></li>
+<li><a href="https://www.javatpoint.com/nodejs-tutorial">Node.js</a></li>
+<li><a href="https://www.javatpoint.com/sql-tutorial">SQL</a></li>
+<li><a href="https://www.javatpoint.com/free-java-projects">Projects</a></li>
+<li><a href="https://www.javatpoint.com/corejava-interview-questions">Interview Q</a></li>
+</ul>
+<br style="clear: left">
+</div></div>
+<div class="mobilemenu" style="clear:both">
+
+<ins class="adPushupAds" data-adpcontrol="hqdgs" data-ver="2" data-siteid="37780" data-ac="PHNjcmlwdCBhc3luYyBzcmM9Ii8vcGFnZWFkMi5nb29nbGVzeW5kaWNhdGlvbi5jb20vcGFnZWFkL2pzL2Fkc2J5Z29vZ2xlLmpzIj48L3NjcmlwdD4KPCEtLSBDbV8zMDB4MjUwX01vYl8xNC85IC0tPgo8aW5zIGNsYXNzPSJhZHNieWdvb2dsZSIKICAgICBzdHlsZT0iZGlzcGxheTppbmxpbmUtYmxvY2s7d2lkdGg6MzAwcHg7aGVpZ2h0OjI1MHB4IgogICAgIGRhdGEtYWQtY2xpZW50PSJjYS1wdWItNDY5OTg1ODU0OTAyMzM4MiIKICAgICBkYXRhLWFkLXNsb3Q9IjcwMTQyNzI1MTkiPjwvaW5zPgo8c2NyaXB0PgooYWRzYnlnb29nbGUgPSB3aW5kb3cuYWRzYnlnb29nbGUgfHwgW10pLnB1c2goe30pOwo8L3NjcmlwdD4=" data-push="1"></ins><script data-cfasync="false" type="text/javascript">(function (w, d) { for (var i = 0, j = d.getElementsByTagName("ins"), k = j[i]; i < j.length; k = j[++i]){ if(k.className == "adPushupAds" && k.getAttribute("data-push") != "1") { ((w.adpushup = w.adpushup || {}).control = (w.adpushup.control || [])).push(k); k.setAttribute("data-push", "1");} } })(window, document);</script>
+</div>
+<div id="menu">
+<div class="leftmenu2">
+<h2 class="spanh2"><span class="spanh2">C++ Tutorial</span></h2>
+</div>
+<div class="leftmenu">
+<a href="https://www.javatpoint.com/cpp-tutorial">C++ Tutorial</a>
+<a href="https://www.javatpoint.com/c-vs-cpp">C vs C++</a>
+<a href="https://www.javatpoint.com/cpp-history">C++ History</a>
+<a href="https://www.javatpoint.com/cpp-features">C++ Features</a>
+<a href="https://www.javatpoint.com/cpp-installation">C++ Installation </a>
+<a href="https://www.javatpoint.com/cpp-program">C++ Program</a>
+<a href="https://www.javatpoint.com/cpp-basic-input-output">C++ cout, cin, endl</a>
+<a href="https://www.javatpoint.com/cpp-variable">C++ Variable</a>
+<a href="https://www.javatpoint.com/cpp-data-types">C++ Data types</a>
+<a href="https://www.javatpoint.com/cpp-keywords">C++ Keywords</a>
+<a href="https://www.javatpoint.com/cpp-operators">C++ Operators</a>
+<a href="https://www.javatpoint.com/cpp-identifiers">C++ Identifiers</a>
+<a href="https://www.javatpoint.com/cpp-expression">C++ Expression</a>
+</div>
+<div class="leftmenu2">
+<h2 class="spanh2"><span class="spanh2">C++ Control Statement</span></h2>
+</div>
+<div class="leftmenu">
+<a href="https://www.javatpoint.com/cpp-if-else">C++ if-else</a>
+<a href="https://www.javatpoint.com/cpp-switch">C++ switch</a>
+<a href="https://www.javatpoint.com/cpp-for-loop">C++ For Loop</a>
+<a href="https://www.javatpoint.com/cpp-while-loop">C++ While Loop</a>
+<a href="https://www.javatpoint.com/cpp-do-while-loop">C++ Do-While Loop</a>
+<a href="https://www.javatpoint.com/cpp-break-statement">C++ Break Statement</a>
+<a href="https://www.javatpoint.com/cpp-continue-statement">C++ Continue Statement</a>
+<a href="https://www.javatpoint.com/cpp-goto-statement">C++ Goto Statement</a>
+<a href="https://www.javatpoint.com/cpp-comments">C++ Comments</a>
+</div>
+<div class="leftmenu2">
+<h2 class="spanh2"><span class="spanh2">C++ Functions</span></h2>
+</div>
+<div class="leftmenu">
+<a href="https://www.javatpoint.com/cpp-functions">C++ Functions</a>
+<a href="https://www.javatpoint.com/call-by-value-and-call-by-reference-in-cpp">Call by value &amp; reference</a>
+<a href="https://www.javatpoint.com/cpp-recursion">C++ Recursion</a>
+<a href="https://www.javatpoint.com/cpp-storage-classes">C++ Storage Classes</a>
+</div>
+<div class="leftmenu2">
+<h2 class="spanh2"><span class="spanh2">C++ Arrays</span></h2>
+</div>
+<div class="leftmenu">
+<a href="https://www.javatpoint.com/cpp-arrays">C++ Arrays</a>
+<a href="https://www.javatpoint.com/cpp-passing-array-to-function">C++ Array to Function</a>
+<a href="https://www.javatpoint.com/cpp-multidimensional-array">Multidimensional Arrays</a>
+</div>
+<div class="leftmenu2">
+<h2 class="spanh2"><span class="spanh2">C++ Pointers</span></h2>
+</div>
+<div class="leftmenu">
+<a href="https://www.javatpoint.com/cpp-pointers">C++ Pointers</a>
+<a href="https://www.javatpoint.com/sizeof-operator-in-cpp">sizeof() operator in C++</a>
+<a href="https://www.javatpoint.com/cpp-array-of-pointers">C++ Array of Pointers</a>
+<a href="https://www.javatpoint.com/cpp-void-pointer">C++ Void Pointer</a>
+<a href="https://www.javatpoint.com/cpp-references">C++ References</a>
+<a href="https://www.javatpoint.com/cpp-reference-vs-pointer">Reference vs Pointer</a>
+<a href="https://www.javatpoint.com/function-pointer-in-cpp">Function Pointer in C++</a>
+<a href="https://www.javatpoint.com/cpp-memory-management">C++ Memory Management</a>
+<a href="https://www.javatpoint.com/malloc-vs-new-in-cpp">malloc() vs new in C++</a>
+<a href="https://www.javatpoint.com/free-vs-delete-in-cpp">free vs delete in C++</a>
+</div>
+<div class="leftmenu2">
+<h2 class="spanh2"><span class="spanh2">C++ Object Class</span></h2>
+</div>
+<div class="leftmenu">
+<a href="https://www.javatpoint.com/cpp-oops-concepts">C++ OOPs Concepts</a>
+<a href="https://www.javatpoint.com/cpp-object-and-class">C++ Object Class</a>
+<a href="https://www.javatpoint.com/cpp-constructor">C++ Constructor</a>
+<a href="https://www.javatpoint.com/cpp-copy-constructor">C++ Copy Constructor</a>
+<a href="https://www.javatpoint.com/cpp-destructor">C++ Destructor</a>
+<a href="https://www.javatpoint.com/cpp-this-pointer">C++ this Pointer</a>
+<a href="https://www.javatpoint.com/cpp-static">C++ static</a>
+<a href="https://www.javatpoint.com/cpp-structs">C++ Structs</a>
+<a href="https://www.javatpoint.com/cpp-enumeration">C++ Enumeration</a>
+<a href="https://www.javatpoint.com/cpp-friend-function">C++ Friend Function</a>
+<a href="https://www.javatpoint.com/cpp-math-functions">C++ Math Functions</a>
+</div>
+<div class="leftmenu2">
+<h2 class="spanh2"><span class="spanh2">C++ Inheritance</span></h2>
+</div>
+<div class="leftmenu">
+<a href="https://www.javatpoint.com/cpp-inheritance">C++ Inheritance</a>
+<a href="https://www.javatpoint.com/cpp-aggregation">C++ Aggregation</a>
+</div>
+<div class="leftmenu2">
+<h2 class="spanh2"><span class="spanh2">C++ Polymorphism</span></h2>
+</div>
+<div class="leftmenu">
+<a href="https://www.javatpoint.com/cpp-polymorphism">C++ Polymorphism</a>
+<a href="https://www.javatpoint.com/cpp-overloading">C++ Overloading</a>
+<a href="https://www.javatpoint.com/cpp-function-overriding">C++ Overriding</a>
+<a href="https://www.javatpoint.com/cpp-virtual-function">C++ Virtual Function</a>
+</div>
+<div class="leftmenu2">
+<h2 class="spanh2"><span class="spanh2">C++ Abstraction</span></h2>
+</div>
+<div class="leftmenu">
+<a href="https://www.javatpoint.com/interfaces-in-cpp">C++ Interfaces</a>
+<a href="https://www.javatpoint.com/data-abstraction-in-cpp">C++ Data Abstraction</a>
+</div>
+<div class="leftmenu2">
+<h2 class="spanh2"><span class="spanh2">C++ Namespaces</span></h2>
+</div>
+<div class="leftmenu">
+<a href="https://www.javatpoint.com/cpp-namespaces">C++ Namespaces</a>
+</div>
+<div class="leftmenu2">
+<h2 class="spanh2"><span class="spanh2">C++ Strings</span></h2>
+</div>
+<div class="leftmenu">
+<a href="https://www.javatpoint.com/cpp-strings">C++ Strings</a>
+</div>
+<div class="leftmenu2">
+<h2 class="spanh2"><span class="spanh2">C++ Exceptions</span></h2>
+</div>
+<div class="leftmenu">
+<a href="https://www.javatpoint.com/cpp-exception-handling">C++ Exception Handling</a>
+<a href="https://www.javatpoint.com/cpp-try-catch">C++ try/catch</a>
+<a href="https://www.javatpoint.com/cpp-user-defined-exceptions">C++ User-Defined</a>
+</div>
+<div class="leftmenu2">
+<h2 class="spanh2"><span class="spanh2">C++ Templates</span></h2>
+</div>
+<div class="leftmenu">
+<a href="https://www.javatpoint.com/cpp-templates">C++ Templates</a>
+</div>
+<div class="leftmenu2">
+<h2 class="spanh2"><span class="spanh2">Signal Handling</span></h2>
+</div>
+<div class="leftmenu">
+<a href="https://www.javatpoint.com/cpp-signal-handling">C++ Signal Handling</a>
+</div>
+<div class="leftmenu2">
+<h2 class="spanh2"><span class="spanh2">C++ File &amp; Stream</span></h2>
+</div>
+<div class="leftmenu">
+<a href="https://www.javatpoint.com/cpp-files-and-streams">C++ File &amp; Stream</a>
+<a href="https://www.javatpoint.com/cpp-getline">C++ getline()</a>
+</div>
+<div class="leftmenu2">
+<h2 class="spanh2"><span class="spanh2">C++ Misc</span></h2>
+</div>
+<div class="leftmenu">
+<a href="https://www.javatpoint.com/cpp-vs-csharp">C++ vs C#</a>
+<a href="https://www.javatpoint.com/cpp-int-to-string">C++ int to string</a>
+<a href="https://www.javatpoint.com/cpp-vs-python">C++ vs Python</a>
+<a href="https://www.javatpoint.com/structure-vs-class-in-cpp">Structure vs Class in C++</a>
+<a href="https://www.javatpoint.com/virtual-destructor-in-cpp">Virtual Destructor in C++</a>
+<a href="https://www.javatpoint.com/constructor-vs-destructor-in-cpp">Constructor vs Destructor in C++</a>
+<a href="https://www.javatpoint.com/bit-manipulation-cpp">Bit manipulation C++</a>
+<a href="https://www.javatpoint.com/what-is-a-reference-variable">What is a reference variable</a>
+<a href="https://www.javatpoint.com/friend-function-in-cpp">Friend Function in C++</a>
+<a href="https://www.javatpoint.com/snake-code-in-cpp">Snake Code in C++</a>
+<a href="https://www.javatpoint.com/inline-function-in-cpp">Inline function in C++</a>
+<a href="https://www.javatpoint.com/virtual-function-vs-pure-virtual-function-in-cpp">Virtual function vs Pure virtual function in C++</a>
+<a href="https://www.javatpoint.com/how-to-split-strings-in-cpp">How to Split strings in C++</a>
+<a href="https://www.javatpoint.com/range-based-for-loop-in-cpp">Range-based for loop in C++</a>
+<a href="https://www.javatpoint.com/type-conversion-in-cpp">Type Conversion in C++</a>
+<a href="https://www.javatpoint.com/lcm-of-two-numbers-in-cpp">LCM of two numbers in C++</a>
+<a href="https://www.javatpoint.com/convert-string-to-integer-in-cpp">Convert string to integer in C++</a>
+</div>
+<div class="leftmenu2">
+<h2 class="spanh2"><span class="spanh2">C++ STL Tutorial</span></h2>
+</div>
+<div class="leftmenu">
+<a href="https://www.javatpoint.com/cpp-stl-components">C++ STL Components</a>
+<a href="https://www.javatpoint.com/cpp-vector">C++ Vector</a>
+<a href="https://www.javatpoint.com/initialize-vector-in-cpp">Initialize Vector in C++</a>
+<a href="https://www.javatpoint.com/post/cpp-deque">C++ Deque</a>
+<a href="https://www.javatpoint.com/post/cpp-list">C++ List</a>
+<a href="https://www.javatpoint.com/cpp-set">C++ Set</a>
+<a href="https://www.javatpoint.com/cpp-stack">C++ Stack</a>
+<a href="https://www.javatpoint.com/cpp-queue">C++ Queue</a>
+<a href="https://www.javatpoint.com/priority-queue-in-cpp">C++ Priority Queue</a>
+<a href="https://www.javatpoint.com/post/cpp-map">C++ Map</a>
+<a href="https://www.javatpoint.com/post/cpp-multimap">C++ Multimap</a>
+<a href="https://www.javatpoint.com/post/cpp-map">C++ Map</a>
+<a href="https://www.javatpoint.com/post/cpp-bitset">C++ Bitset</a>
+<a href="https://www.javatpoint.com/cpp-algorithm">C++ Algorithm</a>
+</div>
+<div class="leftmenu2">
+<h2 class="spanh2"><span class="spanh2">C++ Iterators</span></h2>
+</div>
+<div class="leftmenu">
+<a href="https://www.javatpoint.com/cpp-iterators">C++ Iterators</a>
+<a href="https://www.javatpoint.com/cpp-bidirectional-iterator">C++ Bidirectional Iterator</a>
+<a href="https://www.javatpoint.com/cpp-forward-iterator">C++ Forward Iterator</a>
+<a href="https://www.javatpoint.com/cpp-input-iterator">C++ Input Iterator</a>
+<a href="https://www.javatpoint.com/cpp-output-iterator">C++ Output Iterator</a>
+</div>
+<div class="leftmenu2">
+<h2 class="spanh2"><span class="spanh2">C++ Programs</span></h2>
+</div>
+<div class="leftmenu">
+<a href="https://www.javatpoint.com/cpp-programs">C++Programs</a>
+<a href="https://www.javatpoint.com/fibonacci-series-in-cpp"><span>Fibonacci Series</span></a>
+<a href="https://www.javatpoint.com/prime-number-program-in-cpp"><span>Prime Number</span></a>
+<a href="https://www.javatpoint.com/palindrome-program-in-cpp"><span>Palindrome Number</span></a>
+<a href="https://www.javatpoint.com/factorial-program-in-cpp"><span>Factorial</span></a>
+<a href="https://www.javatpoint.com/armstrong-number-in-cpp"><span>Armstrong Number</span></a>
+<a href="https://www.javatpoint.com/sum-of-digits-program-in-cpp"><span>Sum of digits</span></a>
+<a href="https://www.javatpoint.com/cpp-program-to-reverse-number"><span>Reverse Number</span></a>
+<a href="https://www.javatpoint.com/cpp-program-to-swap-two-numbers-without-third-variable"><span>Swap Number</span></a>
+<a href="https://www.javatpoint.com/matrix-multiplication-in-cpp"><span>Matrix Multiplication</span></a>
+<a href="https://www.javatpoint.com/cpp-program-to-convert-decimal-to-binary"><span>Decimal to Binary</span></a>
+<a href="https://www.javatpoint.com/cpp-program-to-convert-number-in-characters"><span>Number in Characters</span></a>
+<a href="https://www.javatpoint.com/cpp-program-to-print-alphabet-triangle"><span>Alphabet Triangle</span></a>
+<a href="https://www.javatpoint.com/cpp-program-to-print-number-triangle"><span>Number Triangle</span></a>
+<a href="https://www.javatpoint.com/cpp-program-to-generate-fibonacci-triangle"><span>Fibonacci Triangle</span></a>
+<a href="https://www.javatpoint.com/char-array-to-string-in-cpp">Char array to string in C++</a>
+<a href="https://www.javatpoint.com/calculator-program-in-cpp">Calculator Program in C++</a>
+<a href="https://www.javatpoint.com/program-to-convert-infix-to-postfix-expression-in-cpp-using-the-stack-data-structure">Program to convert infix to postfix expression in C++ using the Stack Data Structure</a>
+<a href="https://www.javatpoint.com/cpp-program-to-merge-two-unsorted-arrays">C++ program to merge two unsorted arrays</a>
+<a href="https://www.javatpoint.com/cpp-coin-change-program">C++ coin change program</a>
+<a href="https://www.javatpoint.com/cpp-program-to-add-two-complex-numbers-using-class">C++ program to add two complex numbers using class</a>
+<a href="https://www.javatpoint.com/cpp-program-to-find-the-gcd-of-two-numbers">C++ program to find the GCD of two numbers</a>
+<a href="https://www.javatpoint.com/cpp-program-to-find-greatest-of-four-numbers">C++ program to find greatest of four numbers</a>
+<a href="https://www.javatpoint.com/delete-operator-in-cpp">Delete Operator in C++</a>
+<a href="https://www.javatpoint.com/how-to-concatenate-two-strings-in-cpp">How to concatenate two strings in c++</a>
+<a href="https://www.javatpoint.com/upcasting-and-downcasting-in-cpp">Upcasting and Downcasting in C++</a>
+<a href="https://www.javatpoint.com/cpp-dijkstra-algorithm-using-priority-queue">C++ Dijkstra Algorithm using the priority queue</a>
+<a href="https://www.javatpoint.com/constructor-overloading-in-cpp">Constructor overloading in C++</a>
+<a href="https://www.javatpoint.com/default-arguments-in-cpp">Default arguments in C++</a>
+<a href="https://www.javatpoint.com/dynamic-binding-in-cpp">Dynamic binding in C++</a>
+<a href="https://www.javatpoint.com/dynamic-memory-allocation-in-cpp">Dynamic memory allocation in C++</a>
+<a href="https://www.javatpoint.com/fast-input-and-output-in-cpp">Fast input and output in C++</a>
+<a href="https://www.javatpoint.com/hierarchical-inheritance-in-cpp">Hierarchical inheritance in C++</a>
+<a href="https://www.javatpoint.com/hybrid-inheritance-in-cpp">Hybrid inheritance in C++</a>
+<a href="https://www.javatpoint.com/multiple-inheritance-in-cpp" style="color: black;"><strong>Multiple Inheritance in C++</strong> <img src="./Multiple Inheritance in C++ - javatpoint_files/open-12.png" alt="open link"></a>
+<a href="https://www.javatpoint.com/cpp-bitwise-xor-operator">C++ Bitwise XOR Operator</a>
+<a href="https://www.javatpoint.com/different-ways-to-compare-strings-in-cpp">Different Ways to Compare Strings in C++</a>
+<a href="https://www.javatpoint.com/reverse-an-array-in-cpp">Reverse an Array in C++</a>
+<a href="https://www.javatpoint.com/cpp-date-and-time">C++ date and time</a>
+<a href="https://www.javatpoint.com/copy-elision-in-cpp">Copy elision in C++</a>
+<a href="https://www.javatpoint.com/array-of-sets-in-cpp">Array of sets in C++</a>
+<a href="https://www.javatpoint.com/smart-pointers-in-cpp">Smart pointers in C++</a>
+<a href="https://www.javatpoint.com/types-of-polymorphism-in-cpp">Types of polymorphism in C++</a>
+<a href="https://www.javatpoint.com/implementing-the-sets-without-cpp-stl-containers">Implementing the sets without C++ STL containers</a>
+<a href="https://www.javatpoint.com/scope-resolution-operator-in-cpp">Scope Resolution Operator in C++</a>
+<a href="https://www.javatpoint.com/static-member-function-in-cpp">Static Member Function in C++</a>
+<a href="https://www.javatpoint.com/const-keyword-in-cpp">Const keyword in C++</a>
+<a href="https://www.javatpoint.com/memset-in-cpp">Memset in C++</a>
+<a href="https://www.javatpoint.com/type-casting-in-cpp">Type Casting in C++</a>
+<a href="https://www.javatpoint.com/binary-operator-overloading-in-cpp">Binary Operator Overloading in C++</a>
+<a href="https://www.javatpoint.com/binary-search-in-cpp">Binary Search in C++</a>
+<a href="https://www.javatpoint.com/inheritance-in-cpp-vs-java">Inheritance in C++ vs JAVA</a>
+<a href="https://www.javatpoint.com/static-keyword-in-cpp-and-java">Static Keyword in C++ and JAVA</a>
+<a href="https://www.javatpoint.com/exception-handling-in-cpp-and-java">Exception Handling in C++ and JAVA</a>
+<a href="https://www.javatpoint.com/foreach-in-cpp-and-java">Foreach in C++ and JAVA</a>
+<a href="https://www.javatpoint.com/cpp-templates-vs-java-generics">C++ templates vs. Java generics</a>
+<a href="https://www.javatpoint.com/similarities-and-differences-in-cpp-and-java">Similarities and Differences in C++ and JAVA</a>
+<a href="https://www.javatpoint.com/default-virtual-behaviour-in-cpp-and-java">Default Virtual Behaviour in C++ and JAVA</a>
+<a href="https://www.javatpoint.com/cpp-hashing-programme-with-chaining">C++ hashing programme with chaining</a>
+<a href="https://www.javatpoint.com/largest-subset-whose-all-elements-are-fibonacci-numbers">Largest subset whose all elements are Fibonacci numbers</a>
+<a href="https://www.javatpoint.com/opaque-pointer">Opaque Pointer</a>
+<a href="https://www.javatpoint.com/pointers-such-as-dangling-void-null-and-wild">Pointers such as Dangling, Void, Null, and Wild</a>
+<a href="https://www.javatpoint.com/when-do-we-pass-arguments-by-reference-or-pointer">When do we pass arguments by reference or pointer</a>
+<a href="https://www.javatpoint.com/find-member-function-in-vector-in-cpp">Find Member Function in Vector in C++</a>
+<a href="https://www.javatpoint.com/smart-pointer">Smart Pointer</a>
+<a href="https://www.javatpoint.com/currency-converter-in-cpp">Currency Converter in C++</a>
+<a href="https://www.javatpoint.com/find-max-in-array-function-cpp">Find max in Array Function C++</a>
+<a href="https://www.javatpoint.com/stopwatch-in-cpp">Stopwatch in C++</a>
+<a href="https://www.javatpoint.com/student-data-management-in-cpp">Student Data Management in C++</a>
+<a href="https://www.javatpoint.com/tic-tac-toe-in-cpp">Tic-Tac-Toe in C++</a>
+<a href="https://www.javatpoint.com/credit-card-validator-in-cpp">Credit Card Validator in C++</a>
+<a href="https://www.javatpoint.com/hotel-management-in-cpp">Hotel Management in C++</a>
+<a href="https://www.javatpoint.com/pacman-game-in-cpp">Pacman Game in C++</a>
+<a href="https://www.javatpoint.com/billing-management-system-in-cpp">Billing Management System in C++</a>
+<a href="https://www.javatpoint.com/4-dimensional-array-in-c-or-cpp">4-Dimensional Array in C/C++</a>
+<a href="https://www.javatpoint.com/accumulate-and-partial_sum-in-cpp-stl-numeric-header">accumulate() and partial_sum() in C++ STL : Numeric header</a>
+<a href="https://www.javatpoint.com/arrays-of-vectors-in-cpp-stl">Arrays of Vectors in C++ STL</a>
+<a href="https://www.javatpoint.com/catching-base-and-derived-classes-as-exceptions-in-cpp-and-java">Catching Base and Derived Classes as Exceptions in C++ and Java</a>
+<a href="https://www.javatpoint.com/forward-list-in-cpp-manipulating-functions">Forward List in C++ Manipulating Functions</a>
+<a href="https://www.javatpoint.com/assertions-in-c-cpp">Assertions in C/C++</a>
+<a href="https://www.javatpoint.com/list-back-function-in-cpp-stl">List back() function in C++ STL</a>
+<a href="https://www.javatpoint.com/type-inference-in-cpp-auto-and-decltype">Type Inference in C++ (auto and decltype)</a>
+<a href="https://www.javatpoint.com/attributes-in-cpp">Attributes in C++</a>
+<a href="https://www.javatpoint.com/bigint-in-cpp-with-examples">BigInt (Big Integers) in C++ with Examples</a>
+<a href="https://www.javatpoint.com/2d-vector-in-cpp-with-user-defined-size">2D Vector in C++ with User Defined Size</a>
+<a href="https://www.javatpoint.com/declare-a-c-cpp-function-returning-pointer-to-array-of-integer-pointers">Declare a C/C++ Function Returning Pointer to Array of Integer Pointers</a>
+<a href="https://www.javatpoint.com/jump-statements-in-cpp">Jump Statements in C++</a>
+<a href="https://www.javatpoint.com/maximum-number-of-edges-to-be-added-to-a-tree-so-that-it-stays-a-bipartite-graph">Maximum Number of Edges to be Added to a Tree so that it stays a Bipartite Graph</a>
+<a href="https://www.javatpoint.com/modulus-of-two-float-or-double-numbers">Modulus of two Float or Double Numbers</a>
+<a href="https://www.javatpoint.com/top-10-cpp-project-ideas-for-beginners">Top 10 C++ Project Ideas for Beginners</a>
+<a href="https://www.javatpoint.com/cpp-class-member-functions">C++ Class Member Functions</a>
+<a href="https://www.javatpoint.com/cpp-program-for-find-k-pairs-with-smallest-sums-in-two-arrays">C++ Program for Find k pairs with Smallest Sums in Two Arrays</a>
+<a href="https://www.javatpoint.com/check-if-bits-in-range-l-to-r-of-two-numbers-are-complement-of-each-other-or-not">Check if bits in Range L to R of Two Numbers are Complement of Each other or Not</a>
+<a href="https://www.javatpoint.com/university-management-system-in-cpp">University Management System in C++</a>
+<a href="https://www.javatpoint.com/advantage-and-disadvantage-friend-function-cpp">Advantage and Disadvantage Friend Function C++</a>
+<a href="https://www.javatpoint.com/cpp-pre-processors">C++ Pre-processors</a>
+<a href="https://www.javatpoint.com/difference-between-circular-queue-and-priority-queue">Difference between Circular Queue and Priority Queue</a>
+<a href="https://www.javatpoint.com/forward_list-cbefore_begin-in-cpp-stl">forward_list::cbefore_begin() in C++ STL</a>
+<a href="https://www.javatpoint.com/heap-in-cpp-stl">Heap in C++ STL | make_heap(), push_heap(),pop_heap(), sort_heap(), is_heap, is_heap_until()</a>
+<a href="https://www.javatpoint.com/how-does-void-differ-in-c-and-cpp">How does 'void*' differ in C and C++</a>
+<a href="https://www.javatpoint.com/initialise-an-array-of-objects-with-parameterised-constructors-in-cpp">Initialise an Array of objects with Parameterised Constructors in C++</a>
+<a href="https://www.javatpoint.com/list-push_front-and-list-push_back-in-cpp-stl">list::push_front() and list::push_back() in C++ STL</a>
+<a href="https://www.javatpoint.com/maximize-the-cost-of-repeated-removal-of-string-p-or-its-reverse-from-the-string-s">Maximize the Cost of Repeated Removal of String P or its Reverse from the String S</a>
+<a href="https://www.javatpoint.com/canteen-management-system-in-cpp">Canteen Management System in C++</a>
+<a href="https://www.javatpoint.com/declare-a-c-cpp-function-returning-pointer-to-array-of-integer-pointers">Declare a C/C++ Function Returning Pointer to Array of Integer Pointers</a>
+<a href="https://www.javatpoint.com/name-mangling-and-extern-c-in-cpp">Name Mangling and Extern C in C++</a>
+<a href="https://www.javatpoint.com/different-compilers-for-cpp">Different Compilers for C++</a>
+<a href="https://www.javatpoint.com/diamond-problem-in-cpp">Diamond Problem in C++</a>
+<a href="https://www.javatpoint.com/function-prototype-in-cpp">Function Prototype in C++</a>
+<a href="https://www.javatpoint.com/generic-programming-in-cpp">Generic Programming in C++</a>
+<a href="https://www.javatpoint.com/school-fee-enquiry-system-in-cpp">School Fee Enquiry System in C++</a>
+<a href="https://www.javatpoint.com/vector-pair-in-cpp">Vector Pair in C++</a>
+<a href="https://www.javatpoint.com/what-is-a-token-in-cpp">What is a Token in C++</a>
+<a href="https://www.javatpoint.com/what-is-include-iostream-in-cpp">What is include iostream in C++</a>
+<a href="https://www.javatpoint.com/cpp-using-vs-typedef">C++ 'Using' vs 'Typedef'</a>
+<a href="https://www.javatpoint.com/execute-both-if-and-else-statements-in-c-cpp-simultaneously">Execute both if and else Statements in C/C++ Simultaneously</a>
+<a href="https://www.javatpoint.com/how-to-compile-32-bit-program-on-64-bit-gcc-in-c-and-cpp">How to Compile 32-bit Program on 64-bit GCC in C and C++</a>
+<a href="https://www.javatpoint.com/how-to-create-and-use-unique-ptr-instances">How to Create and Use ''unique_ptr'' Instances</a>
+<a href="https://www.javatpoint.com/level-order-traversal-in-spiral-form">Level Order Traversal in Spiral form</a>
+<a href="https://www.javatpoint.com/problem-with-scanf-when-there-is-fgets-gets-scanf-after-it">Problem with scanf() when there is fgets()/gets()/scanf() After it</a>
+<a href="https://www.javatpoint.com/bfs-code-in-cpp">BFS Code in C++</a>
+<a href="https://www.javatpoint.com/create-linked-list-in-cpp">Create Linked List In C++</a>
+<a href="https://www.javatpoint.com/function-overloading-in-cpp">Function Overloading in C++</a>
+<a href="https://www.javatpoint.com/std-minmax-and-std-minmax_element-in-cpp-stl">std::minmax() and std::minmax_element() in C++ STL</a>
+<a href="https://www.javatpoint.com/multimap-emplace_hint-function-in-cpp-stl">multimap::emplace_hint() Function in C++ STL</a>
+<a href="https://www.javatpoint.com/multimap-find-in-cpp-stl">Multimap find() in C++ STL</a>
+<a href="https://www.javatpoint.com/multiple-comparisons-in-a-cpp-priority-queue">Multiple Comparisons in a C++ Priority Queue</a>
+<a href="https://www.javatpoint.com/name-mangling-and-extern-c-in-cpp-concept">Name Mangling and Extern C in C++ Concept</a>
+<a href="https://www.javatpoint.com/parameterised-constructor-in-cpp">Parameterised Constructor in C++</a>
+<a href="https://www.javatpoint.com/remove-duplicates-from-sorted-array-in-cpp">Remove Duplicates from Sorted Array in C++</a>
+<a href="https://www.javatpoint.com/returning-multiple-values-from-a-function-using-tuple-and-pair-in-cpp">Returning Multiple Values from a Function using Tuple and Pair in C++</a>
+<a href="https://www.javatpoint.com/scope-resolution-operator-vs-this-pointer">Scope Resolution Operator vs this Pointer</a>
+<a href="https://www.javatpoint.com/set-a-variable-without-using-arithmetic-relational-or-conditional-operator">Set a variable without using Arithmetic, Relational or Conditional Operator</a>
+<a href="https://www.javatpoint.com/cpp-program-to-sort-an-array-in-descending-order">C++ Program To Sort An Array In Descending Order</a>
+<a href="https://www.javatpoint.com/timsort-implementation-using-cpp">Timsort Implementation Using C++</a>
+<a href="https://www.javatpoint.com/what-happens-when-we-exceed-valid-range-of-built-in-data-types-in-cpp">What Happens When We Exceed Valid Range of Built-in Data Types in C++</a>
+<a href="https://www.javatpoint.com/naked-function-calls-in-cpp">Naked Function Calls in C++</a>
+<a href="https://www.javatpoint.com/operator-overloading-in-cpp">What is operator overloading in C++</a>
+<a href="https://www.javatpoint.com/simple-car-racing-game-code-in-cpp">Simple Car Racing Game Code in C++</a>
+<a href="https://www.javatpoint.com/sjf-cpu-scheduling-program-in-cpp">SJF CPU Scheduling Program in C++</a>
+<a href="https://www.javatpoint.com/virtual-functions-and-runtime-polymorphism">Virtual functions and runtime polymorphism</a>
+<a href="https://www.javatpoint.com/abstract-class-in-cpp">What is an abstract class in C++</a>
+<a href="https://www.javatpoint.com/function-overloading-in-cpp">What is function overloading in C++</a>
+<a href="https://www.javatpoint.com/add-in-vector-cpp-language">Add in Vector C++ Language</a>
+<a href="https://www.javatpoint.com/default-arguments-and-virtual-function">Default arguments and virtual function</a>
+<a href="https://www.javatpoint.com/private-inheritance-in-cpp">Private Inheritance in C++</a>
+<a href="https://www.javatpoint.com/socket-programming-in-c-or-cpp">Socket Programming in C/C++</a>
+<a href="https://www.javatpoint.com/multithreading-in-cpp-with-examples">Multithreading in C++ with Examples</a>
+<a href="https://www.javatpoint.com/static-object-in-cpp">Static Object in C++</a>
+<a href="https://www.javatpoint.com/what-is-runtime-type-information">What is runtime type information</a>
+<a href="https://www.javatpoint.com/operator-overloading-in-cpp">Operator Overloading in C++</a>
+<a href="https://www.javatpoint.com/add-two-array-in-cpp">Add two Array in C++</a>
+<a href="https://www.javatpoint.com/calling-conventions-in-cpp">Calling Conventions in C++</a>
+<a href="https://www.javatpoint.com/hashset-in-cpp">HASHSET IN C++</a>
+<a href="https://www.javatpoint.com/how-many-children-does-a-binary-tree-have">How many Children does a Binary Tree have</a>
+<a href="https://www.javatpoint.com/how-to-create-and-use-ccomptr-and-ccomqiptr-instances">How to Create and use CComPtr and CComQIPtr Instances</a>
+<a href="https://www.javatpoint.com/naming-conventions-in-cpp">Naming Conventions in C++</a>
+<a href="https://www.javatpoint.com/dynamic-array">DYNAMIC ARRAY</a>
+<a href="https://www.javatpoint.com/strcmp-in-cpp">STRCMP() IN C++</a>
+<a href="https://www.javatpoint.com/add-two-numbers-using-cass-in-cpp">Add two Numbers using Class in C++</a>
+<a href="https://www.javatpoint.com/adding-of-two-numbers-in-cpp">Adding of Two Numbers in C++</a>
+<a href="https://www.javatpoint.com/adding-two-arrays-in-cpp">Adding Two Arrays in C++</a>
+<a href="https://www.javatpoint.com/adding-two-objects-in-cpp">Adding Two Objects in C++</a>
+<a href="https://www.javatpoint.com/add-two-numbers-using-function-in-cpp">Add two Numbers using Function in C++</a>
+<a href="https://www.javatpoint.com/cpp-class-to-prevent-object-copies">C++ class to prevent object copies</a>
+<a href="https://www.javatpoint.com/raw-string-literal-in-cpp">Raw string literal in C++</a>
+<a href="https://www.javatpoint.com/add-two-no-in-cpp-program">Add Two no in C++ program</a>
+<a href="https://www.javatpoint.com/binary-decision-tree">Binary Decision Tree</a>
+<a href="https://www.javatpoint.com/boolean-to-string-in-cpp">Boolean to String in C++</a>
+<a href="https://www.javatpoint.com/stoi-function-in-cpp">Stoi function in C++</a>
+<a href="https://www.javatpoint.com/tolower-in-cpp">ToLOWER In C++</a>
+<a href="https://www.javatpoint.com/unordered_map-in-cpp">UNORDERED_MAP IN C++</a>
+<a href="https://www.javatpoint.com/cpp-books-for-beginners">C++ Books for Beginners</a>
+<a href="https://www.javatpoint.com/activity-selection-problem-in-cpp">Activity Selection Problem in C++</a>
+<a href="https://www.javatpoint.com/activity-selection-program-in-cpp">Activity Selection Program in C++</a>
+<a href="https://www.javatpoint.com/actual-argument-and-formal-argument-in-cpp">Actual Argument and Formal Argument in C++</a>
+<a href="https://www.javatpoint.com/actual-parameter-and-formal-parameter-in-cpp">Actual Parameter and Formal Parameter in C++</a>
+<a href="https://www.javatpoint.com/adding-two-strings-in-cpp">Adding Two Strings in C++</a>
+<a href="https://www.javatpoint.com/adding-vectors-in-cpp">Adding Vectors in C++</a>
+<a href="https://www.javatpoint.com/how-to-convert-a-qstring-to-hexadecimal-in-cpp">How To Convert a Qstring to Hexadecimal in C++</a>
+<a href="https://www.javatpoint.com/pair-in-cpp">PAIR IN C++</a>
+<a href="https://www.javatpoint.com/cpp-program-to-count-positive-and-negative-numbers-in-an-array">C++ Program to Count Positive and Negative Numbers in an Array</a>
+<a href="https://www.javatpoint.com/department-store-management-system-dbms-using-c-plus">Department Store Management System (DSMS) using C+</a>
+<a href="https://www.javatpoint.com/print-all-substrings-of-a-string-that-has-equal-number-of-vowels-and-consonants-in-c-cpp">Print all Substrings of a String that has equal number of vowels and consonants in C/C++</a>
+<a href="https://www.javatpoint.com/accumulator-in-cpp">Accumulator in C++</a>
+<a href="https://www.javatpoint.com/acess-specifiers-in-cpp">Acess Specifiers in C++</a>
+<a href="https://www.javatpoint.com/add-two-matrix-in-cpp">Add Two Matrix in C++</a>
+<a href="https://www.javatpoint.com/add-two-numbers-in-cpp-program">Add two Numbers in C++ program</a>
+<a href="https://www.javatpoint.com/add-two-numbers-represented-by-linked-lists-in-cpp">Add two Numbers Represented by Linked Lists in C++</a>
+<a href="https://www.javatpoint.com/associative-containers-in-cpp">Associative Containers in C++</a>
+<a href="https://www.javatpoint.com/cpp-books-for-beginners">C++ Books for Beginners</a>
+<a href="https://www.javatpoint.com/dynamic-initialization-of-objects-in-cpp">Dynamic Initialization of Objects in C++</a>
+<a href="https://www.javatpoint.com/array-sum-in-cpp-stl">Array sum in c++ stl</a>
+<a href="https://www.javatpoint.com/distinction-between-the-cpp-copy-constructor-and-assignment-operator">The distinction between the C++ copy constructor and assignment operator</a>
+<a href="https://www.javatpoint.com/boost-split-in-cpp-library">Boost::split in c++ library</a>
+<a href="https://www.javatpoint.com/difference-between-declaration-of-user-defined-function-inside-main-and-outside-of-main">Difference between Declaration of User Defined Function Inside main() and Outside of main()</a>
+<a href="https://www.javatpoint.com/isprint-in-cpp">Isprint() in C++</a>
+<a href="https://www.javatpoint.com/std-partition-point-in-cpp">Std partition point in c++</a>
+<a href="https://www.javatpoint.com/opening-and-closing-a-file-in-c-in-cpp-pdf">Opening and Closing a File in C in C++ Pdf</a>
+<a href="https://www.javatpoint.com/overriding-member-function-in-cpp">Overriding Member Function in C++</a>
+<a href="https://www.javatpoint.com/password-validation-in-cpp">Password Validation in C++</a>
+<a href="https://www.javatpoint.com/pid-controller-cpp">PID Controller C++</a>
+<a href="https://www.javatpoint.com/best-cpp-online-course">Best C++ Online Course</a>
+<a href="https://www.javatpoint.com/unordered-set-in-cpp">Unordered Set in C++</a>
+<a href="https://www.javatpoint.com/convert-camel-case-string-in-snake-case-in-cpp">Convert Camel Case String in Snake Case in C++</a>
+<a href="https://www.javatpoint.com/cpp-program-to-draw-histogram">C++ Program to Draw Histogram</a>
+<a href="https://www.javatpoint.com/cpp-dsa">C++ DSA</a>
+<a href="https://www.javatpoint.com/cpp-flow-control">C++ Flow Control</a>
+<a href="https://www.javatpoint.com/cpp-program-to-group-anagrams-in-the-given-stream-of-strings">C++ program to group anagrams in the given stream of strings</a>
+<a href="https://www.javatpoint.com/cstdlib-in-cpp">cstdlib in C++</a>
+<a href="https://www.javatpoint.com/everything-you-need-to-know-about-conio-h-library-functions-in-c-or-cpp">Everything You Need to Know About Conio.h Library Functions in C/C++</a>
+<a href="https://www.javatpoint.com/increment-and-decrement-operators-in-cpp">Increment and Decrement Operators in C++</a>
+<a href="https://www.javatpoint.com/how-to-generate-random-number-between-1-to-10-in-cpp">How to generate random number between 1 to 10 in C++</a>
+<a href="https://www.javatpoint.com/how-to-manipulate-cout-object-using-cpp-ios-library">How to Manipulate cout Object using C++ IOS Library</a>
+<a href="https://www.javatpoint.com/sliding-window-algorithm-in-cpp">Sliding Window Algorithm in C++</a>
+<a href="https://www.javatpoint.com/what-is-bottom-up-approach-in-cpp">What is Bottom-up Approach in C++</a>
+<a href="https://www.javatpoint.com/what-is-top-down-approach-in-cpp">What is Top-Down Approach in C++</a>
+<a href="https://www.javatpoint.com/bitmask-in-cpp">Bitmask in C++</a>
+<a href="https://www.javatpoint.com/ordered-map-in-cpp">Ordered Map C++</a>
+<a href="https://www.javatpoint.com/characteristics-of-destructor-in-cpp">Characteristics of Destructor in C++</a>
+<a href="https://www.javatpoint.com/factory-design-pattern-cpp">Factory Design Pattern C++</a>
+<a href="https://www.javatpoint.com/repl-cpp">REPL C++</a>
+<a href="https://www.javatpoint.com/avl-tree-in-cpp">AVL Tree in C++</a>
+<a href="https://www.javatpoint.com/des-in-cpp">Des in C++</a>
+<a href="https://www.javatpoint.com/boost-library-in-cpp">Boost Library in C++</a>
+<a href="https://www.javatpoint.com/cpp-11-lambda-expression">C++ 11 Lambda Expression</a>
+<a href="https://www.javatpoint.com/concurrency-in-cpp">Concurrency in C++</a>
+<a href="https://www.javatpoint.com/cpp-gui">C++ GUI</a>
+<a href="https://www.javatpoint.com/static-library-linking-in-cpp">Static Library Linking in C++</a>
+<a href="https://www.javatpoint.com/constexpr-in-cpp">Constexpr in C++</a>
+<a href="https://www.javatpoint.com/difference-between-break-and-continue-in-cpp">Difference between break and continue in C++</a>
+<a href="https://www.javatpoint.com/cpp-boolean">C++ Boolean</a>
+<a href="https://www.javatpoint.com/encapsulation-in-cpp">Encapsulation in C++</a>
+<a href="https://www.javatpoint.com/opengl-cpp">OpenGL C++</a>
+<a href="https://www.javatpoint.com/sequence-containers-in-cpp">Sequence Containers in C++</a>
+<a href="https://www.javatpoint.com/difference-between-cpp-and-rust">Difference between C++ and rust</a>
+<a href="https://www.javatpoint.com/falcon-cpp">Falcon C++</a>
+<a href="https://www.javatpoint.com/popcount-cpp">Popcount C++</a>
+<a href="https://www.javatpoint.com/boost-cpp">Boost C++</a>
+<a href="https://www.javatpoint.com/cpp-function-object">C++ Function Object</a>
+<a href="https://www.javatpoint.com/boost-library-in-cpp">Boost Library in C++</a>
+<a href="https://www.javatpoint.com/cpp-concurrency">C++ Concurrency</a>
+<a href="https://www.javatpoint.com/what-are-macros-in-cpp">What are Macros in C++</a>
+<a href="https://www.javatpoint.com/design-pattern-in-cpp">Design Pattern in C++</a>
+<a href="https://www.javatpoint.com/cpp-factory-pattern">C++ Factory Pattern</a>
+<a href="https://www.javatpoint.com/functor-in-cpp">Functor in C++</a>
+<a href="https://www.javatpoint.com/cpp-gui">C++ GUI</a>
+<a href="https://www.javatpoint.com/how-to-create-a-new-thread-in-cpp">How to Create a New Thread in C++</a>
+<a href="https://www.javatpoint.com/cpp-static-member">C++ Static Member</a>
+<a href="https://www.javatpoint.com/cpp-static-variable">C++ Static Variable</a>
+<a href="https://www.javatpoint.com/cpp-template-specialization">C++ Template Specialization</a>
+<a href="https://www.javatpoint.com/difference-between-new-and-delete-operator-in-cpp">Difference between New and Delete operator in C++</a>
+<a href="https://www.javatpoint.com/differences-between-vector-and-list-in-cpp">Differences between Vector and List in C++</a>
+<a href="https://www.javatpoint.com/dynamic-cast-in-cpp">Dynamic Cast in C++</a>
+<a href="https://www.javatpoint.com/shell-sort-in-cpp">Shell sort in C++</a>
+<a href="https://www.javatpoint.com/jagged-array-in-cpp">Jagged Array in C++</a>
+<a href="https://www.javatpoint.com/what-is-containership-in-cpp">What is containership in C++</a>
+<a href="https://www.javatpoint.com/cerr-in-cpp">Cerr in C++</a>
+<a href="https://www.javatpoint.com/make_shared-in-cpp">Make_shared in C++</a>
+<a href="https://www.javatpoint.com/rethrowing-an-exception-in-cpp">Rethrowing an Exception in C++</a>
+<a href="https://www.javatpoint.com/trigraphs-in-cpp">Trigraphs in C++</a>
+<a href="https://www.javatpoint.com/cin-ignore-function-in-cpp">Cin.ignore() function in C++</a>
+<a href="https://www.javatpoint.com/difference-between-function-overloading-and-function-overriding-in-cpp">Difference between function overloading and function overriding in C++</a>
+<a href="https://www.javatpoint.com/typeid-operator-in-cpp">Typeid operator in C++</a>
+<a href="https://www.javatpoint.com/string-view-in-cpp">String_view in C++</a>
+<a href="https://www.javatpoint.com/anonymous-objects-in-cpp">Anonymous objects in C++</a>
+<a href="https://www.javatpoint.com/cerr-in-cpp">Cerr in C++</a>
+<a href="https://www.javatpoint.com/make_shared-in-cpp">Make_shared in C++</a>
+<a href="https://www.javatpoint.com/rethrowing-an-exception-in-cpp">Rethrowing an Exception in C++</a>
+<a href="https://www.javatpoint.com/trigraphs-in-cpp">Trigraphs in C++</a>
+<a href="https://www.javatpoint.com/cin-ignore-function-in-cpp">Cin.ignore() function in C++</a>
+<a href="https://www.javatpoint.com/difference-between-function-overloading-and-function-overriding-in-cpp">Difference between function overloading and function overriding in C++</a>
+<a href="https://www.javatpoint.com/typeid-operator-in-cpp">Typeid operator in C++</a>
+<a href="https://www.javatpoint.com/string-view-in-cpp">String_view in C++</a>
+<a href="https://www.javatpoint.com/anonymous-objects-in-cpp">Anonymous objects in C++</a>
+</div>
+<div class="leftmenu2">
+<h2 class="spanh2"><span class="spanh2">MCQ</span></h2>
+</div>
+<div class="leftmenu">
+<a href="https://www.javatpoint.com/cpp-mcq">C++ MCQ</a>
+<a href="https://www.javatpoint.com/cpp-mcq-part-2">C++ MCQ Part 2</a>
+</div>
+<div class="leftmenu2">
+<h2 class="spanh2"><span class="spanh2">Interview Question</span></h2>
+</div>
+<div class="leftmenu">
+<a href="https://www.javatpoint.com/cpp-interview-questions">Interview Question</a>
+</div>
+<img src="./Multiple Inheritance in C++ - javatpoint_files/wh.JPG" alt="JavaTpoint">
+<br>
+<div id="leftad" style="margin-left:20px">
+
+
+<div align="center" data-freestar-ad="__160x600" id="javatpointcom_lefttrail_1">
+<script data-cfasync="false" type="text/javascript">
+    freestar.config.enabled_slots.push({ placementName: "javatpointcom_lefttrail_1", slotId: "javatpointcom_lefttrail_1" });
+  </script>
+</div>
+
+</div>
+</div>
+<div class="onlycontent">
+<div class="onlycontentad">
+
+<div align="center" data-freestar-ad="__300x300 __650x150" id="javatpointcom_leaderboard_atf_article">
+<script data-cfasync="false" type="text/javascript">
+    freestar.config.enabled_slots.push({ placementName: "javatpointcom_leaderboard_atf_article", slotId: "javatpointcom_leaderboard_atf_article" });
+  </script>
+</div>
+</div>
+<div class="onlycontentinner">
+<div id="city">
+<table>
+<tbody><tr><td>
+<div id="bottomnextup">
+<a class="next" href="https://www.javatpoint.com/cpp-bitwise-xor-operator">next &#8594;</a>
+<a class="next" href="https://www.javatpoint.com/hybrid-inheritance-in-cpp">&#8592; prev</a>
+</div>
+<h1 class="h1">Multiple Inheritance in C++</h1>
+<p>This section will discuss the Multiple Inheritances in the C++ programming language. When we acquire the features and functionalities of one class to another class, the process is called <strong>Inheritance</strong>. In this way, we can reuse, extend or modify all the attributes and behaviour of the parent class using the derived class object. It is the most important feature of object-oriented programming that reduces the length of the program.</p>
+<p>A class that inherits all member functions and functionality from another or parent class is called the <strong>derived class</strong>. And the class from which derive class acquires some features is called the <strong>base or parent class</strong>.</p>
+<img src="./Multiple Inheritance in C++ - javatpoint_files/multiple-inheritance-in-cpp.png" alt="Multiple Inheritance in C++">
+<p><strong><span class="highlighter--highlighted" data-highlight-id="0" style="background-color: rgb(255, 246, 21); color: inherit;">Multiple Inheritance</span></strong><span class="highlighter--highlighted" data-highlight-id="0" style="background-color: rgb(255, 246, 21); color: inherit;"> is the concept of the Inheritance in C++ that allows a child class to inherit properties or behaviour from multiple </span><strong><span class="highlighter--highlighted" data-highlight-id="0" style="background-color: rgb(255, 246, 21); color: inherit;">base</span></strong><span class="highlighter--highlighted" data-highlight-id="0" style="background-color: rgb(255, 246, 21); color: inherit;"> classes</span>. Therefore, we can say it is the process that enables a derived class to acquire member functions, properties, characteristics from more than one base class.</p>
+<h3 class="h3">Diagram of the Multiple Inheritance</h3>
+<p>Following is the diagram of the Multiple Inheritances in the <a href="https://www.javatpoint.com/cpp-tutorial">C++ programming language</a>.</p>
+<img src="./Multiple Inheritance in C++ - javatpoint_files/multiple-inheritance-in-cpp2.png" alt="Multiple Inheritance in C++">
+<p>In the above diagram, there are two-parent classes: <strong>Base Class 1</strong> and <strong>Base Class 2</strong>, whereas there is only one <strong>Child Class</strong>. The Child Class acquires all features from both Base class 1 and Base class 2. Therefore, we termed the type of Inheritance as Multiple Inheritance.</p>
+<h3 class="h3">Syntax of the Multiple Inheritance</h3>
+<div class="codeblock"><div class="dp-highlighter"><div class="bar"><div class="tools"><a href="https://www.javatpoint.com/multiple-inheritance-in-cpp#" onclick="dp.sh.Toolbar.Command(&#39;ViewSource&#39;,this);return false;"></a><a href="https://www.javatpoint.com/multiple-inheritance-in-cpp#" onclick="dp.sh.Toolbar.Command(&#39;PrintSource&#39;,this);return false;"></a><a href="https://www.javatpoint.com/multiple-inheritance-in-cpp#" onclick="dp.sh.Toolbar.Command(&#39;About&#39;,this);return false;"></a></div></div><ol start="1" class="dp-cpp"><li class="alt"><span><span class="keyword">class</span><span>&nbsp;A&nbsp;&nbsp;</span></span></li><li class=""><span>{&nbsp;&nbsp;</span></li><li class="alt"><span><span class="comment">//&nbsp;code&nbsp;of&nbsp;class&nbsp;A</span><span>&nbsp;&nbsp;</span></span></li><li class=""><span>}&nbsp;&nbsp;</span></li><li class="alt"><span><span class="keyword">class</span><span>&nbsp;B&nbsp;&nbsp;</span></span></li><li class=""><span>{&nbsp;&nbsp;</span></li><li class="alt"><span><span class="comment">//&nbsp;code&nbsp;of&nbsp;class&nbsp;B</span><span>&nbsp;&nbsp;</span></span></li><li class=""><span>}&nbsp;&nbsp;</span></li><li class="alt"><span><span class="keyword">class</span><span>&nbsp;C:&nbsp;</span><span class="keyword">public</span><span>&nbsp;A,&nbsp;</span><span class="keyword">public</span><span>&nbsp;B&nbsp;(access&nbsp;modifier&nbsp;class_name)&nbsp;&nbsp;</span></span></li><li class=""><span>{&nbsp;&nbsp;</span></li><li class="alt"><span><span class="comment">//&nbsp;code&nbsp;of&nbsp;the&nbsp;derived&nbsp;class</span><span>&nbsp;&nbsp;</span></span></li><li class=""><span>}&nbsp;&nbsp;</span></li></ol></div><textarea name="code" class="Cpp" style="display: none;">class A
+{
+// code of class A
+}
+class B
+{
+// code of class B
+}
+class C: public A, public B (access modifier class_name)
+{
+// code of the derived class
+}
+</textarea></div>
+<p>In the above syntax, class A and class B are two base classes, and class C is the child class that inherits some features of the parent classes.</p>
+<p>Let's write the various program of Multiple Inheritance to inherit the member functions and functionality from more than one base class using the derived class.</p>
+<h3 class="h3">Example 1: Program to use the Multiple Inheritance</h3>
+<p><strong>Program1.cpp</strong></p>
+<div class="codeblock"><div class="dp-highlighter"><div class="bar"><div class="tools"><a href="https://www.javatpoint.com/multiple-inheritance-in-cpp#" onclick="dp.sh.Toolbar.Command(&#39;ViewSource&#39;,this);return false;"></a><a href="https://www.javatpoint.com/multiple-inheritance-in-cpp#" onclick="dp.sh.Toolbar.Command(&#39;PrintSource&#39;,this);return false;"></a><a href="https://www.javatpoint.com/multiple-inheritance-in-cpp#" onclick="dp.sh.Toolbar.Command(&#39;About&#39;,this);return false;"></a></div></div><ol start="1" class="dp-cpp"><li class="alt"><span><span class="preprocessor">#include&nbsp;&lt;iostream&gt;</span><span>&nbsp;&nbsp;</span></span></li><li class=""><span><span class="keyword">using</span><span>&nbsp;</span><span class="keyword">namespace</span><span>&nbsp;std;&nbsp;&nbsp;</span></span></li><li class="alt"><span>&nbsp;&nbsp;</span></li><li class=""><span><span class="comment">//&nbsp;create&nbsp;a&nbsp;base&nbsp;class1</span><span>&nbsp;&nbsp;</span></span></li><li class="alt"><span><span class="keyword">class</span><span>&nbsp;Base_class&nbsp;&nbsp;</span></span></li><li class=""><span>{&nbsp;&nbsp;</span></li><li class="alt"><span>&nbsp;&nbsp;&nbsp;&nbsp;<span class="comment">//&nbsp;access&nbsp;specifier</span><span>&nbsp;&nbsp;</span></span></li><li class=""><span>&nbsp;&nbsp;&nbsp;&nbsp;<span class="keyword">public</span><span>:&nbsp;&nbsp;&nbsp;</span></span></li><li class="alt"><span>&nbsp;&nbsp;&nbsp;&nbsp;<span class="comment">//&nbsp;It&nbsp;is&nbsp;a&nbsp;member&nbsp;function</span><span>&nbsp;&nbsp;</span></span></li><li class=""><span>&nbsp;&nbsp;&nbsp;&nbsp;<span class="keyword">void</span><span>&nbsp;display()&nbsp;&nbsp;</span></span></li><li class="alt"><span>&nbsp;&nbsp;&nbsp;&nbsp;{&nbsp;&nbsp;</span></li><li class=""><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;cout&nbsp;&lt;&lt;&nbsp;<span class="string">"&nbsp;It&nbsp;is&nbsp;the&nbsp;first&nbsp;function&nbsp;of&nbsp;the&nbsp;Base&nbsp;class&nbsp;"</span><span>&nbsp;&lt;&lt;&nbsp;endl;&nbsp;&nbsp;</span></span></li><li class="alt"><span>&nbsp;&nbsp;&nbsp;&nbsp;}&nbsp;&nbsp;</span></li><li class=""><span>};&nbsp;&nbsp;</span></li><li class="alt"><span>&nbsp;&nbsp;</span></li><li class=""><span><span class="comment">//&nbsp;create&nbsp;a&nbsp;base&nbsp;class2</span><span>&nbsp;&nbsp;</span></span></li><li class="alt"><span><span class="keyword">class</span><span>&nbsp;Base_class2&nbsp;&nbsp;</span></span></li><li class=""><span>{&nbsp;&nbsp;</span></li><li class="alt"><span>&nbsp;&nbsp;&nbsp;&nbsp;<span class="comment">//&nbsp;access&nbsp;specifier</span><span>&nbsp;&nbsp;</span></span></li><li class=""><span>&nbsp;&nbsp;&nbsp;&nbsp;<span class="keyword">public</span><span>:&nbsp;&nbsp;&nbsp;</span></span></li><li class="alt"><span>&nbsp;&nbsp;&nbsp;&nbsp;<span class="comment">//&nbsp;It&nbsp;is&nbsp;a&nbsp;member&nbsp;function</span><span>&nbsp;&nbsp;</span></span></li><li class=""><span>&nbsp;&nbsp;&nbsp;&nbsp;<span class="keyword">void</span><span>&nbsp;display2()&nbsp;&nbsp;</span></span></li><li class="alt"><span>&nbsp;&nbsp;&nbsp;&nbsp;{&nbsp;&nbsp;</span></li><li class=""><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;cout&nbsp;&lt;&lt;&nbsp;<span class="string">"&nbsp;It&nbsp;is&nbsp;the&nbsp;second&nbsp;function&nbsp;of&nbsp;the&nbsp;Base&nbsp;class&nbsp;"</span><span>&nbsp;&lt;&lt;&nbsp;endl;&nbsp;&nbsp;</span></span></li><li class="alt"><span>&nbsp;&nbsp;&nbsp;&nbsp;}&nbsp;&nbsp;</span></li><li class=""><span>};&nbsp;&nbsp;</span></li><li class="alt"><span>&nbsp;&nbsp;</span></li><li class=""><span><span class="comment">/*&nbsp;create&nbsp;a&nbsp;child_class&nbsp;to&nbsp;inherit&nbsp;features&nbsp;of&nbsp;Base_class&nbsp;and&nbsp;Base_class2&nbsp;with&nbsp;access&nbsp;specifier.&nbsp;*/</span><span>&nbsp;&nbsp;</span></span></li><li class="alt"><span><span class="keyword">class</span><span>&nbsp;child_class:&nbsp;</span><span class="keyword">public</span><span>&nbsp;Base_class,&nbsp;</span><span class="keyword">public</span><span>&nbsp;Base_class2&nbsp;&nbsp;</span></span></li><li class=""><span>{&nbsp;&nbsp;</span></li><li class="alt"><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></li><li class=""><span>&nbsp;&nbsp;&nbsp;&nbsp;<span class="comment">//&nbsp;access&nbsp;specifier</span><span>&nbsp;&nbsp;</span></span></li><li class="alt"><span>&nbsp;&nbsp;&nbsp;&nbsp;<span class="keyword">public</span><span>:&nbsp;&nbsp;</span></span></li><li class=""><span>&nbsp;&nbsp;&nbsp;&nbsp;<span class="keyword">void</span><span>&nbsp;display3()&nbsp;</span><span class="comment">//&nbsp;It&nbsp;is&nbsp;a&nbsp;member&nbsp;function&nbsp;of&nbsp;derive&nbsp;class</span><span>&nbsp;&nbsp;</span></span></li><li class="alt"><span>&nbsp;&nbsp;&nbsp;&nbsp;{&nbsp;&nbsp;</span></li><li class=""><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;cout&nbsp;&lt;&lt;&nbsp;<span class="string">"&nbsp;It&nbsp;is&nbsp;the&nbsp;function&nbsp;of&nbsp;the&nbsp;derived&nbsp;class&nbsp;"</span><span>&nbsp;&lt;&lt;&nbsp;endl;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></span></li><li class="alt"><span>&nbsp;&nbsp;&nbsp;&nbsp;}&nbsp;&nbsp;</span></li><li class=""><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></li><li class="alt"><span>};&nbsp;&nbsp;</span></li><li class=""><span>&nbsp;&nbsp;</span></li><li class="alt"><span><span class="datatypes">int</span><span>&nbsp;main&nbsp;()&nbsp;&nbsp;</span></span></li><li class=""><span>{&nbsp;&nbsp;</span></li><li class="alt"><span>&nbsp;&nbsp;&nbsp;&nbsp;<span class="comment">//&nbsp;create&nbsp;an&nbsp;object&nbsp;for&nbsp;derived&nbsp;class</span><span>&nbsp;&nbsp;</span></span></li><li class=""><span>&nbsp;&nbsp;&nbsp;&nbsp;child_class&nbsp;ch;&nbsp;&nbsp;</span></li><li class="alt"><span>&nbsp;&nbsp;&nbsp;&nbsp;ch.display();&nbsp;<span class="comment">//&nbsp;call&nbsp;member&nbsp;function&nbsp;of&nbsp;Base_class1</span><span>&nbsp;&nbsp;</span></span></li><li class=""><span>&nbsp;&nbsp;&nbsp;&nbsp;ch.display2();&nbsp;<span class="comment">//&nbsp;call&nbsp;member&nbsp;function&nbsp;of&nbsp;Base_class2</span><span>&nbsp;&nbsp;</span></span></li><li class="alt"><span>&nbsp;&nbsp;&nbsp;&nbsp;ch.display3();&nbsp;<span class="comment">//&nbsp;call&nbsp;member&nbsp;function&nbsp;of&nbsp;child_class</span><span>&nbsp;&nbsp;</span></span></li><li class=""><span>}&nbsp;&nbsp;</span></li></ol></div><textarea name="code" class="Cpp" style="display: none;">#include &lt;iostream&gt;
+using namespace std;
+
+// create a base class1
+class Base_class
+{
+	// access specifier
+	public: 
+	// It is a member function
+	void display()
+	{
+		cout &lt;&lt; " It is the first function of the Base class " &lt;&lt; endl;
+	}
+};
+
+// create a base class2
+class Base_class2
+{
+	// access specifier
+	public: 
+	// It is a member function
+	void display2()
+	{
+		cout &lt;&lt; " It is the second function of the Base class " &lt;&lt; endl;
+	}
+};
+
+/* create a child_class to inherit features of Base_class and Base_class2 with access specifier. */
+class child_class: public Base_class, public Base_class2
+{
+	
+	// access specifier
+	public:
+	void display3()	// It is a member function of derive class
+	{
+		cout &lt;&lt; " It is the function of the derived class " &lt;&lt; endl;	
+	}
+	
+};
+
+int main ()
+{
+	// create an object for derived class
+	child_class ch;
+	ch.display(); // call member function of Base_class1
+	ch.display2(); // call member function of Base_class2
+	ch.display3(); // call member function of child_class
+}
+</textarea></div>
+<p><strong>Output</strong></p>
+<div class="codeblock3"><pre>It is the first function of the Base class
+ It is the second function of the Base class
+ It is the function of the derived class
+</pre></div>
+<p>In the above program, we created two base classes and one child class. The <strong>child_class</strong> invoke member function display() and display2() from both parent classes <strong>Base_class</strong> and <strong>Base_class2</strong> with the help of child class's object ch.</p>
+<h3 class="h3">Example 2: Use Multiple Inheritance to perform the arithmetic operation</h3>
+<p>Let's create a derived class to inherit the member functions from multiple base classes in C++ programming.</p>
+<p><strong>Program2.cpp</strong></p>
+<div class="codeblock"><div class="dp-highlighter"><div class="bar"><div class="tools"><a href="https://www.javatpoint.com/multiple-inheritance-in-cpp#" onclick="dp.sh.Toolbar.Command(&#39;ViewSource&#39;,this);return false;"></a><a href="https://www.javatpoint.com/multiple-inheritance-in-cpp#" onclick="dp.sh.Toolbar.Command(&#39;PrintSource&#39;,this);return false;"></a><a href="https://www.javatpoint.com/multiple-inheritance-in-cpp#" onclick="dp.sh.Toolbar.Command(&#39;About&#39;,this);return false;"></a></div></div><ol start="1" class="dp-cpp"><li class="alt"><span><span class="preprocessor">#include&nbsp;&lt;iostream&gt;</span><span>&nbsp;&nbsp;</span></span></li><li class=""><span><span class="keyword">using</span><span>&nbsp;</span><span class="keyword">namespace</span><span>&nbsp;std;&nbsp;&nbsp;</span></span></li><li class="alt"><span>&nbsp;&nbsp;</span></li><li class=""><span><span class="comment">//&nbsp;create&nbsp;add&nbsp;class</span><span>&nbsp;&nbsp;</span></span></li><li class="alt"><span><span class="keyword">class</span><span>&nbsp;add&nbsp;&nbsp;</span></span></li><li class=""><span>{&nbsp;&nbsp;</span></li><li class="alt"><span>&nbsp;&nbsp;&nbsp;&nbsp;<span class="keyword">public</span><span>:&nbsp;&nbsp;</span></span></li><li class=""><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="datatypes">int</span><span>&nbsp;x&nbsp;=&nbsp;20;&nbsp;&nbsp;</span></span></li><li class="alt"><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="datatypes">int</span><span>&nbsp;y&nbsp;=&nbsp;30;&nbsp;&nbsp;</span></span></li><li class=""><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="keyword">void</span><span>&nbsp;sum()&nbsp;&nbsp;</span></span></li><li class="alt"><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{&nbsp;&nbsp;</span></li><li class=""><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;cout&nbsp;&lt;&lt;&nbsp;<span class="string">"&nbsp;The&nbsp;sum&nbsp;of&nbsp;"</span><span>&nbsp;&lt;&lt;&nbsp;x&nbsp;&lt;&lt;&nbsp;</span><span class="string">"&nbsp;and&nbsp;"</span><span>&nbsp;&lt;&lt;&nbsp;y&nbsp;&lt;&lt;&nbsp;</span><span class="string">"&nbsp;is&nbsp;"</span><span>&nbsp;&lt;&lt;x+y&nbsp;&lt;&lt;&nbsp;endl;&nbsp;&nbsp;</span></span></li><li class="alt"><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}&nbsp;&nbsp;</span></li><li class=""><span>};&nbsp;&nbsp;</span></li><li class="alt"><span>&nbsp;&nbsp;</span></li><li class=""><span><span class="comment">//&nbsp;create&nbsp;Mul&nbsp;class</span><span>&nbsp;&nbsp;</span></span></li><li class="alt"><span><span class="keyword">class</span><span>&nbsp;Mul&nbsp;&nbsp;</span></span></li><li class=""><span>{&nbsp;&nbsp;</span></li><li class="alt"><span>&nbsp;&nbsp;&nbsp;&nbsp;<span class="keyword">public</span><span>:&nbsp;&nbsp;</span></span></li><li class=""><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="datatypes">int</span><span>&nbsp;a&nbsp;=&nbsp;20;&nbsp;&nbsp;</span></span></li><li class="alt"><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="datatypes">int</span><span>&nbsp;b&nbsp;=&nbsp;30;&nbsp;&nbsp;</span></span></li><li class=""><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="keyword">void</span><span>&nbsp;mul()&nbsp;&nbsp;</span></span></li><li class="alt"><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{&nbsp;&nbsp;</span></li><li class=""><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;cout&nbsp;&lt;&lt;&nbsp;<span class="string">"&nbsp;The&nbsp;Multiplication&nbsp;of&nbsp;"</span><span>&nbsp;&lt;&lt;&nbsp;a&nbsp;&lt;&lt;&nbsp;</span><span class="string">"&nbsp;and&nbsp;"</span><span>&nbsp;&lt;&lt;&nbsp;b&nbsp;&lt;&lt;&nbsp;</span><span class="string">"&nbsp;is&nbsp;"</span><span>&nbsp;&lt;&lt;a*b&nbsp;&lt;&lt;&nbsp;endl;&nbsp;&nbsp;</span></span></li><li class="alt"><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}&nbsp;&nbsp;</span></li><li class=""><span>};&nbsp;&nbsp;</span></li><li class="alt"><span>&nbsp;&nbsp;</span></li><li class=""><span><span class="comment">//&nbsp;create&nbsp;Subclass</span><span>&nbsp;&nbsp;</span></span></li><li class="alt"><span><span class="keyword">class</span><span>&nbsp;Sub&nbsp;&nbsp;</span></span></li><li class=""><span>{&nbsp;&nbsp;</span></li><li class="alt"><span>&nbsp;&nbsp;&nbsp;&nbsp;<span class="keyword">public</span><span>:&nbsp;&nbsp;</span></span></li><li class=""><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="datatypes">int</span><span>&nbsp;a&nbsp;=&nbsp;50;&nbsp;&nbsp;</span></span></li><li class="alt"><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="datatypes">int</span><span>&nbsp;b&nbsp;=&nbsp;30;&nbsp;&nbsp;</span></span></li><li class=""><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="keyword">void</span><span>&nbsp;sub()&nbsp;&nbsp;</span></span></li><li class="alt"><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{&nbsp;&nbsp;</span></li><li class=""><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;cout&nbsp;&lt;&lt;&nbsp;<span class="string">"&nbsp;The&nbsp;Subtraction&nbsp;of&nbsp;"</span><span>&nbsp;&lt;&lt;&nbsp;a&nbsp;&lt;&lt;&nbsp;</span><span class="string">"&nbsp;and&nbsp;"</span><span>&nbsp;&lt;&lt;&nbsp;b&nbsp;&lt;&lt;&nbsp;</span><span class="string">"&nbsp;is&nbsp;"</span><span>&nbsp;&lt;&lt;a-b&nbsp;&lt;&lt;&nbsp;endl;&nbsp;&nbsp;</span></span></li><li class="alt"><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}&nbsp;&nbsp;</span></li><li class=""><span>};&nbsp;&nbsp;</span></li><li class="alt"><span>&nbsp;&nbsp;</span></li><li class=""><span><span class="comment">//&nbsp;create&nbsp;Div&nbsp;class</span><span>&nbsp;&nbsp;</span></span></li><li class="alt"><span><span class="keyword">class</span><span>&nbsp;Div&nbsp;&nbsp;</span></span></li><li class=""><span>{&nbsp;&nbsp;</span></li><li class="alt"><span>&nbsp;&nbsp;&nbsp;&nbsp;<span class="comment">//&nbsp;access&nbsp;specifier</span><span>&nbsp;&nbsp;</span></span></li><li class=""><span>&nbsp;&nbsp;&nbsp;&nbsp;<span class="keyword">public</span><span>:&nbsp;&nbsp;</span></span></li><li class="alt"><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="datatypes">int</span><span>&nbsp;a&nbsp;=&nbsp;150;&nbsp;&nbsp;</span></span></li><li class=""><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="datatypes">int</span><span>&nbsp;b&nbsp;=&nbsp;30;&nbsp;&nbsp;</span></span></li><li class="alt"><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="keyword">void</span><span>&nbsp;div()&nbsp;&nbsp;</span></span></li><li class=""><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{&nbsp;&nbsp;</span></li><li class="alt"><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;cout&nbsp;&lt;&lt;&nbsp;<span class="string">"&nbsp;The&nbsp;Division&nbsp;of&nbsp;"</span><span>&nbsp;&lt;&lt;&nbsp;a&nbsp;&lt;&lt;&nbsp;</span><span class="string">"&nbsp;and&nbsp;"</span><span>&nbsp;&lt;&lt;&nbsp;b&nbsp;&lt;&lt;&nbsp;</span><span class="string">"&nbsp;is&nbsp;"</span><span>&nbsp;&lt;&lt;a/b&nbsp;&lt;&lt;&nbsp;endl;&nbsp;&nbsp;</span></span></li><li class=""><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}&nbsp;&nbsp;</span></li><li class="alt"><span>};&nbsp;&nbsp;</span></li><li class=""><span>&nbsp;&nbsp;</span></li><li class="alt"><span><span class="comment">//&nbsp;create&nbsp;a&nbsp;derived&nbsp;class&nbsp;to&nbsp;derive&nbsp;the&nbsp;member&nbsp;functions&nbsp;of&nbsp;all&nbsp;base&nbsp;classes</span><span>&nbsp;&nbsp;</span></span></li><li class=""><span><span class="keyword">class</span><span>&nbsp;derived:&nbsp;</span><span class="keyword">public</span><span>&nbsp;add,&nbsp;</span><span class="keyword">public</span><span>&nbsp;Div,&nbsp;</span><span class="keyword">public</span><span>&nbsp;Sub,&nbsp;</span><span class="keyword">public</span><span>&nbsp;Mul&nbsp;&nbsp;</span></span></li><li class="alt"><span>{&nbsp;&nbsp;</span></li><li class=""><span>&nbsp;&nbsp;&nbsp;&nbsp;<span class="comment">//&nbsp;access&nbsp;specifier</span><span>&nbsp;&nbsp;</span></span></li><li class="alt"><span>&nbsp;&nbsp;&nbsp;&nbsp;<span class="keyword">public</span><span>:&nbsp;&nbsp;</span></span></li><li class=""><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="datatypes">int</span><span>&nbsp;p&nbsp;=&nbsp;12;&nbsp;&nbsp;</span></span></li><li class="alt"><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="datatypes">int</span><span>&nbsp;q&nbsp;=&nbsp;5;&nbsp;&nbsp;</span></span></li><li class=""><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="keyword">void</span><span>&nbsp;mod()&nbsp;&nbsp;</span></span></li><li class="alt"><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></li><li class=""><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;cout&nbsp;&lt;&lt;&nbsp;<span class="string">"The&nbsp;Modulus&nbsp;of&nbsp;"</span><span>&nbsp;&lt;&lt;&nbsp;p&nbsp;&lt;&lt;&nbsp;</span><span class="string">"&nbsp;and&nbsp;"</span><span>&nbsp;&lt;&lt;q&nbsp;&lt;&lt;&nbsp;</span><span class="string">"&nbsp;is&nbsp;"</span><span>&nbsp;&lt;&lt;&nbsp;p&nbsp;%&nbsp;q&nbsp;&lt;&lt;&nbsp;endl;&nbsp;&nbsp;</span></span></li><li class="alt"><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}&nbsp;&nbsp;</span></li><li class=""><span>};&nbsp;&nbsp;</span></li><li class="alt"><span>&nbsp;&nbsp;</span></li><li class=""><span><span class="datatypes">int</span><span>&nbsp;main&nbsp;()&nbsp;&nbsp;</span></span></li><li class="alt"><span>{&nbsp;&nbsp;</span></li><li class=""><span>&nbsp;&nbsp;&nbsp;&nbsp;<span class="comment">//&nbsp;create&nbsp;an&nbsp;object&nbsp;of&nbsp;the&nbsp;derived&nbsp;class</span><span>&nbsp;&nbsp;</span></span></li><li class="alt"><span>&nbsp;&nbsp;&nbsp;&nbsp;derived&nbsp;dr;&nbsp;&nbsp;</span></li><li class=""><span>&nbsp;&nbsp;&nbsp;&nbsp;dr.mod();&nbsp;<span class="comment">//&nbsp;call&nbsp;derive&nbsp;class&nbsp;member&nbsp;function&nbsp;&nbsp;</span><span>&nbsp;&nbsp;</span></span></li><li class="alt"><span>&nbsp;&nbsp;&nbsp;&nbsp;<span class="comment">//&nbsp;call&nbsp;all&nbsp;member&nbsp;function&nbsp;of&nbsp;class&nbsp;add,&nbsp;Div,&nbsp;Sub&nbsp;and&nbsp;Mul</span><span>&nbsp;&nbsp;</span></span></li><li class=""><span>&nbsp;&nbsp;&nbsp;&nbsp;dr.sum();&nbsp;&nbsp;</span></li><li class="alt"><span>&nbsp;&nbsp;&nbsp;&nbsp;dr.mul();&nbsp;&nbsp;</span></li><li class=""><span>&nbsp;&nbsp;&nbsp;&nbsp;dr.div();&nbsp;&nbsp;</span></li><li class="alt"><span>&nbsp;&nbsp;&nbsp;&nbsp;dr.sub();&nbsp;&nbsp;</span></li><li class=""><span>}&nbsp;&nbsp;</span></li></ol></div><textarea name="code" class="Cpp" style="display: none;">#include &lt;iostream&gt;
+using namespace std;
+
+// create add class
+class add
+{
+	public:
+		int x = 20;
+		int y = 30;
+		void sum()
+		{
+			cout &lt;&lt; " The sum of " &lt;&lt; x &lt;&lt; " and " &lt;&lt; y &lt;&lt; " is " &lt;&lt;x+y &lt;&lt; endl;
+		}
+};
+
+// create Mul class
+class Mul
+{
+	public:
+		int a = 20;
+		int b = 30;
+		void mul()
+		{
+			cout &lt;&lt; " The Multiplication of " &lt;&lt; a &lt;&lt; " and " &lt;&lt; b &lt;&lt; " is " &lt;&lt;a*b &lt;&lt; endl;
+		}
+};
+
+// create Subclass
+class Sub
+{
+	public:
+		int a = 50;
+		int b = 30;
+		void sub()
+		{
+			cout &lt;&lt; " The Subtraction of " &lt;&lt; a &lt;&lt; " and " &lt;&lt; b &lt;&lt; " is " &lt;&lt;a-b &lt;&lt; endl;
+		}
+};
+
+// create Div class
+class Div
+{
+	// access specifier
+	public:
+		int a = 150;
+		int b = 30;
+		void div()
+		{
+			cout &lt;&lt; " The Division of " &lt;&lt; a &lt;&lt; " and " &lt;&lt; b &lt;&lt; " is " &lt;&lt;a/b &lt;&lt; endl;
+		}
+};
+
+// create a derived class to derive the member functions of all base classes
+class derived: public add, public Div, public Sub, public Mul
+{
+	// access specifier
+	public:
+		int p = 12;
+		int q = 5;
+		void mod()
+		{			
+			cout &lt;&lt; "The Modulus of " &lt;&lt; p &lt;&lt; " and " &lt;&lt;q &lt;&lt; " is " &lt;&lt; p % q &lt;&lt; endl;
+		}
+};
+
+int main ()
+{
+	// create an object of the derived class
+	derived dr;
+	dr.mod(); // call derive class member function	
+	// call all member function of class add, Div, Sub and Mul
+	dr.sum();
+	dr.mul();
+	dr.div();
+	dr.sub();
+}
+</textarea></div>
+<p><strong>Output</strong></p>
+<div class="codeblock3"><pre>The Modulus of 12 and 5 is 2
+ The sum of 20 and 30 is 50
+ The Multiplication of 20 and 30 is 600
+ The Division of 150 and 30 is 5
+ The Subtraction of 50 and 30 is 20
+</pre></div>
+<h3 class="h3">Example 3: Get the average marks of six subjects using the Multiple Inheritance</h3>
+<p>Let's create another program to print the average marks of six subjects using the multiple Inheritance in the C++ programming language.</p>
+<p><strong>Program3.cpp</strong></p>
+<div class="codeblock"><div class="dp-highlighter"><div class="bar"><div class="tools"><a href="https://www.javatpoint.com/multiple-inheritance-in-cpp#" onclick="dp.sh.Toolbar.Command(&#39;ViewSource&#39;,this);return false;"></a><a href="https://www.javatpoint.com/multiple-inheritance-in-cpp#" onclick="dp.sh.Toolbar.Command(&#39;PrintSource&#39;,this);return false;"></a><a href="https://www.javatpoint.com/multiple-inheritance-in-cpp#" onclick="dp.sh.Toolbar.Command(&#39;About&#39;,this);return false;"></a></div></div><ol start="1" class="dp-cpp"><li class="alt"><span><span class="preprocessor">#include&nbsp;&lt;iostream&gt;</span><span>&nbsp;&nbsp;</span></span></li><li class=""><span><span class="keyword">using</span><span>&nbsp;</span><span class="keyword">namespace</span><span>&nbsp;std;&nbsp;&nbsp;</span></span></li><li class="alt"><span>&nbsp;&nbsp;</span></li><li class=""><span><span class="comment">//&nbsp;create&nbsp;base&nbsp;class1</span><span>&nbsp;&nbsp;</span></span></li><li class="alt"><span><span class="keyword">class</span><span>&nbsp;student_detail&nbsp;&nbsp;&nbsp;</span></span></li><li class=""><span>{&nbsp;&nbsp;</span></li><li class="alt"><span>&nbsp;&nbsp;&nbsp;&nbsp;<span class="comment">//&nbsp;access&nbsp;specifier&nbsp;</span><span>&nbsp;&nbsp;</span></span></li><li class=""><span>&nbsp;&nbsp;&nbsp;&nbsp;<span class="keyword">protected</span><span>:&nbsp;&nbsp;</span></span></li><li class="alt"><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="datatypes">int</span><span>&nbsp;rno,&nbsp;sum&nbsp;=&nbsp;0,&nbsp;i,&nbsp;marks[5];&nbsp;&nbsp;</span></span></li><li class=""><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></li><li class="alt"><span>&nbsp;&nbsp;&nbsp;&nbsp;<span class="comment">//&nbsp;access&nbsp;specifier&nbsp;</span><span>&nbsp;&nbsp;</span></span></li><li class=""><span>&nbsp;&nbsp;&nbsp;&nbsp;<span class="keyword">public</span><span>:&nbsp;&nbsp;</span></span></li><li class="alt"><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="keyword">void</span><span>&nbsp;detail()&nbsp;&nbsp;</span></span></li><li class=""><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{&nbsp;&nbsp;</span></li><li class="alt"><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></li><li class=""><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></li><li class="alt"><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;cout&nbsp;&lt;&lt;&nbsp;<span class="string">"&nbsp;Enter&nbsp;the&nbsp;Roll&nbsp;No:&nbsp;"</span><span>&nbsp;&lt;&lt;&nbsp;endl;&nbsp;&nbsp;</span></span></li><li class=""><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;cin&nbsp;&gt;&gt;&nbsp;rno;&nbsp;&nbsp;</span></li><li class="alt"><span>&nbsp;&nbsp;</span></li><li class=""><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;cout&nbsp;&lt;&lt;&nbsp;<span class="string">"&nbsp;Enter&nbsp;the&nbsp;marks&nbsp;of&nbsp;five&nbsp;subjects&nbsp;"</span><span>&nbsp;&lt;&lt;&nbsp;endl;&nbsp;&nbsp;</span></span></li><li class="alt"><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="comment">//&nbsp;use&nbsp;for&nbsp;loop</span><span>&nbsp;&nbsp;</span></span></li><li class=""><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="keyword">for</span><span>&nbsp;(i&nbsp;=&nbsp;0;&nbsp;i&nbsp;&lt;&nbsp;5;&nbsp;i++)&nbsp;&nbsp;</span></span></li><li class="alt"><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{&nbsp;&nbsp;</span></li><li class=""><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;cin&nbsp;&gt;&gt;&nbsp;marks[i];&nbsp;&nbsp;</span></li><li class="alt"><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}&nbsp;&nbsp;</span></li><li class=""><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></li><li class="alt"><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></li><li class=""><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="keyword">for</span><span>&nbsp;(&nbsp;i&nbsp;=&nbsp;0;&nbsp;i&nbsp;&lt;&nbsp;5;&nbsp;i++)&nbsp;&nbsp;</span></span></li><li class="alt"><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{&nbsp;&nbsp;</span></li><li class=""><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="comment">//&nbsp;store&nbsp;the&nbsp;sum&nbsp;of&nbsp;five&nbsp;subject</span><span>&nbsp;&nbsp;</span></span></li><li class="alt"><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;sum&nbsp;=&nbsp;sum&nbsp;+&nbsp;marks[i];&nbsp;&nbsp;</span></li><li class=""><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}&nbsp;&nbsp;</span></li><li class="alt"><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}&nbsp;&nbsp;</span></li><li class=""><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></li><li class="alt"><span>};&nbsp;&nbsp;</span></li><li class=""><span>&nbsp;&nbsp;</span></li><li class="alt"><span><span class="comment">//&nbsp;create&nbsp;base&nbsp;class2</span><span>&nbsp;&nbsp;</span></span></li><li class=""><span><span class="keyword">class</span><span>&nbsp;sports_mark&nbsp;&nbsp;&nbsp;</span></span></li><li class="alt"><span>{&nbsp;&nbsp;</span></li><li class=""><span>&nbsp;&nbsp;&nbsp;&nbsp;<span class="keyword">protected</span><span>:&nbsp;&nbsp;</span></span></li><li class="alt"><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="datatypes">int</span><span>&nbsp;s_mark;&nbsp;&nbsp;&nbsp;</span></span></li><li class=""><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></li><li class="alt"><span>&nbsp;&nbsp;&nbsp;&nbsp;<span class="keyword">public</span><span>:&nbsp;&nbsp;</span></span></li><li class=""><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></li><li class="alt"><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="keyword">void</span><span>&nbsp;get_mark()&nbsp;&nbsp;</span></span></li><li class=""><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{&nbsp;&nbsp;</span></li><li class="alt"><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;cout&nbsp;&lt;&lt;&nbsp;<span class="string">"\n&nbsp;Enter&nbsp;the&nbsp;sports&nbsp;mark:&nbsp;"</span><span>;&nbsp;&nbsp;</span></span></li><li class=""><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;cin&nbsp;&gt;&gt;&nbsp;s_mark;&nbsp;&nbsp;</span></li><li class="alt"><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></li><li class=""><span>};&nbsp;&nbsp;</span></li><li class="alt"><span>&nbsp;&nbsp;</span></li><li class=""><span><span class="comment">/*&nbsp;create&nbsp;a&nbsp;result&nbsp;as&nbsp;the&nbsp;child&nbsp;class&nbsp;to&nbsp;inherit&nbsp;functions&nbsp;of&nbsp;the&nbsp;parent&nbsp;class:&nbsp;student_detail&nbsp;and&nbsp;sports_mark.*/</span><span>&nbsp;&nbsp;</span></span></li><li class="alt"><span><span class="keyword">class</span><span>&nbsp;result:&nbsp;</span><span class="keyword">public</span><span>&nbsp;student_detail,&nbsp;</span><span class="keyword">public</span><span>&nbsp;sports_mark&nbsp;&nbsp;</span></span></li><li class=""><span>{&nbsp;&nbsp;</span></li><li class="alt"><span>&nbsp;&nbsp;&nbsp;&nbsp;<span class="datatypes">int</span><span>&nbsp;tot,&nbsp;avg;&nbsp;&nbsp;</span></span></li><li class=""><span>&nbsp;&nbsp;&nbsp;&nbsp;<span class="keyword">public</span><span>:&nbsp;&nbsp;</span></span></li><li class="alt"><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></li><li class=""><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="comment">//&nbsp;create&nbsp;member&nbsp;function&nbsp;of&nbsp;child&nbsp;class</span><span>&nbsp;&nbsp;</span></span></li><li class="alt"><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="keyword">void</span><span>&nbsp;disp&nbsp;()&nbsp;&nbsp;</span></span></li><li class=""><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{&nbsp;&nbsp;</span></li><li class="alt"><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;tot&nbsp;=&nbsp;sum&nbsp;+&nbsp;s_mark;&nbsp;&nbsp;</span></li><li class=""><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;avg&nbsp;=&nbsp;tot&nbsp;/&nbsp;6;&nbsp;<span class="comment">//&nbsp;total&nbsp;marks&nbsp;of&nbsp;six&nbsp;subject&nbsp;/&nbsp;6</span><span>&nbsp;&nbsp;</span></span></li><li class="alt"><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;cout&nbsp;&lt;&lt;&nbsp;<span class="string">"&nbsp;\n&nbsp;\n&nbsp;\t&nbsp;Roll&nbsp;No:&nbsp;"</span><span>&nbsp;&lt;&lt;&nbsp;rno&nbsp;&lt;&lt;&nbsp;</span><span class="string">"&nbsp;\n&nbsp;\t&nbsp;Total:&nbsp;"</span><span>&nbsp;&lt;&lt;&nbsp;tot&nbsp;&lt;&lt;&nbsp;endl;&nbsp;&nbsp;</span></span></li><li class=""><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;cout&nbsp;&lt;&lt;&nbsp;<span class="string">"&nbsp;\n&nbsp;\t&nbsp;Average&nbsp;Marks:&nbsp;"</span><span>&nbsp;&lt;&lt;&nbsp;avg;&nbsp;&nbsp;</span></span></li><li class="alt"><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}&nbsp;&nbsp;</span></li><li class=""><span>};&nbsp;&nbsp;</span></li><li class="alt"><span>&nbsp;&nbsp;</span></li><li class=""><span><span class="datatypes">int</span><span>&nbsp;main&nbsp;()&nbsp;&nbsp;</span></span></li><li class="alt"><span>{&nbsp;&nbsp;</span></li><li class=""><span>&nbsp;&nbsp;&nbsp;&nbsp;result&nbsp;obj;&nbsp;<span class="comment">//&nbsp;create&nbsp;an&nbsp;object&nbsp;of&nbsp;the&nbsp;derived&nbsp;class</span><span>&nbsp;&nbsp;</span></span></li><li class="alt"><span>&nbsp;&nbsp;</span></li><li class=""><span>&nbsp;&nbsp;&nbsp;&nbsp;<span class="comment">//&nbsp;call&nbsp;the&nbsp;member&nbsp;function&nbsp;of&nbsp;the&nbsp;base&nbsp;class</span><span>&nbsp;&nbsp;</span></span></li><li class="alt"><span>&nbsp;&nbsp;&nbsp;&nbsp;obj.detail();&nbsp;&nbsp;</span></li><li class=""><span>&nbsp;&nbsp;&nbsp;&nbsp;obj.get_mark();&nbsp;&nbsp;</span></li><li class="alt"><span>&nbsp;&nbsp;&nbsp;&nbsp;obj.disp();&nbsp;&nbsp;</span></li><li class=""><span>}&nbsp;&nbsp;</span></li></ol></div><textarea name="code" class="Cpp" style="display: none;">#include &lt;iostream&gt;
+using namespace std;
+
+// create base class1
+class student_detail 
+{
+	// access specifier 
+	protected:
+		int rno, sum = 0, i, marks[5];
+	
+	// access specifier	
+	public:
+		void detail()
+		{
+			
+			
+			cout &lt;&lt; " Enter the Roll No: " &lt;&lt; endl;
+			cin &gt;&gt; rno;
+
+			cout &lt;&lt; " Enter the marks of five subjects " &lt;&lt; endl;
+			// use for loop
+			for (i = 0; i &lt; 5; i++)
+			{
+				cin &gt;&gt; marks[i];
+			}
+			
+			
+			for ( i = 0; i &lt; 5; i++)
+			{
+				// store the sum of five subject
+			sum = sum + marks[i];
+			}
+		}
+			
+};
+
+// create base class2
+class sports_mark 
+{
+	protected:
+		int s_mark; 
+	
+	public:
+		
+		void get_mark()
+		{
+			cout &lt;&lt; "\n Enter the sports mark: ";
+			cin &gt;&gt; s_mark;
+			}	
+};
+
+/* create a result as the child class to inherit functions of the parent class: student_detail and sports_mark.*/
+class result: public student_detail, public sports_mark
+{
+	int tot, avg;
+	public:
+		
+		// create member function of child class
+		void disp ()
+		{
+			tot = sum + s_mark;
+			avg = tot / 6; // total marks of six subject / 6
+			cout &lt;&lt; " \n \n \t Roll No: " &lt;&lt; rno &lt;&lt; " \n \t Total: " &lt;&lt; tot &lt;&lt; endl;
+			cout &lt;&lt; " \n \t Average Marks: " &lt;&lt; avg;
+		}
+};
+
+int main ()
+{
+	result obj; // create an object of the derived class
+
+	// call the member function of the base class
+	obj.detail();
+	obj.get_mark();
+	obj.disp();
+}
+</textarea></div>
+<p><strong>Output</strong></p>
+<div class="codeblock3"><pre>Enter the Roll No:
+25
+ Enter the marks of five subjects
+90
+85
+98
+80
+75
+
+ Enter the sports mark: 99
+
+
+         Roll No: 25
+         Total: 527
+
+         Average Marks: 87
+</pre></div>
+<h3 class="h3"><span class="highlighter--highlighted" data-highlight-id="1" style="background-color: rgb(255, 246, 21); color: inherit;">Ambiguity Problem in Multiple Inheritance</span></h3>
+<p>In Multiple Inheritance, when a single class is derived from two or more base or parent classes. So, it might be possible that both the parent class have the same-named member functions, and it shows ambiguity when the child class object invokes one of the same-named member functions. Hence, we can say, the C++ compiler is confused in selecting the member function of a class for the execution of a program.</p>
+<h3 class="h3">Program to demonstrate the Ambiguity Problem in Multiple Inheritance</h3>
+<p>Let's write a simple to invoke the same member function of the parent class using derived class in C++ programming.</p>
+<p><strong>Program4.cpp</strong></p>
+<div class="codeblock"><div class="dp-highlighter"><div class="bar"><div class="tools"><a href="https://www.javatpoint.com/multiple-inheritance-in-cpp#" onclick="dp.sh.Toolbar.Command(&#39;ViewSource&#39;,this);return false;"></a><a href="https://www.javatpoint.com/multiple-inheritance-in-cpp#" onclick="dp.sh.Toolbar.Command(&#39;PrintSource&#39;,this);return false;"></a><a href="https://www.javatpoint.com/multiple-inheritance-in-cpp#" onclick="dp.sh.Toolbar.Command(&#39;About&#39;,this);return false;"></a></div></div><ol start="1" class="dp-cpp"><li class="alt"><span><span class="preprocessor">#include&nbsp;&lt;iostream&gt;</span><span>&nbsp;&nbsp;</span></span></li><li class=""><span><span class="preprocessor">#include&nbsp;&lt;conio.h&gt;</span><span>&nbsp;&nbsp;</span></span></li><li class="alt"><span>&nbsp;&nbsp;</span></li><li class=""><span><span class="keyword">using</span><span>&nbsp;</span><span class="keyword">namespace</span><span>&nbsp;std;&nbsp;&nbsp;</span></span></li><li class="alt"><span>&nbsp;&nbsp;</span></li><li class=""><span><span class="comment">//&nbsp;create&nbsp;class&nbsp;A</span><span>&nbsp;&nbsp;</span></span></li><li class="alt"><span><span class="keyword">class</span><span>&nbsp;A&nbsp;&nbsp;</span></span></li><li class=""><span>{&nbsp;&nbsp;</span></li><li class="alt"><span>&nbsp;&nbsp;&nbsp;&nbsp;<span class="keyword">public</span><span>:&nbsp;&nbsp;&nbsp;</span></span></li><li class=""><span>&nbsp;&nbsp;&nbsp;&nbsp;<span class="keyword">void</span><span>&nbsp;show()&nbsp;&nbsp;</span></span></li><li class="alt"><span>&nbsp;&nbsp;&nbsp;&nbsp;{&nbsp;&nbsp;</span></li><li class=""><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;cout&nbsp;&lt;&lt;&nbsp;<span class="string">"&nbsp;It&nbsp;is&nbsp;the&nbsp;member&nbsp;function&nbsp;of&nbsp;class&nbsp;A&nbsp;"</span><span>&nbsp;&lt;&lt;&nbsp;endl;&nbsp;&nbsp;</span></span></li><li class="alt"><span>&nbsp;&nbsp;&nbsp;&nbsp;}&nbsp;&nbsp;</span></li><li class=""><span>&nbsp;};&nbsp;&nbsp;&nbsp;</span></li><li class="alt"><span>&nbsp;&nbsp;&nbsp;</span></li><li class=""><span>&nbsp;<span class="comment">//&nbsp;create&nbsp;class&nbsp;B</span><span>&nbsp;&nbsp;</span></span></li><li class="alt"><span>&nbsp;<span class="keyword">class</span><span>&nbsp;B&nbsp;&nbsp;</span></span></li><li class=""><span>{&nbsp;&nbsp;</span></li><li class="alt"><span>&nbsp;&nbsp;&nbsp;&nbsp;<span class="keyword">public</span><span>:&nbsp;&nbsp;&nbsp;</span></span></li><li class=""><span>&nbsp;&nbsp;&nbsp;&nbsp;<span class="keyword">void</span><span>&nbsp;show()&nbsp;&nbsp;</span></span></li><li class="alt"><span>&nbsp;&nbsp;&nbsp;&nbsp;{&nbsp;&nbsp;</span></li><li class=""><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;cout&nbsp;&lt;&lt;&nbsp;<span class="string">"&nbsp;It&nbsp;is&nbsp;the&nbsp;member&nbsp;function&nbsp;of&nbsp;class&nbsp;B&nbsp;"</span><span>&nbsp;&lt;&lt;&nbsp;endl;&nbsp;&nbsp;</span></span></li><li class="alt"><span>&nbsp;&nbsp;&nbsp;&nbsp;}&nbsp;&nbsp;</span></li><li class=""><span>&nbsp;};&nbsp;&nbsp;</span></li><li class="alt"><span>&nbsp;&nbsp;&nbsp;</span></li><li class=""><span>&nbsp;&nbsp;&nbsp;</span></li><li class="alt"><span>&nbsp;<span class="comment">//&nbsp;create&nbsp;a&nbsp;child&nbsp;class&nbsp;to&nbsp;inherit&nbsp;the&nbsp;member&nbsp;function&nbsp;of&nbsp;class&nbsp;A&nbsp;and&nbsp;class&nbsp;B</span><span>&nbsp;&nbsp;</span></span></li><li class=""><span>&nbsp;<span class="keyword">class</span><span>&nbsp;child:&nbsp;</span><span class="keyword">public</span><span>&nbsp;A,&nbsp;</span><span class="keyword">public</span><span>&nbsp;B&nbsp;&nbsp;</span></span></li><li class="alt"><span>&nbsp;{&nbsp;&nbsp;</span></li><li class=""><span>&nbsp;&nbsp;&nbsp;&nbsp;<span class="keyword">public</span><span>:&nbsp;&nbsp;</span></span></li><li class="alt"><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="keyword">void</span><span>&nbsp;disp()&nbsp;&nbsp;</span></span></li><li class=""><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{&nbsp;&nbsp;</span></li><li class="alt"><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;cout&nbsp;&lt;&lt;&nbsp;<span class="string">"&nbsp;It&nbsp;is&nbsp;the&nbsp;member&nbsp;function&nbsp;of&nbsp;the&nbsp;child&nbsp;class&nbsp;"</span><span>&nbsp;&lt;&lt;&nbsp;endl;&nbsp;&nbsp;</span></span></li><li class=""><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}&nbsp;&nbsp;</span></li><li class="alt"><span>&nbsp;};&nbsp;&nbsp;</span></li><li class=""><span>&nbsp;&nbsp;&nbsp;</span></li><li class="alt"><span>&nbsp;<span class="datatypes">int</span><span>&nbsp;main&nbsp;()&nbsp;&nbsp;</span></span></li><li class=""><span>&nbsp;{&nbsp;&nbsp;</span></li><li class="alt"><span>&nbsp;&nbsp;&nbsp;&nbsp;<span class="comment">//&nbsp;create&nbsp;an&nbsp;object&nbsp;of&nbsp;the&nbsp;child&nbsp;class&nbsp;to&nbsp;access&nbsp;the&nbsp;member&nbsp;function</span><span>&nbsp;&nbsp;</span></span></li><li class=""><span>&nbsp;&nbsp;&nbsp;&nbsp;child&nbsp;ch;&nbsp;&nbsp;</span></li><li class="alt"><span>&nbsp;&nbsp;&nbsp;&nbsp;ch.show();&nbsp;<span class="comment">//&nbsp;It&nbsp;causes&nbsp;ambiguity&nbsp;</span><span>&nbsp;&nbsp;</span></span></li><li class=""><span>ch.disp();&nbsp;&nbsp;</span></li><li class="alt"><span>&nbsp;&nbsp;&nbsp;&nbsp;<span class="keyword">return</span><span>&nbsp;0;&nbsp;&nbsp;</span></span></li><li class=""><span>&nbsp;}&nbsp;&nbsp;&nbsp;</span></li></ol></div><textarea name="code" class="Cpp" style="display: none;">#include &lt;iostream&gt;
+#include &lt;conio.h&gt;
+
+using namespace std;
+
+// create class A
+class A
+{
+	public: 
+	void show()
+	{
+		cout &lt;&lt; " It is the member function of class A " &lt;&lt; endl;
+	}
+ }; 
+ 
+ // create class B
+ class B
+{
+	public: 
+	void show()
+	{
+		cout &lt;&lt; " It is the member function of class B " &lt;&lt; endl;
+	}
+ };
+ 
+ 
+ // create a child class to inherit the member function of class A and class B
+ class child: public A, public B
+ {
+ 	public:
+ 		void disp()
+ 		{
+ 			cout &lt;&lt; " It is the member function of the child class " &lt;&lt; endl;
+		 }
+ };
+ 
+ int main ()
+ {
+ 	// create an object of the child class to access the member function
+ 	child ch;
+ 	ch.show(); // It causes ambiguity 
+ch.disp();
+ 	return 0;
+ } 
+</textarea></div>
+<p>When the above program is compiled, it throws the show() member function is ambiguous. Because of both the base class A and B, defining the same member function show(), and when the derived class's object call the shows() function, it shows ambiguity in multiple inheritances.</p>
+<p>Therefore, we need to resolve the ambiguous problem in multiple Inheritance. The ambiguity problem can be resolved by defining the <strong>class name</strong> and <strong>scope resolution (::) operator</strong> to specify the class from which the member function is invoked in the child class.</p>
+<p><strong>Syntax of the Ambiguity Resolution</strong></p>
+<div class="codeblock"><div class="dp-highlighter"><div class="bar"><div class="tools"><a href="https://www.javatpoint.com/multiple-inheritance-in-cpp#" onclick="dp.sh.Toolbar.Command(&#39;ViewSource&#39;,this);return false;"></a><a href="https://www.javatpoint.com/multiple-inheritance-in-cpp#" onclick="dp.sh.Toolbar.Command(&#39;PrintSource&#39;,this);return false;"></a><a href="https://www.javatpoint.com/multiple-inheritance-in-cpp#" onclick="dp.sh.Toolbar.Command(&#39;About&#39;,this);return false;"></a></div></div><ol start="1" class="dp-cpp"><li class="alt"><span><span>Derived_obj_name.parent_class_name&nbsp;:&nbsp;:&nbsp;same_named_memberFunction&nbsp;(&nbsp;[parameter]&nbsp;);&nbsp;&nbsp;</span></span></li></ol></div><textarea name="code" class="Cpp" style="display: none;">Derived_obj_name.parent_class_name : : same_named_memberFunction ( [parameter] );
+</textarea></div>
+<p><strong>For example,</strong></p>
+<div class="codeblock"><div class="dp-highlighter"><div class="bar"><div class="tools"><a href="https://www.javatpoint.com/multiple-inheritance-in-cpp#" onclick="dp.sh.Toolbar.Command(&#39;ViewSource&#39;,this);return false;"></a><a href="https://www.javatpoint.com/multiple-inheritance-in-cpp#" onclick="dp.sh.Toolbar.Command(&#39;PrintSource&#39;,this);return false;"></a><a href="https://www.javatpoint.com/multiple-inheritance-in-cpp#" onclick="dp.sh.Toolbar.Command(&#39;About&#39;,this);return false;"></a></div></div><ol start="1" class="dp-cpp"><li class="alt"><span><span><span class="highlighter--highlighted" data-highlight-id="2" style="background-color: rgb(255, 246, 21); color: inherit;">ch.A::&nbsp;show();&nbsp;</span></span><span class="comment"><span class="highlighter--highlighted" data-highlight-id="2" style="background-color: rgb(255, 246, 21); color: inherit;">//&nbsp;class_name&nbsp;and&nbsp;scope&nbsp;resolution&nbsp;operator&nbsp;with&nbsp;member&nbsp;function</span></span><span>&nbsp;&nbsp;</span></span></li><li class=""><span><span class="highlighter--highlighted" data-highlight-id="2" style="background-color: rgb(255, 246, 21); color: inherit;">ch.B::show();</span>&nbsp;&nbsp;</span></li></ol></div><textarea name="code" class="Cpp" style="display: none;">ch.A:: show(); // class_name and scope resolution operator with member function
+ch.B::show();
+</textarea></div>
+<p>After making some changes, now we again execute the above program that returns the given below Output.</p>
+<div class="codeblock"><div class="dp-highlighter"><div class="bar"><div class="tools"><a href="https://www.javatpoint.com/multiple-inheritance-in-cpp#" onclick="dp.sh.Toolbar.Command(&#39;ViewSource&#39;,this);return false;"></a><a href="https://www.javatpoint.com/multiple-inheritance-in-cpp#" onclick="dp.sh.Toolbar.Command(&#39;PrintSource&#39;,this);return false;"></a><a href="https://www.javatpoint.com/multiple-inheritance-in-cpp#" onclick="dp.sh.Toolbar.Command(&#39;About&#39;,this);return false;"></a></div></div><ol start="1" class="dp-cpp"><li class="alt"><span><span>It&nbsp;is&nbsp;the&nbsp;member&nbsp;function&nbsp;of&nbsp;the&nbsp;child&nbsp;</span><span class="keyword">class</span><span>&nbsp;&nbsp;</span></span></li><li class=""><span>&nbsp;It&nbsp;is&nbsp;the&nbsp;member&nbsp;function&nbsp;of&nbsp;<span class="keyword">class</span><span>&nbsp;A&nbsp;&nbsp;</span></span></li><li class="alt"><span>&nbsp;It&nbsp;is&nbsp;the&nbsp;member&nbsp;function&nbsp;of&nbsp;<span class="keyword">class</span><span>&nbsp;B&nbsp;&nbsp;</span></span></li></ol></div><textarea name="code" class="Cpp" style="display: none;">It is the member function of the child class
+ It is the member function of class A
+ It is the member function of class B
+</textarea></div>
+<hr>
+<div class="nexttopicdiv">
+<span class="nexttopictext">Next Topic</span><span class="nexttopiclink"><a href="https://www.javatpoint.com/cpp-bitwise-xor-operator">C++ Bitwise XOR Operator</a></span>
+</div>
+
+<br><br>
+<div id="bottomnext">
+<a style="float:left" class="next" href="https://www.javatpoint.com/hybrid-inheritance-in-cpp">&#8592; prev</a>
+<a style="float:right" class="next" href="https://www.javatpoint.com/cpp-bitwise-xor-operator">next &#8594;</a>
+</div>
+<br><br>
+</td></tr>
+</tbody></table>
+</div>
+
+<div align="center" data-freestar-ad="__336x280 __790x250" id="javatpointcom_leaderboard_btf_1">
+<script data-cfasync="false" type="text/javascript">
+    freestar.config.enabled_slots.push({ placementName: "javatpointcom_leaderboard_btf_1", slotId: "javatpointcom_leaderboard_btf_1" });
+  </script>
+</div>
+<hr class="hrhomebox">
+<div><img class=" lazyloaded" data-src="https://static.javatpoint.com/images/youtube-32.png" style="vertical-align:middle;" alt="Youtube" src="./Multiple Inheritance in C++ - javatpoint_files/youtube-32.png">
+<span class="h3" style="vertical-align:middle;font-size:22px"> For Videos Join Our Youtube Channel: <a href="https://bit.ly/2FOeX6S" target="_blank"> Join Now</a></span>
+</div>
+<hr class="hrhomebox">
+<h3 class="h3">Feedback</h3>
+<ul class="points">
+<li>Send your Feedback to feedback@javatpoint.com</li>
+</ul>
+<hr class="hrhomebox">
+<h2 class="h2">Help Others, Please Share</h2>
+<a rel="nofollow" title="Facebook" target="_blank" href="https://www.facebook.com/sharer.php?u=https://www.javatpoint.com/multiple-inheritance-in-cpp"><img src="./Multiple Inheritance in C++ - javatpoint_files/facebook32.png" alt="facebook"></a>
+<a rel="nofollow" title="Twitter" target="_blank" href="https://twitter.com/share?url=https://www.javatpoint.com/multiple-inheritance-in-cpp"><img src="./Multiple Inheritance in C++ - javatpoint_files/twitter32.png" alt="twitter"></a>
+<a rel="nofollow" title="Pinterest" target="_blank" href="https://www.pinterest.com/pin/create/button/?url=https://www.javatpoint.com/multiple-inheritance-in-cpp"><img src="./Multiple Inheritance in C++ - javatpoint_files/pinterest32.png" alt="pinterest"></a>
+
+<hr class="hrhomebox">
+
+<fieldset class="gra1">
+<h2 class="h3">Learn Latest Tutorials</h2>
+<div class="firsthomecontent">
+<a href="https://www.javatpoint.com/splunk">
+<div class="homecontent"><img class=" lazyloaded" data-src="https://static.javatpoint.com/images/homeicon/splunk.png" alt="Splunk tutorial" src="./Multiple Inheritance in C++ - javatpoint_files/splunk.png">
+<p>Splunk</p>
+</div>
+</a>
+<a href="https://www.javatpoint.com/spss">
+<div class="homecontent"><img class=" lazyloaded" data-src="https://static.javatpoint.com/images/homeicon/spss.png" alt="SPSS tutorial" src="./Multiple Inheritance in C++ - javatpoint_files/spss.png">
+<p>SPSS</p>
+</div>
+</a>
+<a href="https://www.javatpoint.com/swagger">
+<div class="homecontent"><img class=" lazyloaded" data-src="https://static.javatpoint.com/images/homeicon/swagger.png" alt="Swagger tutorial" src="./Multiple Inheritance in C++ - javatpoint_files/swagger.png">
+<p>Swagger</p>
+</div>
+</a>
+<a href="https://www.javatpoint.com/t-sql">
+<div class="homecontent"><img class=" lazyloaded" data-src="https://static.javatpoint.com/images/homeicon/transact-sql.png" alt="T-SQL tutorial" src="./Multiple Inheritance in C++ - javatpoint_files/transact-sql.png">
+<p>Transact-SQL</p>
+</div>
+</a>
+<a href="https://www.javatpoint.com/tumblr">
+<div class="homecontent"><img class=" lazyloaded" data-src="https://static.javatpoint.com/images/homeicon/tumblr.png" alt="Tumblr tutorial" src="./Multiple Inheritance in C++ - javatpoint_files/tumblr.png">
+<p>Tumblr</p>
+</div>
+</a>
+<a href="https://www.javatpoint.com/reactjs-tutorial">
+<div class="homecontent"><img class=" lazyloaded" data-src="https://static.javatpoint.com/images/homeicon/react.png" alt="React tutorial" src="./Multiple Inheritance in C++ - javatpoint_files/react.png">
+<p>ReactJS</p>
+</div>
+</a>
+<a href="https://www.javatpoint.com/regex">
+<div class="homecontent"><img class=" lazyloaded" data-src="https://static.javatpoint.com/images/homeicon/regex.png" alt="Regex tutorial" src="./Multiple Inheritance in C++ - javatpoint_files/regex.png">
+<p>Regex</p>
+</div>
+</a>
+<a href="https://www.javatpoint.com/reinforcement-learning">
+<div class="homecontent"><img class=" lazyloaded" data-src="https://static.javatpoint.com/images/homeicon/react.png" alt="Reinforcement learning tutorial" src="./Multiple Inheritance in C++ - javatpoint_files/react.png">
+<p>Reinforcement Learning</p>
+</div>
+</a>
+<a href="https://www.javatpoint.com/r-tutorial">
+<div class="homecontent"><img class=" lazyloaded" data-src="https://static.javatpoint.com/images/homeicon/r-programming.png" alt="R Programming tutorial" src="./Multiple Inheritance in C++ - javatpoint_files/r-programming.png">
+<p>R Programming</p>
+</div>
+</a>
+<a href="https://www.javatpoint.com/rxjs">
+<div class="homecontent"><img class=" lazyloaded" data-src="https://static.javatpoint.com/images/homeicon/rxjs.png" alt="RxJS tutorial" src="./Multiple Inheritance in C++ - javatpoint_files/rxjs.png">
+<p>RxJS</p>
+</div>
+</a>
+<a href="https://www.javatpoint.com/react-native-tutorial">
+<div class="homecontent"><img class=" lazyloaded" data-src="https://static.javatpoint.com/images/homeicon/react-native.png" alt="React Native tutorial" src="./Multiple Inheritance in C++ - javatpoint_files/react-native.png">
+<p>React Native</p>
+</div>
+</a>
+<a href="https://www.javatpoint.com/python-design-pattern">
+<div class="homecontent"><img class=" lazyloaded" data-src="https://static.javatpoint.com/images/homeicon/python-design-patterns.png" alt="Python Design Patterns" src="./Multiple Inheritance in C++ - javatpoint_files/python-design-patterns.png">
+<p>Python Design Patterns</p>
+</div>
+</a>
+<a href="https://www.javatpoint.com/python-pillow">
+<div class="homecontent"><img class=" lazyloaded" data-src="https://static.javatpoint.com/images/homeicon/python-pillow.png" alt="Python Pillow tutorial" src="./Multiple Inheritance in C++ - javatpoint_files/python-pillow.png">
+<p>Python Pillow</p>
+</div>
+</a>
+<a href="https://www.javatpoint.com/python-turtle-programming">
+<div class="homecontent"><img class=" lazyloaded" data-src="https://static.javatpoint.com/images/homeicon/python-turtle.png" alt="Python Turtle tutorial" src="./Multiple Inheritance in C++ - javatpoint_files/python-turtle.png">
+<p>Python Turtle</p>
+</div>
+</a>
+<a href="https://www.javatpoint.com/keras">
+<div class="homecontent"><img class=" lazyloaded" data-src="https://static.javatpoint.com/images/homeicon/keras.png" alt="Keras tutorial" src="./Multiple Inheritance in C++ - javatpoint_files/keras.png">
+<p>Keras</p>
+</div>
+</a>
+</div>
+</fieldset>
+<hr class="hrhomebox">
+
+<fieldset class="gra1">
+<h2 class="h3">Preparation</h2>
+<div class="firsthomecontent">
+<a href="https://www.javatpoint.com/aptitude/quantitative">
+<div class="homecontent"><img class=" lazyloaded" data-src="https://static.javatpoint.com/aptitude/images/quantitative-aptitude-home.png" alt="Aptitude" src="./Multiple Inheritance in C++ - javatpoint_files/quantitative-aptitude-home.png">
+<p>Aptitude</p>
+</div>
+</a>
+<a href="https://www.javatpoint.com/reasoning">
+<div class="homecontent"><img class=" lazyloaded" data-src="https://static.javatpoint.com/reasoning/images/reasoning-home.png" alt="Logical Reasoning" src="./Multiple Inheritance in C++ - javatpoint_files/reasoning-home.png">
+<p>Reasoning</p>
+</div>
+</a>
+<a href="https://www.javatpoint.com/verbal-ability">
+<div class="homecontent"><img class=" lazyloaded" data-src="https://static.javatpoint.com/verbal-ability/images/verbal-ability-home.png" alt="Verbal Ability" src="./Multiple Inheritance in C++ - javatpoint_files/verbal-ability-home.png">
+<p>Verbal Ability</p>
+</div>
+</a>
+<a href="https://www.javatpoint.com/interview-questions-and-answers">
+<div class="homecontent"><img class=" lazyloaded" data-src="https://static.javatpoint.com/images/logo/interviewhome.png" alt="Interview Questions" src="./Multiple Inheritance in C++ - javatpoint_files/interviewhome.png">
+<p>Interview Questions</p>
+</div>
+</a>
+<a href="https://www.javatpoint.com/company-interview-questions-and-recruitment-process">
+<div class="homecontent"><img class=" lazyloaded" data-src="https://static.javatpoint.com/interview/images/company-home.jpeg" alt="Company Interview Questions" src="./Multiple Inheritance in C++ - javatpoint_files/company-home.jpeg">
+<p>Company Questions</p>
+</div>
+</a>
+</div>
+</fieldset>
+<hr class="hrhomebox">
+
+<div align="center" data-freestar-ad="__336x280 __790x250" id="javatpointcom_leaderboard_btf_2">
+<script data-cfasync="false" type="text/javascript">
+    freestar.config.enabled_slots.push({ placementName: "javatpointcom_leaderboard_btf_2", slotId: "javatpointcom_leaderboard_btf_2" });
+  </script>
+</div>
+
+<fieldset class="gra1">
+<h2 class="h3">Trending Technologies</h2>
+<div class="firsthomecontent">
+<a href="https://www.javatpoint.com/artificial-intelligence-ai">
+<div class="homecontent"><img class=" lazyloaded" data-src="https://static.javatpoint.com/images/homeicon/artificial-intelligence.png" alt="Artificial Intelligence" src="./Multiple Inheritance in C++ - javatpoint_files/artificial-intelligence.png">
+<p>Artificial Intelligence</p>
+</div>
+</a>
+<a href="https://www.javatpoint.com/aws-tutorial">
+<div class="homecontent"><img class=" lazyloaded" data-src="https://static.javatpoint.com/images/homeicon/amazon-web-services.png" alt="AWS Tutorial" src="./Multiple Inheritance in C++ - javatpoint_files/amazon-web-services.png">
+<p>AWS</p>
+</div>
+</a>
+<a href="https://www.javatpoint.com/selenium-tutorial">
+<div class="homecontent"><img class=" lazyloaded" data-src="https://static.javatpoint.com/images/homeicon/selenium.png" alt="Selenium tutorial" src="./Multiple Inheritance in C++ - javatpoint_files/selenium.png">
+<p>Selenium</p>
+</div>
+</a>
+<a href="https://www.javatpoint.com/cloud-computing">
+<div class="homecontent"><img class=" lazyloaded" data-src="https://static.javatpoint.com/images/homeicon/cloud-computing.png" alt="Cloud Computing" src="./Multiple Inheritance in C++ - javatpoint_files/cloud-computing.png">
+<p>Cloud Computing</p>
+</div>
+</a>
+<a href="https://www.javatpoint.com/hadoop-tutorial">
+<div class="homecontent"><img class=" lazyloaded" data-src="https://static.javatpoint.com/images/homeicon/hadoop.png" alt="Hadoop tutorial" src="./Multiple Inheritance in C++ - javatpoint_files/hadoop.png">
+<p>Hadoop</p>
+</div>
+</a>
+<a href="https://www.javatpoint.com/reactjs-tutorial">
+<div class="homecontent"><img class="lazyload" data-src="https://static.javatpoint.com/images/homeicon/reactjs.png" alt="ReactJS Tutorial">
+<p>ReactJS</p>
+</div>
+</a>
+<a href="https://www.javatpoint.com/data-science">
+<div class="homecontent"><img class="lazyload" data-src="https://static.javatpoint.com/images/homeicon/data-science.png" alt="Data Science Tutorial">
+<p>Data Science</p>
+</div>
+</a>
+<a href="https://www.javatpoint.com/angular-7-tutorial">
+<div class="homecontent"><img class="lazyload" data-src="https://static.javatpoint.com/images/homeicon/angular7.png" alt="Angular 7 Tutorial">
+<p>Angular 7</p>
+</div>
+</a>
+<a href="https://www.javatpoint.com/blockchain-tutorial">
+<div class="homecontent"><img class="lazyload" data-src="https://static.javatpoint.com/images/homeicon/blockchain.png" alt="Blockchain Tutorial">
+<p>Blockchain</p>
+</div>
+</a>
+<a href="https://www.javatpoint.com/git">
+<div class="homecontent"><img class="lazyload" data-src="https://static.javatpoint.com/images/homeicon/git.png" alt="Git Tutorial">
+<p>Git</p>
+</div>
+</a>
+<a href="https://www.javatpoint.com/machine-learning">
+<div class="homecontent"><img class="lazyload" data-src="https://static.javatpoint.com/images/homeicon/machine-learning.png" alt="Machine Learning Tutorial">
+<p>Machine Learning</p>
+</div>
+</a>
+<a href="https://www.javatpoint.com/devops">
+<div class="homecontent"><img class="lazyload" data-src="https://static.javatpoint.com/images/homeicon/devops.png" alt="DevOps Tutorial">
+<p>DevOps</p>
+</div>
+</a>
+</div>
+</fieldset>
+<hr class="hrhomebox">
+
+<fieldset class="gra1">
+<h2 class="h3">B.Tech / MCA</h2>
+<div class="firsthomecontent">
+<a href="https://www.javatpoint.com/dbms-tutorial">
+<div class="homecontent"><img class="lazyload" data-src="https://static.javatpoint.com/images/homeicon/dbms.png" alt="DBMS tutorial">
+<p>DBMS</p>
+</div>
+</a>
+<a href="https://www.javatpoint.com/data-structure-tutorial">
+<div class="homecontent"><img class="lazyload" data-src="https://static.javatpoint.com/images/homeicon/data-structures.png" alt="Data Structures tutorial">
+<p>Data Structures</p>
+</div>
+</a>
+<a href="https://www.javatpoint.com/daa-tutorial">
+<div class="homecontent"><img class="lazyload" data-src="https://static.javatpoint.com/images/homeicon/daa.png" alt="DAA tutorial">
+<p>DAA</p>
+</div>
+</a>
+<a href="https://www.javatpoint.com/operating-system">
+<div class="homecontent"><img class="lazyload" data-src="https://static.javatpoint.com/images/homeicon/operating-system.png" alt="Operating System">
+<p>Operating System</p>
+</div>
+</a>
+<a href="https://www.javatpoint.com/computer-network-tutorial">
+<div class="homecontent"><img class="lazyload" data-src="https://static.javatpoint.com/images/homeicon/computer-network.png" alt="Computer Network tutorial">
+<p>Computer Network</p>
+</div>
+</a>
+<a href="https://www.javatpoint.com/compiler-tutorial">
+<div class="homecontent"><img class="lazyload" data-src="https://static.javatpoint.com/images/homeicon/compiler-design.png" alt="Compiler Design tutorial">
+<p>Compiler Design</p>
+</div>
+</a>
+<a href="https://www.javatpoint.com/computer-organization-and-architecture-tutorial">
+<div class="homecontent"><img class="lazyload" data-src="https://static.javatpoint.com/images/homeicon/computer-organization.png" alt="Computer Organization and Architecture">
+<p>Computer Organization</p>
+</div>
+</a>
+<a href="https://www.javatpoint.com/discrete-mathematics-tutorial">
+<div class="homecontent"><img class="lazyload" data-src="https://static.javatpoint.com/images/homeicon/discrete-mathematics.png" alt="Discrete Mathematics Tutorial">
+<p>Discrete Mathematics</p>
+</div>
+</a>
+<a href="https://www.javatpoint.com/ethical-hacking">
+<div class="homecontent"><img class="lazyload" data-src="https://static.javatpoint.com/images/homeicon/ethical-hacking.png" alt="Ethical Hacking">
+<p>Ethical Hacking</p>
+</div>
+</a>
+<a href="https://www.javatpoint.com/computer-graphics-tutorial">
+<div class="homecontent"><img class="lazyload" data-src="https://static.javatpoint.com/images/homeicon/computer-graphics.png" alt="Computer Graphics Tutorial">
+<p>Computer Graphics</p>
+</div>
+</a>
+<a href="https://www.javatpoint.com/software-engineering">
+<div class="homecontent"><img class="lazyload" data-src="https://static.javatpoint.com/images/homeicon/software-engineering.png" alt="Software Engineering ">
+<p>Software Engineering</p>
+</div>
+</a>
+<a href="https://www.javatpoint.com/html-tutorial">
+<div class="homecontent"><img class="lazyload" data-src="https://static.javatpoint.com/images/homeicon/web-technology.png" alt="html tutorial">
+<p>Web Technology</p>
+</div>
+</a>
+<a href="https://www.javatpoint.com/cyber-security-tutorial">
+<div class="homecontent"><img class="lazyload" data-src="https://static.javatpoint.com/images/homeicon/cyber-security.png" alt="Cyber Security tutorial">
+<p>Cyber Security</p>
+</div>
+</a>
+<a href="https://www.javatpoint.com/automata-tutorial">
+<div class="homecontent"><img class="lazyload" data-src="https://static.javatpoint.com/images/homeicon/automata.png" alt="Automata Tutorial">
+<p>Automata</p>
+</div>
+</a>
+<a href="https://www.javatpoint.com/c-programming-language-tutorial">
+<div class="homecontent"><img class="lazyload" data-src="https://static.javatpoint.com/images/homeicon/c-programming.png" alt="C Language tutorial">
+<p>C Programming</p>
+</div>
+</a>
+<a href="https://www.javatpoint.com/cpp-tutorial">
+<div class="homecontent"><img class="lazyload" data-src="https://static.javatpoint.com/images/homeicon/cpp.png" alt="C++ tutorial">
+<p>C++</p>
+</div>
+</a>
+<a href="https://www.javatpoint.com/java-tutorial">
+<div class="homecontent"><img class="lazyload" data-src="https://static.javatpoint.com/images/homeicon/java.png" alt="Java tutorial">
+<p>Java</p>
+</div>
+</a>
+<a href="https://www.javatpoint.com/net-framework">
+<div class="homecontent"><img class="lazyload" data-src="https://static.javatpoint.com/images/homeicon/dot-net.png" alt=".Net Framework tutorial">
+<p>.Net</p>
+</div>
+</a>
+<a href="https://www.javatpoint.com/python-tutorial">
+<div class="homecontent"><img class="lazyload" data-src="https://static.javatpoint.com/images/homeicon/python.png" alt="Python tutorial">
+<p>Python</p>
+</div>
+</a>
+<a href="https://www.javatpoint.com/programs-list">
+<div class="homecontent"><img class="lazyload" data-src="https://static.javatpoint.com/images/homeicon/programs.png" alt="List of Programs">
+<p>Programs</p>
+</div>
+</a>
+<a href="https://www.javatpoint.com/control-system-tutorial">
+<div class="homecontent"><img class="lazyload" data-src="https://static.javatpoint.com/images/homeicon/control-system.png" alt="Control Systems tutorial">
+<p>Control System</p>
+</div>
+</a>
+<a href="https://www.javatpoint.com/data-mining">
+<div class="homecontent"><img class="lazyload" data-src="https://static.javatpoint.com/images/homeicon/data-mining.png" alt="Data Mining Tutorial">
+<p>Data Mining</p>
+</div>
+</a>
+<a href="https://www.javatpoint.com/data-warehouse">
+<div class="homecontent"><img class="lazyload" data-src="https://static.javatpoint.com/images/homeicon/data-warehouse.png" alt="Data Warehouse Tutorial">
+<p>Data Warehouse</p>
+</div>
+</a>
+</div>
+</fieldset>
+
+<div align="center" data-freestar-ad="__336x280 __790x250" id="javatpointcom_leaderboard_btf_3">
+<script data-cfasync="false" type="text/javascript">
+    freestar.config.enabled_slots.push({ placementName: "javatpointcom_leaderboard_btf_3", slotId: "javatpointcom_leaderboard_btf_3" });
+  </script>
+</div>
+</div>
+<br><br><div class="mobilemenu" style="clear:both">
+</div></div>
+<div id="right">
+<div class="sidebar-container">
+<div class="sticky-container">
+<div align="center" data-freestar-ad="__336x280" id="javatpointcom_rightrail_1">
+<script data-cfasync="false" type="text/javascript">
+          freestar.config.enabled_slots.push({
+              placementName: "javatpointcom_rightrail_1",
+              slotId: "javatpointcom_rightrail_1"
+          });
+      </script>
+</div>
+<br>
+<br>
+<div align="center" data-freestar-ad="__336x280" id="javatpointcom_rightrail_2">
+<script data-cfasync="false" type="text/javascript">
+        freestar.config.enabled_slots.push({
+            placementName: "javatpointcom_rightrail_2",
+            slotId: "javatpointcom_rightrail_2"
+        });
+    </script>
+</div>
+<br>
+<br>
+</div>
+</div>
+<div class="sidebar-container">
+<div class="sticky-container">
+<div align="center" data-freestar-ad="__336x280" id="javatpointcom_rightrail_3">
+<script data-cfasync="false" type="text/javascript">
+          freestar.config.enabled_slots.push({
+              placementName: "javatpointcom_rightrail_3",
+              slotId: "javatpointcom_rightrail_3"
+          });
+      </script>
+</div>
+<br>
+<br>
+<div align="center" data-freestar-ad="__336x280" id="javatpointcom_rightrail_4">
+<script data-cfasync="false" type="text/javascript">
+          freestar.config.enabled_slots.push({
+              placementName: "javatpointcom_rightrail_4",
+              slotId: "javatpointcom_rightrail_4"
+          });
+      </script>
+</div>
+<br>
+<br>
+</div>
+</div>
+<div class="sidebar-container">
+<div class="sticky-container">
+<div align="center" data-freestar-ad="__336x280" id="javatpointcom_rightrail_5">
+<script data-cfasync="false" type="text/javascript">
+          freestar.config.enabled_slots.push({
+              placementName: "javatpointcom_rightrail_5",
+              slotId: "javatpointcom_rightrail_5"
+          });
+      </script>
+</div>
+<br>
+<br>
+<div align="center" data-freestar-ad="__336x280" id="javatpointcom_rightrail_6">
+<script data-cfasync="false" type="text/javascript">
+          freestar.config.enabled_slots.push({
+              placementName: "javatpointcom_rightrail_6",
+              slotId: "javatpointcom_rightrail_6"
+          });
+      </script>
+</div>
+</div>
+</div>
+<br><br>
+</div>
+<div class="right1024" style="float:left;margin-left:10px;margin-top:120px;">
+
+</div>
+<br>
+<div id="footer" style="clear:both;width:100%">
+<div style="width:100%;margin-top:10px;color:white;background-image: linear-gradient(145deg,#52a2fc,#480fcc);line-height:28px;"> <h2 style="padding:60px 0px 0px 20px">Javatpoint Services</h2> <p style="padding:0px 20px 0px 20px">JavaTpoint offers too many high quality services. Mail us on hr@javatpoint.com, to get more information about given services. </p><ul class="points"> <li>Website Designing</li><li>Website Development</li><li>Java Development</li><li>PHP Development</li><li>WordPress</li><li>Graphic Designing</li><li>Logo</li><li>Digital Marketing</li><li>On Page and Off Page SEO</li><li>PPC</li><li>Content Development</li><li>Corporate Training</li><li>Classroom and Online Training</li><li>Data Entry</li></ul> <p style="padding-bottom:60px"></p></div><div style="width:100%;margin-top:-20px;color:white;background-image: linear-gradient(145deg,#dc8140,#b16b15);line-height:28px;"> <h2 style="padding:60px 0px 0px 20px">Training For College Campus</h2> <p style="padding:0px 20px 60px 20px">JavaTpoint offers college campus training on Core Java, Advance Java, .Net, Android, Hadoop, PHP, Web Technology and Python. Please mail your requirement at hr@javatpoint.com. <br>Duration: 1 week to 2 week<br></p></div><script>var _gaq=_gaq || []; _gaq.push(['_setAccount', 'UA-24880427-1']); _gaq.push(['_trackPageview']); (function(){var ga=document.createElement('script'); ga.type='text/javascript'; ga.async=true; ga.src=('https:'==document.location.protocol ? 'https://ssl' : 'https://www') + '.google-analytics.com/ga.js'; var s=document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);})();</script><div style="margin-top:5px;text-align:center"> <sup style="font:16px arial;">Like/Subscribe us for latest updates or newsletter </sup> <a target="_blank" rel="nofollow noopener" href="https://feeds.feedburner.com/javatpointsonoo"><img src="./Multiple Inheritance in C++ - javatpoint_files/rss1.png" alt="RSS Feed"></a> <a target="_blank" rel="nofollow noopener" href="https://feedburner.google.com/fb/a/mailverify?uri=javatpointsonoo"><img src="./Multiple Inheritance in C++ - javatpoint_files/mail1.png" alt="Subscribe to Get Email Alerts"></a> <a rel="nofollow noopener" target="_blank" href="https://www.facebook.com/javatpoint"><img src="./Multiple Inheritance in C++ - javatpoint_files/facebook1.jpg" alt="Facebook Page"></a> <a target="_blank noopener" rel="nofollow" href="https://twitter.com/pagejavatpoint"><img src="./Multiple Inheritance in C++ - javatpoint_files/twitter1.png" alt="Twitter Page"></a> <a target="_blank" rel="nofollow noopener" href="https://www.youtube.com/channel/UCUnYvQVCrJoFWZhKK3O2xLg"><img src="./Multiple Inheritance in C++ - javatpoint_files/youtube32.png" alt="YouTube"></a> <a target="_blank" rel="nofollow noopener" href="https://javatpoint.blogspot.com/"><img src="./Multiple Inheritance in C++ - javatpoint_files/blog.png" alt="Blog Page"></a> </div><footer class="footer1"><div class="column4"><h3>Learn Tutorials</h3><a href="https://www.javatpoint.com/java-tutorial">Learn Java</a><a href="https://www.javatpoint.com/data-structure-tutorial">Learn Data Structures</a><a href="https://www.javatpoint.com/c-programming-language-tutorial">Learn C Programming</a><a href="https://www.javatpoint.com/cpp-tutorial">Learn C++ Tutorial</a><a href="https://www.javatpoint.com/c-sharp-tutorial">Learn C# Tutorial</a><a href="https://www.javatpoint.com/php-tutorial">Learn PHP Tutorial</a><a href="https://www.javatpoint.com/html-tutorial">Learn HTML Tutorial</a><a href="https://www.javatpoint.com/javascript-tutorial">Learn JavaScript Tutorial</a><a href="https://www.javatpoint.com/jquery-tutorial">Learn jQuery Tutorial</a><a href="https://www.javatpoint.com/spring-tutorial">Learn Spring Tutorial</a></div><div class="column4"><h3>Our Websites</h3><a href="https://www.javatpoint.com/">Javatpoint.com</a><a rel="dofollow noopener" target="_blank" href="https://www.hindi100.com/">Hindi100.com</a><a rel="dofollow noopener" target="_blank" href="https://www.lyricsia.com/">Lyricsia.com</a><a rel="nofollow noopener" target="_blank" href="https://www.quoteperson.com/">Quoteperson.com</a><a rel="nofollow noopener" target="_blank" href="https://www.jobandplacement.com/">Jobandplacement.com</a></div><div class="column4"><h3>Our Services</h3><p>Website Development</p><p>Android Development</p><p>Website Designing</p><p>Digital Marketing</p><p>Summer Training</p><p>Industrial Training</p><p>College Campus Training</p></div><div class="column4"><h3>Contact</h3><p>Address: G-13, 2nd Floor, Sec-3</p><p>Noida, UP, 201301, India</p><p>Contact No: 0120-4256464, 9990449935</p><a href="https://www.javatpoint.com/contact-us">Contact Us</a> <a href="https://www.javatpoint.com/subscribe.jsp">Subscribe Us</a> <a href="https://www.javatpoint.com/privacy-policy">Privacy Policy</a><a href="https://www.javatpoint.com/sitemap.xml">Sitemap</a><br><a href="https://www.javatpoint.com/sonoo-jaiswal">About Me</a></div></footer><footer class="footer2"><p>© Copyright 2011-2021 www.javatpoint.com. All rights reserved. Developed by JavaTpoint.</p></footer>
+<div id="bot-root"><script src="https://app.pushbrothers.com/js/notification-bot.js?cnfg=a3cc04a1-8471-450e-b01e-c9d752b16eb0"></script></div>
+<script> 
+ (function() {
+ var e = document.createElement('script');
+ e.src = 'https://app.pushbrothers.com/js/notification-bot.js?cnfg=a3cc04a1-8471-450e-b01e-c9d752b16eb0';
+ document.getElementById('bot-root').appendChild(e);}());
+</script>
+</div>
+
+</div></div>
+<script src="./Multiple Inheritance in C++ - javatpoint_files/shcoreandbrush.js.download"></script><script type="text/javascript" src="./Multiple Inheritance in C++ - javatpoint_files/google.js.download"></script>
+<script> dp.SyntaxHighlighter.HighlightAll('code'); </script>
+<script src="./Multiple Inheritance in C++ - javatpoint_files/lazysizes.min.js.download" async=""></script>
+  <table cellspacing="0" cellpadding="0" role="presentation" class="gstl_50 gssb_c" style="width: 164px; display: none; top: 33px; left: 253px; position: absolute;"><tbody><tr><td class="gssb_f"></td><td class="gssb_e" style="width: 100%;"></td></tr></tbody></table><table cellspacing="0" cellpadding="0" role="presentation" class="gstl_51 gssb_c" style="width: 2px; display: none; top: 3px; left: -1px; position: absolute;"><tbody><tr><td class="gssb_f"></td><td class="gssb_e" style="width: 100%;"></td></tr></tbody></table><div id="highlighter--hover-tools" style="top: 81.025px; left: 724px; display: none;">
+    <div id="highlighter--hover-tools--container">
+        <div class="highlighter--icon highlighter--icon-copy" title="Copy"></div>
+        <div class="highlighter--icon highlighter--icon-change-color" title="Change Color"></div>
+        <div class="highlighter--icon highlighter--icon-delete" title="Delete"></div>
+    </div>
+</div></body></html>

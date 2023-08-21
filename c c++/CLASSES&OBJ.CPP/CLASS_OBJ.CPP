@@ -1,4 +1,4 @@
-/*
+
 #include <iostream>
 using namespace std;
 
@@ -59,9 +59,9 @@ int main(){
     return 0;
 }
 
-*/
 
-/*
+
+//////////////////////////////////
 #include <iostream>
 using namespace std;
 
@@ -94,9 +94,9 @@ int main()
     obj.display();
     return 0;
 }
-*/
 
-/*
+
+
 // c++ program to explain
 // Encapsulation
 
@@ -135,9 +135,10 @@ int main()
     cout<<obj.get();
     return 0;
 }
-*/
 
-/*
+
+
+
 //Classes, Public and Private access modifiers in C++
 #include<iostream>
 using namespace std;
@@ -174,7 +175,7 @@ int main(){
     return 0;
 }
 
-*/
+
 
 // OOPs - Classes and objects
 
