@@ -32,7 +32,7 @@ public:
 
             if (current->val == current->next->val)
             {
-                // ext_next = current->next->next;
+                // next_next = current->next->next;
                 // free(current->next);
                 // current->next = next_next;
                 current->next = current->next->next;
