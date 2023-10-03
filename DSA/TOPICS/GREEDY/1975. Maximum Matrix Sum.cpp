@@ -77,3 +77,4 @@ public:
         return sum - 2*mini;               
     }
 };
+

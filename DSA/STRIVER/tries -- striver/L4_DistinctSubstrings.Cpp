@@ -18,6 +18,7 @@ struct Node {
         return flag; 
     }
 }; 
+
 int countDistinctSubstrings(string &s)
 {
     Node* root = new Node(); 

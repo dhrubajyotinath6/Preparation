@@ -89,7 +89,7 @@ public:
 };
 */
 
-/*
+
 class Solution {
 public:
     int minCostClimbingStairs(vector<int>& cost) {
@@ -118,7 +118,7 @@ public:
        return dp[dp.size() - 1];
     }
 };
-*/
+
 
 
 class Solution {
